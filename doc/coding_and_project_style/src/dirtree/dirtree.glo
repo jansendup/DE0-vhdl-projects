@@ -1,0 +1,4 @@
+\glossaryentry{v0.2> =General:>dtx for CTAN, code for both Plain \textlatin  {T\kern -.1667em\lower .5ex\hbox {E}\kern -.125emX\spacefactor \@m }{} and \textlatin  {\LaTeX  }.}{1}
+\glossaryentry{v0.12> =General:>\cs  {DTbaselineskip}. local \cs  {parskip}, \cs  {baselineskip}, and \cs  {strut} in order to fix a displaying bug.}{1}
+\glossaryentry{v0.11> =General:>fix bug}{1}
+\glossaryentry{v0.01> =General:>First realease to answer a question on fctt.}{1}

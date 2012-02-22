@@ -1,0 +1,54 @@
+
+\documentclass{article}
+\usepackage{dirtree}
+
+\begin{document}
+
+\section{Signal naming conventions}
+
+\begin{tabular}{| l | l |}
+\hline
+\textbf{Signal postfix} & \textbf{Description} \\ \hline
+\_i       & Input port          \\ \hline
+\_o       & Output port         \\ \hline
+\_io      & Bi-directional port \\ \hline
+\_clk\_i & Clock input port    \\ \hline
+\_clk\_o & Clock output port   \\ \hline
+\_rst\_i & Reset input port    \\ \hline
+\_rst\_o & Reset output port   \\ \hline
+\end{tabular}
+
+\section{Directory structure}
+
+\dirtree{%
+.1 blockname \DTcomment{Top level directory of a core}.
+.2 backend   \DTcomment{Top level backend directory}.
+.3 <vendor>  \DTcomment{Vendor specific floorplan, place and route directory structure}.
+.2 sim       \DTcomment{Top level simulations directory}.
+.3 rtl\_sim  \DTcomment{RTL simulations}.
+.4 bin RTL   \DTcomment{simulation scripts}.
+.4 run For   \DTcomment{running RTL simulations}.
+.4 src       \DTcomment{Special sources for RTL simulations}.
+.4 out       \DTcomment{Dump and other useful output from RTL simulation}.
+.4 log       \DTcomment{Log files}.
+.3 gate\_sim \DTcomment{Gate-level simulations}.
+.4 bin       \DTcomment{Gate-level simulation scripts}.
+.4 run       \DTcomment{For running gate-level simulations}.
+.4 src       \DTcomment{Special sources for gate-level simulations}.
+.4 out       \DTcomment{Dump and other useful output from gate-level simulation}.
+.4 log       \DTcomment{Log files}.
+.2 syn       \DTcomment{Synthesis}.
+.3 <vendor>  \DTcomment{Each synthesis tool has separate directory}.
+.4 bin       \DTcomment{For synthesis scripts}.
+.4 run       \DTcomment{For running synthesis scripts}.
+.4 src       \DTcomment{Special sources for synthesis}.
+.4 out       \DTcomment{For generated netlists (Synopsys db, verilog)}.
+.4 log       \DTcomment{Log files (including reports)}.
+.2 rtl       \DTcomment{RTL sources (.vhd or .vhdl)}.
+.2 bench     \DTcomment{Bench sources}.
+.2 doc       \DTcomment{ut specification, design and other PDF documents here}.
+.2 src       \DTcomment{Source version of all documents ( Latex etc.)}.
+.2 sw        \DTcomment{Put sources for utilities or software test cases}.
+}
+
+\end{document}
