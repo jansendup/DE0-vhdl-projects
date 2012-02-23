@@ -1,25 +1,47 @@
-
 \documentclass{article}
+
 \usepackage{dirtree}
+\usepackage{float}
 
 \begin{document}
 
+\section{Introduction}
+This document contains the conventions used within all projects in this repository. Good conventions make following code easier and is thus considerd good practice. This document is mainly intended for personal use but may also be used by someone whom might want to build on some of these projects.
+
 \section{Signal naming conventions}
 
-\begin{tabular}{| l | l |}
-\hline
-\textbf{Signal postfix} & \textbf{Description} \\ \hline
-\_i       & Input port          \\ \hline
-\_o       & Output port         \\ \hline
-\_io      & Bi-directional port \\ \hline
-\_clk\_i & Clock input port    \\ \hline
-\_clk\_o & Clock output port   \\ \hline
-\_rst\_i & Reset input port    \\ \hline
-\_rst\_o & Reset output port   \\ \hline
-\end{tabular}
+Signal names must adhere to the following conventions:
+\begin{description}
+	\item[Lower-case] \hfill \\
+		All signal names should be in lower-case.
+	\item[Descriptive] \hfill \\
+		All signal names should be descriptive and its use must be clearly stated by its definition.
+	\item[Prefix] \hfill \\
+		Signals driven localy within the entity should be prefixed by a lower-case 'l'. 	All other signals except the inputs and outputs of the entity should be given a prefix unique to the module driving it.
+	\item[Postfix] \hfill \\
+		All inputs and outputs of an entity should be prefixed by 'i' and 'o' respectively. Special I/O's also needs an extra prefix as listed in Table \ref{tab:postfix}.
+\end{description}
+\begin{table}[h]
+	\begin{center}
+	\begin{tabular}{| l | l |}
+	\hline
+	\textbf{Signal postfix} & \textbf{Description} \\ \hline
+	\_i       & Input signals          \\ \hline
+	\_o       & Output signals         \\ \hline
+	\_io      & Bi-directional signals \\ \hline
+	\_clk\_i & Clock input signals    \\ \hline
+	\_clk\_o & Clock output signals   \\ \hline
+	\_rst\_i & Reset input signals    \\ \hline
+	\_rst\_o & Reset output signals   \\ \hline
+	\end{tabular}
+	\end{center}
+\caption{Signal postfixes}
+\label{tab:postfix}
+\end{table}
 
 \section{Directory structure}
-
+The directory structure used for the projects is based on the recommendations found in OpenCores' HDL modeling guidelines article.\cite{OpenCores} This is the initial directory structure and may still be subject to small changes over time. Figure \ref{fig:dir_struct} shows the standard directory structure used for all projects.
+\begin{figure}[h]
 \dirtree{%
 .1 blockname \DTcomment{Top level directory of a core}.
 .2 backend   \DTcomment{Top level backend directory}.
@@ -51,4 +73,15 @@
 .2 sw        \DTcomment{Put sources for utilities or software test cases}.
 }
 
+\caption{Directory structure}
+\label{fig:dir_struct}
+\end{figure}
+
+
+\begin{thebibliography}{9}
+\bibitem{OpenCores}
+OpenCores HDL modeling guidelines.
+\end{thebibliography}
+
 \end{document}
+
