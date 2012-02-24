@@ -1,0 +1,193 @@
+m255
+K3
+13
+cModel Technology
+Z0 d/home/jansen/vhdl/projects/primatives/sim/rtl_sim
+Ecounter
+Z1 w1330035642
+Z2 DPx4 ieee 14 std_logic_1164 0 22 GH1=`jDDBJ=`LM;:Ak`kf2
+Z3 d/home/jansen/vhdl/projects/primatives/sim/rtl_sim
+Z4 8/home/jansen/vhdl/projects/primatives/rtl/counter.vhd
+Z5 F/home/jansen/vhdl/projects/primatives/rtl/counter.vhd
+l0
+L4
+V8fdgj@>BmJ5:cm:@`R`9m3
+Z6 OV;C;6.6d;45
+32
+Z7 o-work work -2002 -explicit -O0
+Z8 tExplicit 1
+!s100 JkS1Wf>8F?6UH0P2zZ7k81
+Abehaviour
+R2
+Z9 DEx4 work 7 counter 0 22 8fdgj@>BmJ5:cm:@`R`9m3
+l25
+L19
+VIYOS]Zz30<nUg3<2E;F;U0
+R6
+32
+Z10 Mx1 4 ieee 14 std_logic_1164
+R7
+R8
+!s100 @k>O`k3>^N1aXCCO;Mc]W2
+Ecounter_tb
+Z11 w1330083516
+R2
+R3
+Z12 8/home/jansen/vhdl/projects/primatives/bench/counter_tb.vhd
+Z13 F/home/jansen/vhdl/projects/primatives/bench/counter_tb.vhd
+l0
+L27
+VU4WW:NKN9EgJ4Jc`;L]Hj3
+!s100 ?62]H?DW3l5iaJ=KSf:z?0
+R6
+32
+R7
+R8
+Astimulus
+R9
+R2
+Z14 DEx4 work 10 counter_tb 0 22 U4WW:NKN9EgJ4Jc`;L]Hj3
+l50
+L33
+V]Y?UcbETzRa:2CBM:S;HN3
+!s100 kFOKEa8fFEi`04UU5RMn;1
+R6
+32
+R10
+R7
+R8
+Abehaviour
+R9
+R2
+R14
+l50
+L33
+VVkR]h9_obSaob]k6]X=kc2
+R6
+32
+R10
+R7
+R8
+w1330033263
+!s100 LTUgMI4SF9K@[fRaUU=e01
+Pprimatives_pkg
+R2
+w1330028876
+R3
+8/home/jansen/vhdl/projects/primatives/rtl/primatives_pkg.vhd
+F/home/jansen/vhdl/projects/primatives/rtl/primatives_pkg.vhd
+l0
+L4
+V?<EWH<liFiF1WnFUZ21T80
+R6
+32
+R10
+R7
+R8
+!s100 VXKF>i2NXj9m69D<Vg3@R1
+Eschmitt_trigger_filter
+Z15 w1330021661
+R2
+R3
+Z16 8/home/jansen/vhdl/projects/primatives/rtl/schmitt_trigger_filter.vhd
+Z17 F/home/jansen/vhdl/projects/primatives/rtl/schmitt_trigger_filter.vhd
+l0
+L4
+VlPPQDRdh4K45M5;a1jI@T1
+R6
+32
+R7
+R8
+!s100 S^_`b[I_CXJRfK8Ml0nHf2
+Abehaviour
+R2
+Z18 DEx4 work 22 schmitt_trigger_filter 0 22 lPPQDRdh4K45M5;a1jI@T1
+l21
+L12
+VOXkFom^C:;PI:@gR4_XBf3
+R6
+32
+R10
+R7
+R8
+!s100 NZ=DP4Z^;i5h8z^Ze;[J:3
+Eschmitt_trigger_filter_tb
+Z19 w1330085111
+R2
+R3
+Z20 8/home/jansen/vhdl/projects/primatives/bench/schmitt_trigger_filter_tb.vhd
+Z21 F/home/jansen/vhdl/projects/primatives/bench/schmitt_trigger_filter_tb.vhd
+l0
+L27
+V8]4:@L:kE]9BT?`cL]7NJ1
+R6
+31
+Z22 o-93 -work work -O0
+R8
+!s100 U]dozTPf_?Q5VXKlA5YnR3
+Astimulus
+R18
+R2
+DEx4 work 25 schmitt_trigger_filter_tb 0 22 8]4:@L:kE]9BT?`cL]7NJ1
+l50
+L33
+VFKCVf_kKjH8]D5SUI8cJU3
+R6
+31
+R10
+R22
+R8
+!s100 dPEO1V`d@D5@_;D^9^Gc53
+Eshift_reg
+Z23 w1330081450
+R2
+R3
+Z24 8/home/jansen/vhdl/projects/primatives/rtl/shift_reg.vhd
+Z25 F/home/jansen/vhdl/projects/primatives/rtl/shift_reg.vhd
+l0
+L4
+VZ=ZDme@OMRoB0N@8gTn]P3
+R6
+32
+R7
+R8
+!s100 ?II@HWn^f[62=D@ImH>0B3
+Abehaviour
+R2
+DEx4 work 9 shift_reg 0 22 Z=ZDme@OMRoB0N@8gTn]P3
+l21
+L17
+VLZj`hLVIBKA3ecTWg9FcD2
+!s100 TTB]MHRhUGR`?C<BSBT>@3
+R6
+32
+R10
+R7
+R8
+Eshift_reg_tb
+Z26 w1330081964
+R2
+R3
+Z27 8/home/jansen/vhdl/projects/primatives/bench/shift_reg_tb.vhd
+Z28 F/home/jansen/vhdl/projects/primatives/bench/shift_reg_tb.vhd
+l0
+L25
+Vm3@G@kJ6MLR[3LnFe3RQT0
+R6
+31
+R22
+R8
+!s100 BM9<MbMCmNal0K^:GSJ?:1
+Abehaviour
+DEx4 work 9 shift_reg 0 22 M9PkY4LZV@GfRd32^oYbd2
+R2
+DEx4 work 12 shift_reg_tb 0 22 m3@G@kJ6MLR[3LnFe3RQT0
+l47
+L29
+VL[f2T15=5[AkB7^IaJHjV1
+R6
+31
+R10
+R22
+R8
+!s100 bIfh?1TTESPzEL]F0XFWH0

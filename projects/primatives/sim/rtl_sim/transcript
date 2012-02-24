@@ -1,0 +1,179 @@
+# Loading project primatives
+# Compile of counter.vhd was successful.
+# Compile of primatives_pkg.vhd was successful.
+# Compile of schmitt_trigger_filter.vhd was successful.
+# Compile of shift_reg.vhd was successful.
+# Compile of counter_tb.vhd was successful with warnings.
+# 5 compiles, 0 failed with no errors. 
+# Compile of counter.vhd was successful.
+# Compile of primatives_pkg.vhd was successful.
+# Compile of schmitt_trigger_filter.vhd was successful.
+# Compile of shift_reg.vhd was successful.
+# Compile of counter_tb.vhd was successful.
+# 5 compiles, 0 failed with no errors. 
+# Load canceled
+# Compile of counter.vhd was successful.
+# Compile of primatives_pkg.vhd was successful.
+# Compile of schmitt_trigger_filter.vhd was successful.
+# Compile of shift_reg.vhd was successful.
+# Compile of counter_tb.vhd was successful.
+vsim work.counter_tb
+# vsim work.counter_tb 
+# Loading std.standard
+# Loading ieee.std_logic_1164(body)
+# Loading work.counter_tb(stimulus)
+# Loading work.counter(behaviour)
+sim -all
+# expecting one of memory, working, time, cpu, context, or faults
+run -all
+# ** Failure: Counter value not as expected.
+#    Time: 120 ns  Iteration: 0  Process: /counter_tb/wave_gen_proc File: /home/jansen/vhdl/projects/primatives/bench/counter_tb.vhd
+# Break in Process wave_gen_proc at /home/jansen/vhdl/projects/primatives/bench/counter_tb.vhd line 91
+step -over
+step -over
+step -over
+step -over
+step -over
+step -over
+step -over
+step -over
+step -over
+step -over
+step -over
+step -over
+step -over
+step -over
+step -over
+step -over
+step -over
+restart -f
+run -all
+# ** Failure: Counter value not as expected.
+#    Time: 120 ns  Iteration: 0  Process: /counter_tb/wave_gen_proc File: /home/jansen/vhdl/projects/primatives/bench/counter_tb.vhd
+# Break in Process wave_gen_proc at /home/jansen/vhdl/projects/primatives/bench/counter_tb.vhd line 91
+restart -f
+run -next
+run -next
+run -step
+run -step
+run -step
+run -step
+run -step
+run -step
+run -step
+run -step
+run -step
+run -step
+run -step
+run -step
+run -step
+run -step
+run -step
+run -step
+run -step
+run -step
+run -step
+run -step
+# Next activity is in 10 ns.
+run -step
+run -step
+run -step
+run -step
+run -step
+run -step
+
+run -step
+run -step
+run -step
+run -step
+run -step
+# Next activity is in 10 ns.
+run -step
+run -step
+run -step
+run -step
+run -step
+run -step
+step -over
+step -over
+step -out
+step -out
+step -out
+step -out
+step -out
+# Next activity is in 10 ns.
+step -out
+step -out
+step -out
+# Next activity is in 10 ns.
+step -out
+step -out
+step -out
+step -out
+step -out
+# Next activity is in 10 ns.
+step -out
+step -out
+step -out
+# Next activity is in 10 ns.
+step -out
+step -out
+step -out
+step -out
+step -out
+# Next activity is in 10 ns.
+step -out
+step -out
+step -out
+# Next activity is in 10 ns.
+step -out
+step -out
+step -out
+step -out
+step -out
+# Next activity is in 10 ns.
+step -out
+step -out
+step -out
+# Next activity is in 10 ns.
+step -out
+step -over
+step -over
+restart -f
+add wave \
+{sim:/counter_tb/clk } \
+{sim:/counter_tb/rst } \
+{sim:/counter_tb/cnt_en } \
+{sim:/counter_tb/load } \
+{sim:/counter_tb/load_cnt } \
+{sim:/counter_tb/cnt } \
+{sim:/counter_tb/done } 
+run -all
+# ** Failure: Counter value not as expected.
+#    Time: 120 ns  Iteration: 0  Process: /counter_tb/wave_gen_proc File: /home/jansen/vhdl/projects/primatives/bench/counter_tb.vhd
+# Break in Process wave_gen_proc at /home/jansen/vhdl/projects/primatives/bench/counter_tb.vhd line 91
+run -all
+# ** Failure: Counter value not as expected.
+#    Time: 180 ns  Iteration: 0  Process: /counter_tb/wave_gen_proc File: /home/jansen/vhdl/projects/primatives/bench/counter_tb.vhd
+# Break in Process wave_gen_proc at /home/jansen/vhdl/projects/primatives/bench/counter_tb.vhd line 97
+# Compile of counter.vhd was successful.
+# Compile of primatives_pkg.vhd was successful.
+# Compile of schmitt_trigger_filter.vhd was successful.
+# Compile of shift_reg.vhd was successful.
+# Compile of counter_tb.vhd was successful.
+# 5 compiles, 0 failed with no errors. 
+vsim work.schmitt_trigger_filter_tb
+# vsim work.schmitt_trigger_filter_tb 
+# Loading std.standard
+# Loading ieee.std_logic_1164(body)
+# Loading work.schmitt_trigger_filter_tb(stimulus)
+# Loading work.schmitt_trigger_filter(behaviour)
+add wave \
+{sim:/schmitt_trigger_filter_tb/clk } \
+{sim:/schmitt_trigger_filter_tb/rst } \
+{sim:/schmitt_trigger_filter_tb/sig } \
+{sim:/schmitt_trigger_filter_tb/fsig } \
+{sim:/schmitt_trigger_filter_tb/done } 
+run -all
+# Break key hit 
+# Break key hit 

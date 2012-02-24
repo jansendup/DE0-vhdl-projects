@@ -1,0 +1,19 @@
+;; -*- Emacs-Lisp -*-
+
+;;; emacs_projects.prj - project setup file for Emacs VHDL Mode 3.33.6
+
+;; Project : uart
+;; Saved   : 2012-02-24 08:59:48 jansen
+
+
+;; project name
+(setq vhdl-project "uart")
+
+;; project setup
+(aput 'vhdl-project-alist vhdl-project
+'("Uart module on Altera DE0" "~/vhdl/projects/uart/"
+ ("rtl/*")
+ ""
+ (("ModelSim" "\\2" "\\2" nil))
+ "sim/rtl_sim/" "work" "work/" "Makefile" "")
+)
