@@ -1,0 +1,85 @@
+m255
+K3
+13
+cModel Technology
+Z0 d/home/jansen/vhdl/projects/uart/sim/rtl_sim
+Ecounter
+Z1 w1330035642
+Z2 DPx4 ieee 14 std_logic_1164 0 22 GH1=`jDDBJ=`LM;:Ak`kf2
+Z3 d/home/jansen/vhdl/projects/uart/sim/rtl_sim
+Z4 8/home/jansen/vhdl/projects/primatives/rtl/counter.vhd
+Z5 F/home/jansen/vhdl/projects/primatives/rtl/counter.vhd
+l0
+L4
+VBmG<>cmVnR]>1`;0SWV182
+Z6 OV;C;6.6d;45
+31
+Z7 o-93 -work work -O0
+Z8 tExplicit 1
+!s100 JkS1Wf>8F?6UH0P2zZ7k81
+Abehaviour
+R2
+Z9 DEx4 work 7 counter 0 22 BmG<>cmVnR]>1`;0SWV182
+l25
+L19
+VaOfTKX3j`X?Wc;i@c^2RE1
+R6
+31
+Z10 Mx1 4 ieee 14 std_logic_1164
+R7
+R8
+!s100 @k>O`k3>^N1aXCCO;Mc]W2
+Eschmitt_trigger_filter
+Z11 w1330021661
+R2
+R3
+Z12 8/home/jansen/vhdl/projects/primatives/rtl/schmitt_trigger_filter.vhd
+Z13 F/home/jansen/vhdl/projects/primatives/rtl/schmitt_trigger_filter.vhd
+l0
+L4
+V=D2KPoZzjnL2CmU@oPYQe3
+R6
+31
+R7
+R8
+!s100 S^_`b[I_CXJRfK8Ml0nHf2
+Abehaviour
+R2
+Z14 DEx4 work 22 schmitt_trigger_filter 0 22 =D2KPoZzjnL2CmU@oPYQe3
+l21
+L12
+VVL0I9XXgLTafcZ1Z<UHR_1
+R6
+31
+R10
+R7
+R8
+!s100 NZ=DP4Z^;i5h8z^Ze;[J:3
+Euart_receiver
+Z15 w1330122194
+R2
+R3
+Z16 8/home/jansen/vhdl/projects/uart/rtl/uart_receiver.vhd
+Z17 F/home/jansen/vhdl/projects/uart/rtl/uart_receiver.vhd
+l0
+L4
+VU@e988PbaY;;eh9zz?0RK3
+!s100 H2m]IP:TKB]3z<Fc9gUi:2
+R6
+31
+R7
+R8
+Abehaviour
+R9
+R14
+R2
+DEx4 work 13 uart_receiver 0 22 U@e988PbaY;;eh9zz?0RK3
+l65
+L19
+VD;PRob1TA;Q7VHN]54fCX0
+!s100 GhnPYPWb<l;1n685i0^^S0
+R6
+31
+R10
+R7
+R8
