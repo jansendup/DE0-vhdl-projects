@@ -55,12 +55,38 @@ R10
 R7
 R8
 !s100 NZ=DP4Z^;i5h8z^Ze;[J:3
-Euart_receiver
-Z15 w1330122194
+Eshift_reg
+Z15 w1330081450
 R2
 R3
-Z16 8/home/jansen/vhdl/projects/uart/rtl/uart_receiver.vhd
-Z17 F/home/jansen/vhdl/projects/uart/rtl/uart_receiver.vhd
+Z16 8/home/jansen/vhdl/projects/primatives/rtl/shift_reg.vhd
+Z17 F/home/jansen/vhdl/projects/primatives/rtl/shift_reg.vhd
+l0
+L4
+VM9PkY4LZV@GfRd32^oYbd2
+R6
+31
+R7
+R8
+!s100 ?II@HWn^f[62=D@ImH>0B3
+Abehaviour
+R2
+Z18 DEx4 work 9 shift_reg 0 22 M9PkY4LZV@GfRd32^oYbd2
+l21
+L17
+VL]jj[]lC_jcc@@h`O_P3E2
+R6
+31
+R10
+R7
+R8
+!s100 TTB]MHRhUGR`?C<BSBT>@3
+Euart_receiver
+Z19 w1330124093
+R2
+R3
+Z20 8/home/jansen/vhdl/projects/uart/rtl/uart_receiver.vhd
+Z21 F/home/jansen/vhdl/projects/uart/rtl/uart_receiver.vhd
 l0
 L4
 VU@e988PbaY;;eh9zz?0RK3
@@ -71,13 +97,14 @@ R7
 R8
 Abehaviour
 R9
+R18
 R14
 R2
-DEx4 work 13 uart_receiver 0 22 U@e988PbaY;;eh9zz?0RK3
-l65
+Z22 DEx4 work 13 uart_receiver 0 22 U@e988PbaY;;eh9zz?0RK3
+l66
 L19
-VD;PRob1TA;Q7VHN]54fCX0
-!s100 GhnPYPWb<l;1n685i0^^S0
+VAg4NmA5?TDzI5D6a3[`FR1
+!s100 `MDTdzg;kaIXR`o[m<8Q50
 R6
 31
 R10

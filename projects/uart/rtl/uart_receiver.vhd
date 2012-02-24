@@ -19,6 +19,7 @@ end uart_receiver;
 architecture behaviour of uart_receiver is
 
   type STATE is (IDLE_S, START_S, DATA_S, STOP_S);
+  constant SHIFT_REG_RELOAD_VAL : std_logic_vector(N-1 downto 0) := (others => '-');
 
   -- State signals
   signal l_state_reg  : STATE;
@@ -61,6 +62,7 @@ architecture behaviour of uart_receiver is
   signal l_sample_rx : std_logic;       -- High when rx needs to be sampled
                                         -- in data state.
   signal f_rx        : std_logic;       -- Glitch filtered rx signal
+  signal s_data : std_logic_vector(N-1 downto 0);  -- Receive shift register output.
   
 begin  -- behaviour
 
@@ -73,6 +75,19 @@ begin  -- behaviour
       rst_i  => rst_i,
       sig_i  => rx_i,
       fsig_o => f_rx);
+
+  rx_shift_reg: entity work.shift_reg
+    generic map (
+      N         => N,
+      RESET_VAL => SHIFT_REG_RELOAD_VAL)
+    port map (
+      clk_i         => clk_i,
+      rst_i         => rst_i,
+      shift_nLoad_i => '1',
+      shift_en_i    => l_sample_rx,
+      serial_i      => f_rx,
+      data_i        => (others => '-'),
+      data_o        => s_data);
 
   sample_counter : entity work.counter
     generic map (
