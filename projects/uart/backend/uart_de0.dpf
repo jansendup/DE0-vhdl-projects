@@ -1,0 +1,291 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<pin_planner>
+	<pin_info>
+		<pin name="LEDG[9..0]" direction="Unknown Group" source="Pin Planner" >
+		</pin>
+		<pin name="SW[9..0]" direction="Unknown Group" source="Pin Planner" >
+		</pin>
+		<pin name="KEY[2..0]" direction="Unknown Group" source="Pin Planner" >
+		</pin>
+		<pin name="FL_ADDR[21..0]" direction="Unknown Group" source="Pin Planner" >
+		</pin>
+		<pin name="FL_DQ[14..0]" direction="Unknown Group" source="Pin Planner" >
+		</pin>
+		<pin name="GPIO_0[31..0]" direction="Unknown Group" source="Pin Planner" >
+		</pin>
+		<pin name="GPIO_1[31..0]" direction="Unknown Group" source="Pin Planner" >
+		</pin>
+		<pin name="LCD_DATA[7..0]" direction="Unknown Group" source="Pin Planner" >
+		</pin>
+		<pin name="VGA_G[3..0]" direction="Unknown Group" source="Pin Planner" >
+		</pin>
+		<pin name="VGA_R[3..0]" direction="Unknown Group" source="Pin Planner" >
+		</pin>
+		<pin name="VGA_B[3..0]" direction="Unknown Group" source="Pin Planner" >
+		</pin>
+		<pin name="HEX0[7..0]" direction="Unknown Group" source="Pin Planner" >
+		</pin>
+		<pin name="HEX1[7..0]" direction="Unknown Group" source="Pin Planner" >
+		</pin>
+		<pin name="HEX2[7..0]" direction="Unknown Group" source="Pin Planner" >
+		</pin>
+		<pin name="HEX3[7..0]" direction="Unknown Group" source="Pin Planner" >
+		</pin>
+		<pin name="DRAM_BA[1..0]" direction="Unknown Group" source="Pin Planner" >
+		</pin>
+		<pin name="DRAM_DQ[15..0]" direction="Unknown Group" source="Pin Planner" >
+		</pin>
+		<pin name="DRAM_ADDR[12..0]" direction="Unknown Group" source="Pin Planner" >
+		</pin>
+	</pin_info>
+	<buses>
+		<bus name="LEDG[9..0]" direction="Unknown Group" >
+			<member name="LEDG[9]" />
+			<member name="LEDG[8]" />
+			<member name="LEDG[7]" />
+			<member name="LEDG[6]" />
+			<member name="LEDG[5]" />
+			<member name="LEDG[4]" />
+			<member name="LEDG[3]" />
+			<member name="LEDG[2]" />
+			<member name="LEDG[1]" />
+			<member name="LEDG[0]" />
+		</bus>
+		<bus name="SW[9..0]" direction="Unknown Group" >
+			<member name="SW[9]" />
+			<member name="SW[8]" />
+			<member name="SW[7]" />
+			<member name="SW[6]" />
+			<member name="SW[5]" />
+			<member name="SW[4]" />
+			<member name="SW[3]" />
+			<member name="SW[2]" />
+			<member name="SW[1]" />
+			<member name="SW[0]" />
+		</bus>
+		<bus name="KEY[2..0]" direction="Unknown Group" >
+			<member name="KEY[2]" />
+			<member name="KEY[1]" />
+			<member name="KEY[0]" />
+		</bus>
+		<bus name="FL_ADDR[21..0]" direction="Unknown Group" >
+			<member name="FL_ADDR[21]" />
+			<member name="FL_ADDR[20]" />
+			<member name="FL_ADDR[19]" />
+			<member name="FL_ADDR[18]" />
+			<member name="FL_ADDR[17]" />
+			<member name="FL_ADDR[16]" />
+			<member name="FL_ADDR[15]" />
+			<member name="FL_ADDR[14]" />
+			<member name="FL_ADDR[13]" />
+			<member name="FL_ADDR[12]" />
+			<member name="FL_ADDR[11]" />
+			<member name="FL_ADDR[10]" />
+			<member name="FL_ADDR[9]" />
+			<member name="FL_ADDR[8]" />
+			<member name="FL_ADDR[7]" />
+			<member name="FL_ADDR[6]" />
+			<member name="FL_ADDR[5]" />
+			<member name="FL_ADDR[4]" />
+			<member name="FL_ADDR[3]" />
+			<member name="FL_ADDR[2]" />
+			<member name="FL_ADDR[1]" />
+			<member name="FL_ADDR[0]" />
+		</bus>
+		<bus name="FL_DQ[14..0]" direction="Unknown Group" >
+			<member name="FL_DQ[14]" />
+			<member name="FL_DQ[13]" />
+			<member name="FL_DQ[12]" />
+			<member name="FL_DQ[11]" />
+			<member name="FL_DQ[10]" />
+			<member name="FL_DQ[9]" />
+			<member name="FL_DQ[8]" />
+			<member name="FL_DQ[7]" />
+			<member name="FL_DQ[6]" />
+			<member name="FL_DQ[5]" />
+			<member name="FL_DQ[4]" />
+			<member name="FL_DQ[3]" />
+			<member name="FL_DQ[2]" />
+			<member name="FL_DQ[1]" />
+			<member name="FL_DQ[0]" />
+		</bus>
+		<bus name="GPIO_0[31..0]" direction="Unknown Group" >
+			<member name="GPIO_0[31]" />
+			<member name="GPIO_0[30]" />
+			<member name="GPIO_0[29]" />
+			<member name="GPIO_0[28]" />
+			<member name="GPIO_0[27]" />
+			<member name="GPIO_0[26]" />
+			<member name="GPIO_0[25]" />
+			<member name="GPIO_0[24]" />
+			<member name="GPIO_0[23]" />
+			<member name="GPIO_0[22]" />
+			<member name="GPIO_0[21]" />
+			<member name="GPIO_0[20]" />
+			<member name="GPIO_0[19]" />
+			<member name="GPIO_0[18]" />
+			<member name="GPIO_0[17]" />
+			<member name="GPIO_0[16]" />
+			<member name="GPIO_0[15]" />
+			<member name="GPIO_0[14]" />
+			<member name="GPIO_0[13]" />
+			<member name="GPIO_0[12]" />
+			<member name="GPIO_0[11]" />
+			<member name="GPIO_0[10]" />
+			<member name="GPIO_0[9]" />
+			<member name="GPIO_0[8]" />
+			<member name="GPIO_0[7]" />
+			<member name="GPIO_0[6]" />
+			<member name="GPIO_0[5]" />
+			<member name="GPIO_0[4]" />
+			<member name="GPIO_0[3]" />
+			<member name="GPIO_0[2]" />
+			<member name="GPIO_0[1]" />
+			<member name="GPIO_0[0]" />
+		</bus>
+		<bus name="GPIO_1[31..0]" direction="Unknown Group" >
+			<member name="GPIO_1[31]" />
+			<member name="GPIO_1[30]" />
+			<member name="GPIO_1[29]" />
+			<member name="GPIO_1[28]" />
+			<member name="GPIO_1[27]" />
+			<member name="GPIO_1[26]" />
+			<member name="GPIO_1[25]" />
+			<member name="GPIO_1[24]" />
+			<member name="GPIO_1[23]" />
+			<member name="GPIO_1[22]" />
+			<member name="GPIO_1[21]" />
+			<member name="GPIO_1[20]" />
+			<member name="GPIO_1[19]" />
+			<member name="GPIO_1[18]" />
+			<member name="GPIO_1[17]" />
+			<member name="GPIO_1[16]" />
+			<member name="GPIO_1[15]" />
+			<member name="GPIO_1[14]" />
+			<member name="GPIO_1[13]" />
+			<member name="GPIO_1[12]" />
+			<member name="GPIO_1[11]" />
+			<member name="GPIO_1[10]" />
+			<member name="GPIO_1[9]" />
+			<member name="GPIO_1[8]" />
+			<member name="GPIO_1[7]" />
+			<member name="GPIO_1[6]" />
+			<member name="GPIO_1[5]" />
+			<member name="GPIO_1[4]" />
+			<member name="GPIO_1[3]" />
+			<member name="GPIO_1[2]" />
+			<member name="GPIO_1[1]" />
+			<member name="GPIO_1[0]" />
+		</bus>
+		<bus name="LCD_DATA[7..0]" direction="Unknown Group" >
+			<member name="LCD_DATA[7]" />
+			<member name="LCD_DATA[6]" />
+			<member name="LCD_DATA[5]" />
+			<member name="LCD_DATA[4]" />
+			<member name="LCD_DATA[3]" />
+			<member name="LCD_DATA[2]" />
+			<member name="LCD_DATA[1]" />
+			<member name="LCD_DATA[0]" />
+		</bus>
+		<bus name="VGA_G[3..0]" direction="Unknown Group" >
+			<member name="VGA_G[3]" />
+			<member name="VGA_G[2]" />
+			<member name="VGA_G[1]" />
+			<member name="VGA_G[0]" />
+		</bus>
+		<bus name="VGA_R[3..0]" direction="Unknown Group" >
+			<member name="VGA_R[3]" />
+			<member name="VGA_R[2]" />
+			<member name="VGA_R[1]" />
+			<member name="VGA_R[0]" />
+		</bus>
+		<bus name="VGA_B[3..0]" direction="Unknown Group" >
+			<member name="VGA_B[3]" />
+			<member name="VGA_B[2]" />
+			<member name="VGA_B[1]" />
+			<member name="VGA_B[0]" />
+		</bus>
+		<bus name="HEX0[7..0]" direction="Unknown Group" >
+			<member name="HEX0[7]" />
+			<member name="HEX0[6]" />
+			<member name="HEX0[5]" />
+			<member name="HEX0[4]" />
+			<member name="HEX0[3]" />
+			<member name="HEX0[2]" />
+			<member name="HEX0[1]" />
+			<member name="HEX0[0]" />
+		</bus>
+		<bus name="HEX1[7..0]" direction="Unknown Group" >
+			<member name="HEX1[7]" />
+			<member name="HEX1[6]" />
+			<member name="HEX1[5]" />
+			<member name="HEX1[4]" />
+			<member name="HEX1[3]" />
+			<member name="HEX1[2]" />
+			<member name="HEX1[1]" />
+			<member name="HEX1[0]" />
+		</bus>
+		<bus name="HEX2[7..0]" direction="Unknown Group" >
+			<member name="HEX2[7]" />
+			<member name="HEX2[6]" />
+			<member name="HEX2[5]" />
+			<member name="HEX2[4]" />
+			<member name="HEX2[3]" />
+			<member name="HEX2[2]" />
+			<member name="HEX2[1]" />
+			<member name="HEX2[0]" />
+		</bus>
+		<bus name="HEX3[7..0]" direction="Unknown Group" >
+			<member name="HEX3[7]" />
+			<member name="HEX3[6]" />
+			<member name="HEX3[5]" />
+			<member name="HEX3[4]" />
+			<member name="HEX3[3]" />
+			<member name="HEX3[2]" />
+			<member name="HEX3[1]" />
+			<member name="HEX3[0]" />
+		</bus>
+		<bus name="DRAM_BA[1..0]" direction="Unknown Group" >
+			<member name="DRAM_BA[1]" />
+			<member name="DRAM_BA[0]" />
+		</bus>
+		<bus name="DRAM_DQ[15..0]" direction="Unknown Group" >
+			<member name="DRAM_DQ[15]" />
+			<member name="DRAM_DQ[14]" />
+			<member name="DRAM_DQ[13]" />
+			<member name="DRAM_DQ[12]" />
+			<member name="DRAM_DQ[11]" />
+			<member name="DRAM_DQ[10]" />
+			<member name="DRAM_DQ[9]" />
+			<member name="DRAM_DQ[8]" />
+			<member name="DRAM_DQ[7]" />
+			<member name="DRAM_DQ[6]" />
+			<member name="DRAM_DQ[5]" />
+			<member name="DRAM_DQ[4]" />
+			<member name="DRAM_DQ[3]" />
+			<member name="DRAM_DQ[2]" />
+			<member name="DRAM_DQ[1]" />
+			<member name="DRAM_DQ[0]" />
+		</bus>
+		<bus name="DRAM_ADDR[12..0]" direction="Unknown Group" >
+			<member name="DRAM_ADDR[12]" />
+			<member name="DRAM_ADDR[11]" />
+			<member name="DRAM_ADDR[10]" />
+			<member name="DRAM_ADDR[9]" />
+			<member name="DRAM_ADDR[8]" />
+			<member name="DRAM_ADDR[7]" />
+			<member name="DRAM_ADDR[6]" />
+			<member name="DRAM_ADDR[5]" />
+			<member name="DRAM_ADDR[4]" />
+			<member name="DRAM_ADDR[3]" />
+			<member name="DRAM_ADDR[2]" />
+			<member name="DRAM_ADDR[1]" />
+			<member name="DRAM_ADDR[0]" />
+		</bus>
+	</buses>
+	<group_file_association>
+	</group_file_association>
+	<pin_planner_file_specifies>
+	</pin_planner_file_specifies>
+</pin_planner>

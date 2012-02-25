@@ -4,7 +4,8 @@ use ieee.std_logic_1164.all;
 entity counter is
   
   generic (
-    max_cnt : integer);                 -- max value of counter
+    max_cnt : integer;                  -- max value of counter
+    rst_val : integer := 0);           
 
   port (
     clk_i      : in  std_logic;
@@ -18,7 +19,7 @@ end entity counter;
 
 architecture behaviour of counter is
 
-  signal l_cnt      : integer range 0 to max_cnt;
+  signal l_cnt      : integer range 0 to max_cnt := rst_val;
   signal l_cnt_next : integer range 0 to max_cnt + 1;
   signal l_ld_cnt   : std_logic_vector(1 downto 0);  -- Temp signal for select statement
   
@@ -31,7 +32,7 @@ begin  -- architecture behaviour
   count_proc : process (clk_i, rst_i) is
   begin  -- process count_proc
     if rst_i = '1' then                     -- asynchronous reset (active high)
-      l_cnt <= 0;
+      l_cnt <= rst_val;
     elsif clk_i'event and clk_i = '1' then  -- rising clock edge
       l_cnt <= l_cnt_next;
     end if;

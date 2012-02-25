@@ -14,6 +14,11 @@ entity uart is
        rx_done_tick_o : out std_logic;
        rx_data_o      : out std_logic_vector(MAX_DATA_BITS + MAX_PARITY_BITS - 1 downto 0);
 
+       tx_o            : out std_logic;
+       tx_reg_empty_o  : out std_logic;
+       tx_start_tick_i : in  std_logic;
+       tx_data_i       : in  std_logic_vector(MAX_DATA_BITS + MAX_PARITY_BITS - 1 downto 0);
+
        trans_length_i    : in integer range 0 to MAX_DATA_BITS + MAX_PARITY_BITS;
        cycles_per_tick_i : in integer range 0 to MAX_CYCLES_PER_TICK
        );

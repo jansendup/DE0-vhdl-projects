@@ -1,0 +1,519 @@
+Quartus II
+Version 11.0 Build 157 04/27/2011 SJ Web Edition
+13
+843
+OFF
+OFF
+OFF
+ON
+ON
+ON
+FV_OFF
+Level2
+0
+0
+VRSM_ON
+VHSM_ON
+0
+-- Start Library Paths --
+-- End Library Paths --
+-- Start VHDL Libraries --
+-- End VHDL Libraries --
+# entity
+uart_de0
+# storage
+db|uart_de0.(0).cnf
+db|uart_de0.(0).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+|home|jansen|vhdl|projects|uart|rtl|uart_de0.vhd
+22188b373738961bbf647c808ecec9ee
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# include_file {
+|home|jansen|vhdl|projects|uart|rtl|uart.vhd
+db22e68e3be494c6ebcecd7803b6723
+|home|jansen|vhdl|projects|primatives|rtl|schmitt_trigger_filter.vhd
+a9c4de68b6cd89972e559d3164670
+|home|jansen|vhdl|projects|primatives|rtl|shift_reg.vhd
+3a25946d7345e0844fffa224376c72a3
+|home|jansen|vhdl|projects|uart|rtl|baud_rate_generator.vhd
+70df812eba11ac18cc5a1b9fa5b18e
+|home|jansen|vhdl|projects|uart|rtl|uart_receiver_fsm.vhd
+6f4f3ac538f0dbf41ff256cc5fedfb46
+|home|jansen|vhdl|projects|primatives|rtl|counter.vhd
+a928111c22b5e055fcae84a595275a5
+|home|jansen|vhdl|projects|uart|rtl|uart_receiver.vhd
+1fcee21a1b3287df8b33f1f847d671e
+}
+# hierarchies {
+|
+}
+# macro_sequence
+
+# end
+# entity
+uart
+# storage
+db|uart_de0.(1).cnf
+db|uart_de0.(1).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+|home|jansen|vhdl|projects|uart|rtl|uart.vhd
+db22e68e3be494c6ebcecd7803b6723
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# user_parameter {
+max_data_bits
+8
+PARAMETER_SIGNED_DEC
+USR
+max_parity_bits
+0
+PARAMETER_SIGNED_DEC
+USR
+max_cycles_per_tick
+80
+PARAMETER_SIGNED_DEC
+USR
+ constraint(rx_data_o)
+7 downto 0
+PARAMETER_STRING
+USR
+ constraint(tx_data_i)
+7 downto 0
+PARAMETER_STRING
+USR
+}
+# include_file {
+|home|jansen|vhdl|projects|primatives|rtl|schmitt_trigger_filter.vhd
+a9c4de68b6cd89972e559d3164670
+|home|jansen|vhdl|projects|primatives|rtl|shift_reg.vhd
+3a25946d7345e0844fffa224376c72a3
+|home|jansen|vhdl|projects|uart|rtl|baud_rate_generator.vhd
+70df812eba11ac18cc5a1b9fa5b18e
+|home|jansen|vhdl|projects|uart|rtl|uart_receiver_fsm.vhd
+6f4f3ac538f0dbf41ff256cc5fedfb46
+|home|jansen|vhdl|projects|primatives|rtl|counter.vhd
+a928111c22b5e055fcae84a595275a5
+|home|jansen|vhdl|projects|uart|rtl|uart_receiver.vhd
+1fcee21a1b3287df8b33f1f847d671e
+}
+# hierarchies {
+uart:uart_1
+}
+# macro_sequence
+
+# end
+# entity
+uart_receiver
+# storage
+db|uart_de0.(2).cnf
+db|uart_de0.(2).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+|home|jansen|vhdl|projects|uart|rtl|uart_receiver.vhd
+1fcee21a1b3287df8b33f1f847d671e
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# user_parameter {
+n
+8
+PARAMETER_SIGNED_DEC
+USR
+ constraint(data_o)
+7 downto 0
+PARAMETER_STRING
+USR
+}
+# include_file {
+|home|jansen|vhdl|projects|primatives|rtl|schmitt_trigger_filter.vhd
+a9c4de68b6cd89972e559d3164670
+|home|jansen|vhdl|projects|primatives|rtl|shift_reg.vhd
+3a25946d7345e0844fffa224376c72a3
+|home|jansen|vhdl|projects|uart|rtl|uart_receiver_fsm.vhd
+6f4f3ac538f0dbf41ff256cc5fedfb46
+|home|jansen|vhdl|projects|primatives|rtl|counter.vhd
+a928111c22b5e055fcae84a595275a5
+}
+# hierarchies {
+uart:uart_1|uart_receiver:uart_receiver_1
+}
+# macro_sequence
+
+# end
+# entity
+schmitt_trigger_filter
+# storage
+db|uart_de0.(3).cnf
+db|uart_de0.(3).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+|home|jansen|vhdl|projects|primatives|rtl|schmitt_trigger_filter.vhd
+a9c4de68b6cd89972e559d3164670
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# user_parameter {
+n
+2
+PARAMETER_SIGNED_DEC
+USR
+reset_val
+'0'
+PARAMETER_ENUM
+USR
+}
+# hierarchies {
+uart:uart_1|uart_receiver:uart_receiver_1|schmitt_trigger_filter:rx_filter
+}
+# macro_sequence
+
+# end
+# entity
+shift_reg
+# storage
+db|uart_de0.(4).cnf
+db|uart_de0.(4).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+|home|jansen|vhdl|projects|primatives|rtl|shift_reg.vhd
+3a25946d7345e0844fffa224376c72a3
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# user_parameter {
+n
+8
+PARAMETER_SIGNED_DEC
+USR
+reset_val
+XXXXXXXX
+PARAMETER_UNSIGNED_BIN
+USR
+ constraint(reset_val)
+7 downto 0
+PARAMETER_STRING
+USR
+ constraint(data_i)
+7 downto 0
+PARAMETER_STRING
+USR
+ constraint(data_o)
+7 downto 0
+PARAMETER_STRING
+USR
+}
+# hierarchies {
+uart:uart_1|uart_receiver:uart_receiver_1|shift_reg:rx_shift_reg
+}
+# macro_sequence
+
+# end
+# entity
+counter
+# storage
+db|uart_de0.(5).cnf
+db|uart_de0.(5).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+|home|jansen|vhdl|projects|primatives|rtl|counter.vhd
+a928111c22b5e055fcae84a595275a5
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# user_parameter {
+max_cnt
+15
+PARAMETER_SIGNED_DEC
+USR
+rst_val
+0
+PARAMETER_SIGNED_DEC
+USR
+}
+# hierarchies {
+uart:uart_1|uart_receiver:uart_receiver_1|counter:sample_counter
+}
+# macro_sequence
+
+# end
+# entity
+counter
+# storage
+db|uart_de0.(6).cnf
+db|uart_de0.(6).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+|home|jansen|vhdl|projects|primatives|rtl|counter.vhd
+a928111c22b5e055fcae84a595275a5
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# user_parameter {
+max_cnt
+8
+PARAMETER_SIGNED_DEC
+USR
+rst_val
+0
+PARAMETER_SIGNED_DEC
+USR
+}
+# hierarchies {
+uart:uart_1|uart_receiver:uart_receiver_1|counter:bits_counter
+}
+# macro_sequence
+
+# end
+# entity
+uart_receiver_fsm
+# storage
+db|uart_de0.(7).cnf
+db|uart_de0.(7).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+|home|jansen|vhdl|projects|uart|rtl|uart_receiver_fsm.vhd
+6f4f3ac538f0dbf41ff256cc5fedfb46
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# user_parameter {
+n
+8
+PARAMETER_SIGNED_DEC
+USR
+}
+# hierarchies {
+uart:uart_1|uart_receiver:uart_receiver_1|uart_receiver_fsm:uart_receiver_fsm_1
+}
+# macro_sequence
+
+# end
+# entity
+baud_rate_generator
+# storage
+db|uart_de0.(8).cnf
+db|uart_de0.(8).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+|home|jansen|vhdl|projects|uart|rtl|baud_rate_generator.vhd
+70df812eba11ac18cc5a1b9fa5b18e
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# user_parameter {
+max_cycles_per_tick
+80
+PARAMETER_SIGNED_DEC
+USR
+}
+# include_file {
+|home|jansen|vhdl|projects|primatives|rtl|counter.vhd
+a928111c22b5e055fcae84a595275a5
+}
+# hierarchies {
+uart:uart_1|baud_rate_generator:baud_rate_generator_1
+}
+# macro_sequence
+
+# end
+# entity
+counter
+# storage
+db|uart_de0.(9).cnf
+db|uart_de0.(9).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+|home|jansen|vhdl|projects|primatives|rtl|counter.vhd
+a928111c22b5e055fcae84a595275a5
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# user_parameter {
+max_cnt
+80
+PARAMETER_SIGNED_DEC
+USR
+rst_val
+0
+PARAMETER_SIGNED_DEC
+USR
+}
+# hierarchies {
+uart:uart_1|baud_rate_generator:baud_rate_generator_1|counter:cycles_counter
+}
+# macro_sequence
+
+# end
+# entity
+reset_control
+# storage
+db|uart_de0.(10).cnf
+db|uart_de0.(10).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+|home|jansen|vhdl|projects|uart|rtl|uart_de0.vhd
+22188b373738961bbf647c808ecec9ee
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# include_file {
+|home|jansen|vhdl|projects|uart|rtl|uart.vhd
+db22e68e3be494c6ebcecd7803b6723
+|home|jansen|vhdl|projects|primatives|rtl|schmitt_trigger_filter.vhd
+a9c4de68b6cd89972e559d3164670
+|home|jansen|vhdl|projects|primatives|rtl|shift_reg.vhd
+3a25946d7345e0844fffa224376c72a3
+|home|jansen|vhdl|projects|uart|rtl|baud_rate_generator.vhd
+70df812eba11ac18cc5a1b9fa5b18e
+|home|jansen|vhdl|projects|uart|rtl|uart_receiver_fsm.vhd
+6f4f3ac538f0dbf41ff256cc5fedfb46
+|home|jansen|vhdl|projects|primatives|rtl|counter.vhd
+a928111c22b5e055fcae84a595275a5
+|home|jansen|vhdl|projects|uart|rtl|uart_receiver.vhd
+1fcee21a1b3287df8b33f1f847d671e
+}
+# hierarchies {
+reset_control:reset_control_1
+}
+# macro_sequence
+
+# end
+# complete
+
