@@ -1,0 +1,60 @@
+/home/jansen/vhdl/projects/uart/rtl/uart_receiver_fsm.vhd {1 {vcom -work work -2002 -explicit /home/jansen/vhdl/projects/uart/rtl/uart_receiver_fsm.vhd
+Model Technology ModelSim ALTERA vcom 6.6d Compiler 2010.11 Nov  2 2010
+-- Loading package standard
+-- Loading package std_logic_1164
+-- Compiling entity uart_receiver_fsm
+-- Compiling architecture behaviour of uart_receiver_fsm
+
+} {} {}} /home/jansen/vhdl/projects/primatives/rtl/primatives_pkg.vhd {1 {vcom -work work -2002 -explicit /home/jansen/vhdl/projects/primatives/rtl/primatives_pkg.vhd
+Model Technology ModelSim ALTERA vcom 6.6d Compiler 2010.11 Nov  2 2010
+-- Loading package standard
+-- Loading package std_logic_1164
+-- Compiling package primatives_pkg
+
+} {} {}} /home/jansen/vhdl/projects/uart/rtl/uart_receiver_datapath.vhd {1 {vcom -work work -2002 -explicit /home/jansen/vhdl/projects/uart/rtl/uart_receiver_datapath.vhd
+Model Technology ModelSim ALTERA vcom 6.6d Compiler 2010.11 Nov  2 2010
+-- Loading package standard
+-- Loading package std_logic_1164
+-- Compiling entity uart_receiver_datapath
+
+} {} {}} /home/jansen/vhdl/projects/uart/bench/uart_receiver_tb.vhd {1 {vcom -work work -2002 -explicit /home/jansen/vhdl/projects/uart/bench/uart_receiver_tb.vhd
+Model Technology ModelSim ALTERA vcom 6.6d Compiler 2010.11 Nov  2 2010
+-- Loading package standard
+-- Loading package std_logic_1164
+-- Compiling entity uart_receiver_tb
+-- Compiling architecture stimulus of uart_receiver_tb
+-- Loading entity uart_receiver
+
+} {} {}} /home/jansen/vhdl/projects/primatives/rtl/shift_reg.vhd {1 {vcom -work work -2002 -explicit /home/jansen/vhdl/projects/primatives/rtl/shift_reg.vhd
+Model Technology ModelSim ALTERA vcom 6.6d Compiler 2010.11 Nov  2 2010
+-- Loading package standard
+-- Loading package std_logic_1164
+-- Compiling entity shift_reg
+-- Compiling architecture behaviour of shift_reg
+
+} {} {}} /home/jansen/vhdl/projects/uart/rtl/uart_receiver.vhd {1 {vcom -work work -2002 -explicit /home/jansen/vhdl/projects/uart/rtl/uart_receiver.vhd
+Model Technology ModelSim ALTERA vcom 6.6d Compiler 2010.11 Nov  2 2010
+-- Loading package standard
+-- Loading package std_logic_1164
+-- Compiling entity uart_receiver
+-- Compiling architecture structure of uart_receiver
+-- Loading entity schmitt_trigger_filter
+-- Loading entity shift_reg
+-- Loading entity counter
+-- Loading entity uart_receiver_fsm
+
+} {} {}} /home/jansen/vhdl/projects/primatives/rtl/counter.vhd {1 {vcom -work work -2002 -explicit /home/jansen/vhdl/projects/primatives/rtl/counter.vhd
+Model Technology ModelSim ALTERA vcom 6.6d Compiler 2010.11 Nov  2 2010
+-- Loading package standard
+-- Loading package std_logic_1164
+-- Compiling entity counter
+-- Compiling architecture behaviour of counter
+
+} {} {}} /home/jansen/vhdl/projects/primatives/rtl/schmitt_trigger_filter.vhd {1 {vcom -work work -2002 -explicit /home/jansen/vhdl/projects/primatives/rtl/schmitt_trigger_filter.vhd
+Model Technology ModelSim ALTERA vcom 6.6d Compiler 2010.11 Nov  2 2010
+-- Loading package standard
+-- Loading package std_logic_1164
+-- Compiling entity schmitt_trigger_filter
+-- Compiling architecture behaviour of schmitt_trigger_filter
+
+} {} {}}

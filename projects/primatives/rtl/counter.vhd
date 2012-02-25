@@ -19,7 +19,7 @@ end entity counter;
 architecture behaviour of counter is
 
   signal l_cnt      : integer range 0 to max_cnt;
-  signal l_cnt_next : integer range 0 to max_cnt;
+  signal l_cnt_next : integer range 0 to max_cnt + 1;
   signal l_ld_cnt   : std_logic_vector(1 downto 0);  -- Temp signal for select statement
   
 begin  -- architecture behaviour

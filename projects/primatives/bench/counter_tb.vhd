@@ -6,7 +6,7 @@
 -- Author     : Jansen  <jansen@jansen-M1022E>
 -- Company    : 
 -- Created    : 2012-02-23
--- Last update: 2012-02-24
+-- Last update: 2012-02-25
 -- Platform   : 
 -- Standard   : VHDL'93
 -------------------------------------------------------------------------------
@@ -44,7 +44,6 @@ architecture stimulus of counter_tb is
   signal load_cnt : integer range 0 to max_cnt;
   signal cnt      : integer range 0 to max_cnt;
 
-  -- clock
   signal done : boolean := FALSE;
 
 begin  -- architecture stimulus

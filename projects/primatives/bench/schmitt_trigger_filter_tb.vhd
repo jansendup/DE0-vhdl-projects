@@ -6,7 +6,7 @@
 -- Author     : Jansen  <jansen@jansen-M1022E>
 -- Company    : 
 -- Created    : 2012-02-24
--- Last update: 2012-02-24
+-- Last update: 2012-02-25
 -- Platform   : 
 -- Standard   : VHDL'93
 -------------------------------------------------------------------------------
@@ -83,7 +83,6 @@ begin  -- architecture stimulus
 
   sig_gen_proc : process
     constant SIG_PERIOD : time      := PERIOD * 25/3;
-    variable sig_clk    : std_logic := '1';
     variable sig_index  : integer   := 0;
   begin
     while sig_index < sig_length loop
