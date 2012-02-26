@@ -2,28 +2,27 @@ library ieee;
 use ieee.std_logic_1164.all;
 
 entity uart_receiver_fsm is
-  
-  generic (
-    N : integer);                       -- Number of data + parity bits.
 
   port (
     clk_i : in std_logic;
     rst_i : in std_logic;
 
     -- FSM inputs --
-    rx_i           : in std_logic;
-    sample_tick_i  : in std_logic;
-    sc_cnt_i       : in integer range 0 to 15;  -- Counts sample ticks.
-    bc_cnt_i       : in integer range 0 to N;  -- Counts number of bits received.
-    trans_length_i : in integer range 7 to N;  -- Amount of bits to be received
+    rx_i          : in std_logic;
+    sample_tick_i : in std_logic;
+    sc_cnt_i      : in integer range 0 to 31;  -- Counts sample ticks.
+    r_last_bit_i  : in std_logic;
 
     -- FSM outputs --
-    sc_cnt_en_o    : out std_logic;
-    sc_load_o      : out std_logic;
-    bc_cnt_en_o    : out std_logic;
-    bc_load_o      : out std_logic;
-    rx_shift_en_o  : out std_logic;     -- Enables shift of rx shift reg.
-    rx_done_tick_o : out std_logic);
+    sc_cnt_en_o      : out std_logic;
+    sc_load_o        : out std_logic;
+    r_shift_nLoad_o  : out std_logic;
+    r_shift_en_o     : out std_logic;   -- Enables shift of rx shift reg.
+    rx_done_tick_o   : out std_logic;
+    frame_err_tick_o : out std_logic;
+
+    -- Configuration inputs --
+    stop_bits_num_i : in std_logic_vector(1 downto 0));
 
 end entity uart_receiver_fsm;
 
@@ -48,14 +47,18 @@ architecture behaviour of uart_receiver_fsm is
   signal l_stop_idle_trans  : std_logic;
 
   -- Counter comparison signals --
-  signal l_sc_cnt_ge_7            : std_logic;  -- Sample count greater or equal than 7
-  signal l_sc_cnt_ge_15           : std_logic;  -- Sample count greater or equal than 15
-  signal l_bc_cnt_eq_trans_length : std_logic;  -- Bits counter equal to the number of
-                                        -- bits expected in transmision.
+  signal l_sc_cnt_ge_7  : std_logic;    -- Sample count greater or equal than 7
+  signal l_sc_cnt_ge_15 : std_logic;  -- Sample count greater or equal than 15
+  signal l_sc_cnt_ge_19 : std_logic;  -- Sample count greater or equal than 19
+  signal l_sc_cnt_ge_31 : std_logic;  -- Sample count greater or equal than 31
 
   signal l_center_of_next_bit  : std_logic;
   signal l_center_of_start_bit : std_logic;
+  signal l_center_of_stop_bit  : std_logic;
+  signal l_stop_comp_src       : std_logic;
   signal l_sample_rx           : std_logic;  -- High when Rx line should be sampled.
+
+  signal l_last_dbit : std_logic;
   
 begin  -- architecture behaviour
 
@@ -107,15 +110,21 @@ begin  -- architecture behaviour
     end case;
   end process next_state_proc;
 
+  with stop_bits_num_i select
+    l_stop_comp_src <=
+    l_sc_cnt_ge_15 when "00",
+    l_sc_cnt_ge_19 when "01",
+    l_sc_cnt_ge_31 when others;
 
   l_center_of_start_bit <= sample_tick_i and l_sc_cnt_ge_7;
   l_center_of_next_bit  <= sample_tick_i and l_sc_cnt_ge_15;
+  l_center_of_stop_bit  <= sample_tick_i and l_stop_comp_src;
 
                                         -- Next state conditions signals --
   l_idle_start_cond <= sample_tick_i and (not rx_i);
   l_start_data_cond <= l_center_of_start_bit;
-  l_data_stop_cond  <= sample_tick_i and l_bc_cnt_eq_trans_length;
-  l_stop_idle_cond  <= l_center_of_next_bit;
+  l_data_stop_cond  <= l_center_of_next_bit and r_last_bit_i;
+  l_stop_idle_cond  <= l_center_of_stop_bit;
 
                                         -- Next state transition signals --
   l_idle_start_trans <= '1' when l_idle_start_cond = '1' and l_state = IDLE_S  else '0';
@@ -124,31 +133,30 @@ begin  -- architecture behaviour
   l_stop_idle_trans  <= '1' when l_stop_idle_cond = '1' and l_state = STOP_S   else '0';
 
                                         -- Counter comparisons --
-  l_sc_cnt_ge_7            <= '1' when sc_cnt_i >= 7              else '0';
-  l_sc_cnt_ge_15           <= '1' when sc_cnt_i >= 15             else '0';
-  l_bc_cnt_eq_trans_length <= '1' when bc_cnt_i >= trans_length_i else '0';
+  l_sc_cnt_ge_7  <= '1' when sc_cnt_i >= 7  else '0';
+  l_sc_cnt_ge_15 <= '1' when sc_cnt_i >= 15 else '0';
+  l_sc_cnt_ge_19 <= '1' when sc_cnt_i >= 19 else '0';
+  l_sc_cnt_ge_31 <= '1' when sc_cnt_i >= 31 else '0';
 
                                         -- Rx sample control signal --
   l_sample_rx <= '1' when l_center_of_next_bit = '1' and l_state = DATA_S else '0';
 
-                                        -- Sample counter control signals --
+                                          -- Sample counter control signals --
   sc_cnt_en_o <= '1' when sample_tick_i = '1' and l_state /= IDLE_S else '0';
   sc_load_o   <= '1' when
                  l_sample_rx = '1' or
                  l_idle_start_trans = '1' or
                  l_start_data_trans = '1' or
-                 l_data_stop_trans = '1' or
-                 l_stop_idle_trans = '1'
+                 l_data_stop_trans = '1'  -- or
+                 --l_stop_idle_trans = '1'
                  else '0';
 
-                                        -- Bits counter control signals --
-  bc_cnt_en_o <= l_sample_rx;
-  bc_load_o   <= l_start_data_trans;
+  r_shift_nLoad_o <= not l_start_data_trans;
 
-                                        -- Receive register shift enable --
-  rx_shift_en_o <= l_sample_rx;
+  r_shift_en_o <= l_sample_rx;
 
-  rx_done_tick_o <= l_stop_idle_trans and rx_i;  -- RX done when stop bit was
-                                                 -- received.
+  rx_done_tick_o   <= l_stop_idle_trans and rx_i;  -- RX done when stop bit was
+                                                   -- received.
+  frame_err_tick_o <= l_stop_idle_trans and (not rx_i);
   
 end architecture behaviour;

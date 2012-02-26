@@ -9,7 +9,6 @@ entity shift_reg is
         shift_nLoad_i : in  std_logic;
         shift_en_i    : in  std_logic;
         serial_i      : in  std_logic;
-        serial_o      : out std_logic;
         data_i        : in  std_logic_vector(N - 1 downto 0);
         data_o        : out std_logic_vector(N - 1 downto 0));
 end shift_reg;
@@ -29,7 +28,6 @@ begin
       
       if(shift_nLoad_i = '1' and shift_en_i = '1') then
         reg      <= serial_i & reg(N - 1 downto 1);
-        serial_o <= reg(0);
       end if;
       if(shift_nLoad_i = '0') then
         reg <= data_i;

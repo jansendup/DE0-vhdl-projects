@@ -73,10 +73,13 @@ end uart_de0;
 
 architecture structure of uart_de0 is
 
-  signal rst : std_logic;
+  signal rst         : std_logic;
+  signal err_ind_rst : std_logic;
 
-  signal rx_done_tick : std_logic;
-  signal rx_data      : std_logic_vector(7 downto 0);
+  signal rx_data         : std_logic_vector(7 downto 0);
+  signal rx_done_tick    : std_logic;
+  signal frame_err_tick  : std_logic;
+  signal parity_err_tick : std_logic;
 
   signal tx_done_tick : std_logic;
   
@@ -84,21 +87,26 @@ begin
 
   uart_1 : entity work.uart
     generic map (
-      MAX_DATA_BITS       => 8,
-      MAX_PARITY_BITS     => 0,
-      MAX_CYCLES_PER_TICK => 80)
+      MAX_CYCLES_PER_TICK => 255)
     port map (
-      clk_i             => CLOCK_50,
-      rst_i             => rst,
-      en_i              => '1',
-      rx_i              => UART_RXD,
-      rx_done_tick_o    => rx_done_tick,
-      rx_data_o         => rx_data,
-      tx_o              => UART_TXD,
-      tx_done_tick_o    => tx_done_tick,
-      tx_start_tick_i   => '0',
-      tx_data_i         => x"00",
-      trans_length_i    => 8,
+      clk_i           => CLOCK_50,
+      rst_i           => rst,
+      en_i            => '1',
+      rx_i            => UART_RXD,
+      rx_done_tick_o  => rx_done_tick,
+      rx_data_o       => rx_data,
+      tx_o            => UART_TXD,
+      tx_done_tick_o  => tx_done_tick,
+      tx_start_tick_i => '0',
+      tx_data_i       => x"00",
+
+      rx_frame_err_tick_o => frame_err_tick,
+      rx_par_err_tick_o   => parity_err_tick,
+
+      par_en_i        => SW(3),
+      par_odd_nEven_i => SW(2),
+      stop_bits_num_i => SW(1 downto 0),
+
       cycles_per_tick_i => 80);
 
   reset_control_1 : entity work.reset_control
@@ -106,8 +114,17 @@ begin
       clk_i => CLOCK_50,
       rst_o => rst);
 
+  error_indicator_1 : entity work.error_indicator
+    port map (
+      clk_i             => CLOCK_50,
+      rst_i             => err_ind_rst,
+      frame_err_tick_i  => frame_err_tick,
+      parity_err_tick_i => parity_err_tick,
+      frame_err_led_o   => LEDG(8),
+      parity_err_led_o  => LEDG(9));
+
+  err_ind_rst      <= rst or (not KEY(0));
   LEDG(7 downto 0) <= rx_data;
-  LEDG(9)          <= UART_RXD;
 
 end;
 
@@ -134,4 +151,63 @@ begin  -- architecture behaviour
 
   rst_o <= '1' when count < 127 else '0';
   
+end architecture behaviour;
+
+library ieee;
+use ieee.std_logic_1164.all;
+entity error_indicator is
+  
+  port (
+    clk_i : in std_logic;
+    rst_i : in std_logic;
+
+    frame_err_tick_i  : in std_logic;
+    parity_err_tick_i : in std_logic;
+
+    frame_err_led_o  : out std_logic;
+    parity_err_led_o : out std_logic);
+
+end entity error_indicator;
+
+architecture behaviour of error_indicator is
+
+  signal l_flash      : std_logic;
+  signal l_frame_err  : std_logic;
+  signal l_parity_err : std_logic;
+
+  signal l_flash_counter : integer range 0 to 12500000;
+  
+begin  -- architecture behaviour
+
+  catch_ticks_proc : process (clk_i, rst_i) is
+  begin  -- process catch_ticks_proc
+    if rst_i = '1' then                     -- asynchronous reset (active high)
+      l_frame_err  <= '0';
+      l_parity_err <= '0';
+    elsif clk_i'event and clk_i = '1' then  -- rising clock edge
+      if frame_err_tick_i = '1' then
+        l_frame_err <= '1';
+      end if;
+      if parity_err_tick_i = '1' then
+        l_parity_err <= '1';
+      end if;
+    end if;
+  end process catch_ticks_proc;
+
+  flash_proc : process (clk_i, rst_i) is
+  begin  -- process flash_proc
+    if rst_i = '1' then                     -- asynchronous reset (active high)
+      l_flash <= '1';
+    elsif clk_i'event and clk_i = '1' then  -- rising clock edge
+      l_flash_counter <= l_flash_counter + 1;
+      if l_flash_counter >= 12500000 then
+        l_flash_counter <= 0;
+        l_flash         <= not l_flash;
+      end if;
+    end if;
+  end process flash_proc;
+
+  frame_err_led_o  <= l_frame_err and l_flash;
+  parity_err_led_o <= l_parity_err and l_flash;
+
 end architecture behaviour;

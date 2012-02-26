@@ -6,7 +6,7 @@
 -- Author     : Jansen  <jansen@jansen-M1022E>
 -- Company    : 
 -- Created    : 2012-02-25
--- Last update: 2012-02-25
+-- Last update: 2012-02-26
 -- Platform   : 
 -- Standard   : VHDL'93
 -------------------------------------------------------------------------------
@@ -32,47 +32,53 @@ end entity uart_receiver_tb;
 
 architecture stimulus of uart_receiver_tb is
 
-  -- component generics
-  constant N : integer := 8;
-
   -- Constants
   constant PERIOD    : time    := 20 NS;
   constant CLK_DIV   : integer := 434;
   constant SIG_COUNT : integer := 3;
 
-  type   sig_array is array(0 to SIG_COUNT-1) of std_logic_vector(0 to N+2);
+  type   sig_array is array(0 to SIG_COUNT-1) of std_logic_vector(0 to 12);
   signal raw_sigs : sig_array;
   signal sig_cnt  : integer := 0;
 
   -- component ports
 
-  signal clk          : std_logic;
-  signal rst          : std_logic;
-  signal rx           : std_logic;
-  signal sample_tick  : std_logic;
-  signal data         : std_logic_vector(N-1 downto 0);
-  signal rx_done_tick : std_logic;
+  signal clk            : std_logic;
+  signal rst            : std_logic;
+  signal rx             : std_logic;
+  signal sample_tick    : std_logic;
+  signal data           : std_logic_vector(7 downto 0);
+  signal rx_done_tick   : std_logic;
+  signal frame_err_tick : std_logic;
+  signal par_err_tick   : std_logic;
+  signal par_en         : std_logic;
+  signal par_odd_nEven  : std_logic;
+  signal stop_bits_num  : std_logic_vector(1 downto 0);
 
   signal done : boolean := FALSE;
 
 begin  -- architecture stimulus
 
-  raw_sigs(0) <= "10101010101";
-  raw_sigs(1) <= "10010101010";
-  raw_sigs(2) <= "10111100001";
+  raw_sigs(0) <= "1010101010111";
+  raw_sigs(1) <= "1001010101101";
+  raw_sigs(2) <= "1011110000111";
 
   -- component instantiation
   DUT : entity work.uart_receiver
-    generic map (
-      N => N)
     port map (
-      clk_i          => clk,
-      rst_i          => rst,
-      rx_i           => rx,
-      sample_tick_i  => sample_tick,
-      data_o         => data,
-      rx_done_tick_o => rx_done_tick,
-      trans_length_i => N);
+      clk_i         => clk,
+      rst_i         => rst,
+      rx_i          => rx,
+      sample_tick_i => sample_tick,
+      data_o        => data,
+
+      rx_done_tick_o    => rx_done_tick,
+      frame_err_tick_o  => frame_err_tick,
+      parity_err_tick_o => par_err_tick,
+
+      par_en_i        => par_en,
+      par_odd_nEven_i => par_odd_nEven,
+      stop_bits_num_i => stop_bits_num);
 
   -- clock generation
   clk_gen_proc : process
@@ -101,9 +107,11 @@ begin  -- architecture stimulus
   -- waveform generation
   wave_gen_proc : process
   begin
-    rst <= '1';
+    rst           <= '1';
+    par_en        <= '1';
+    stop_bits_num <= "01";
     wait for PERIOD;
-    rst <= '0';
+    rst           <= '0';
     wait;
   end process wave_gen_proc;
 
@@ -119,7 +127,7 @@ begin  -- architecture stimulus
     wait for SIG_START_TIME;
     while sig_cnt_var < SIG_COUNT loop
       sig_index := 0;
-      while sig_index < N+2 loop
+      while sig_index < 13 loop
         rx        <= raw_sigs(sig_cnt_var)(sig_index);
         sig_index := sig_index + 1;
         wait for SIG_PERIOD;
@@ -141,8 +149,8 @@ begin  -- architecture stimulus
       for i in data'low to data'high loop
         reverse(i) := data(i);
       end loop;
-      
-      assert reverse = raw_sigs(sig_cnt-1)(2 to N+1)
+
+      assert reverse(data'low to data'high) = raw_sigs(sig_cnt)(2 to 9)
         report "Sent data was not received correctly."
         severity FAILURE;
       

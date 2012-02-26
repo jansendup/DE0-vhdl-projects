@@ -1,5 +1,5 @@
 Flow report for uart_de0
-Sat Feb 25 22:05:01 2012
+Sun Feb 26 19:28:54 2012
 Quartus II Version 11.0 Build 157 04/27/2011 SJ Web Edition
 
 
@@ -38,17 +38,17 @@ applicable agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Flow Summary                                                                  ;
 +------------------------------------+------------------------------------------+
-; Flow Status                        ; Successful - Sat Feb 25 22:05:01 2012    ;
+; Flow Status                        ; Successful - Sun Feb 26 19:28:54 2012    ;
 ; Quartus II Version                 ; 11.0 Build 157 04/27/2011 SJ Web Edition ;
 ; Revision Name                      ; uart_de0                                 ;
 ; Top-level Entity Name              ; uart_de0                                 ;
 ; Family                             ; Cyclone III                              ;
 ; Device                             ; EP3C16F484C6                             ;
 ; Timing Models                      ; Final                                    ;
-; Total logic elements               ; 53 / 15,408 ( < 1 % )                    ;
-;     Total combinational functions  ; 45 / 15,408 ( < 1 % )                    ;
-;     Dedicated logic registers      ; 35 / 15,408 ( < 1 % )                    ;
-; Total registers                    ; 44                                       ;
+; Total logic elements               ; 97 / 15,408 ( 1 % )                      ;
+;     Total combinational functions  ; 96 / 15,408 ( 1 % )                      ;
+;     Dedicated logic registers      ; 61 / 15,408 ( < 1 % )                    ;
+; Total registers                    ; 70                                       ;
 ; Total pins                         ; 252 / 347 ( 73 % )                       ;
 ; Total virtual pins                 ; 0                                        ;
 ; Total memory bits                  ; 0 / 516,096 ( 0 % )                      ;
@@ -62,33 +62,34 @@ applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 02/25/2012 22:03:07 ;
+; Start date & time ; 02/26/2012 19:27:19 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; uart_de0            ;
 +-------------------+---------------------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------+
-; Flow Non-Default Global Settings                                                                                                          ;
-+-------------------------------------+------------------------------------------------------+---------------+-------------+----------------+
-; Assignment Name                     ; Value                                                ; Default Value ; Entity Name ; Section Id     ;
-+-------------------------------------+------------------------------------------------------+---------------+-------------+----------------+
-; COMPILER_SIGNATURE_ID               ; 155118484109.133020018603437                         ; --            ; --          ; --             ;
-; EDA_OUTPUT_DATA_FORMAT              ; Vhdl                                                 ; --            ; --          ; eda_simulation ;
-; EDA_SIMULATION_TOOL                 ; ModelSim-Altera (VHDL)                               ; <None>        ; --          ; --             ;
-; MAX_CORE_JUNCTION_TEMP              ; 85                                                   ; --            ; --          ; --             ;
-; MIN_CORE_JUNCTION_TEMP              ; 0                                                    ; --            ; --          ; --             ;
-; MISC_FILE                           ; /home/jansen/vhdl/projects/uart/backend/uart_de0.dpf ; --            ; --          ; --             ;
-; OUTPUT_IO_TIMING_FAR_END_VMEAS      ; Half Signal Swing                                    ; --            ; --          ; --             ;
-; OUTPUT_IO_TIMING_FAR_END_VMEAS      ; Half Signal Swing                                    ; --            ; --          ; --             ;
-; OUTPUT_IO_TIMING_NEAR_END_VMEAS     ; Half Vccio                                           ; --            ; --          ; --             ;
-; OUTPUT_IO_TIMING_NEAR_END_VMEAS     ; Half Vccio                                           ; --            ; --          ; --             ;
-; PARTITION_COLOR                     ; 16764057                                             ; --            ; --          ; Top            ;
-; PARTITION_FITTER_PRESERVATION_LEVEL ; PLACEMENT_AND_ROUTING                                ; --            ; --          ; Top            ;
-; PARTITION_NETLIST_TYPE              ; SOURCE                                               ; --            ; --          ; Top            ;
-; POWER_BOARD_THERMAL_MODEL           ; None (CONSERVATIVE)                                  ; --            ; --          ; --             ;
-; POWER_PRESET_COOLING_SOLUTION       ; 23 MM HEAT SINK WITH 200 LFPM AIRFLOW                ; --            ; --          ; --             ;
-+-------------------------------------+------------------------------------------------------+---------------+-------------+----------------+
++----------------------------------------------------------------------------------------------------------------------------+
+; Flow Non-Default Global Settings                                                                                           ;
++-------------------------------------+---------------------------------------+---------------+-------------+----------------+
+; Assignment Name                     ; Value                                 ; Default Value ; Entity Name ; Section Id     ;
++-------------------------------------+---------------------------------------+---------------+-------------+----------------+
+; COMPILER_SIGNATURE_ID               ; 155118484109.133027723808148          ; --            ; --          ; --             ;
+; EDA_OUTPUT_DATA_FORMAT              ; Vhdl                                  ; --            ; --          ; eda_simulation ;
+; EDA_SIMULATION_TOOL                 ; ModelSim-Altera (VHDL)                ; <None>        ; --          ; --             ;
+; MAX_CORE_JUNCTION_TEMP              ; 85                                    ; --            ; --          ; --             ;
+; MIN_CORE_JUNCTION_TEMP              ; 0                                     ; --            ; --          ; --             ;
+; OUTPUT_IO_TIMING_FAR_END_VMEAS      ; Half Signal Swing                     ; --            ; --          ; --             ;
+; OUTPUT_IO_TIMING_FAR_END_VMEAS      ; Half Signal Swing                     ; --            ; --          ; --             ;
+; OUTPUT_IO_TIMING_NEAR_END_VMEAS     ; Half Vccio                            ; --            ; --          ; --             ;
+; OUTPUT_IO_TIMING_NEAR_END_VMEAS     ; Half Vccio                            ; --            ; --          ; --             ;
+; PARTITION_COLOR                     ; 16764057                              ; --            ; --          ; Top            ;
+; PARTITION_FITTER_PRESERVATION_LEVEL ; PLACEMENT_AND_ROUTING                 ; --            ; --          ; Top            ;
+; PARTITION_NETLIST_TYPE              ; SOURCE                                ; --            ; --          ; Top            ;
+; POWER_BOARD_THERMAL_MODEL           ; None (CONSERVATIVE)                   ; --            ; --          ; --             ;
+; POWER_PRESET_COOLING_SOLUTION       ; 23 MM HEAT SINK WITH 200 LFPM AIRFLOW ; --            ; --          ; --             ;
+; RTLV_GROUP_RELATED_NODES            ; Off                                   ; On            ; --          ; --             ;
+; RTLV_SIMPLIFIED_LOGIC               ; Off                                   ; On            ; --          ; --             ;
++-------------------------------------+---------------------------------------+---------------+-------------+----------------+
 
 
 +-------------------------------------------------------------------------------------------------------------------------------+
@@ -96,12 +97,12 @@ applicable agreement for further details.
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name               ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis      ; 00:00:15     ; 1.0                     ; --                  ; 00:00:11                           ;
-; Fitter                    ; 00:00:38     ; 1.0                     ; --                  ; 00:00:32                           ;
-; Assembler                 ; 00:00:16     ; 1.0                     ; --                  ; 00:00:07                           ;
-; TimeQuest Timing Analyzer ; 00:00:26     ; 1.0                     ; --                  ; 00:00:10                           ;
-; EDA Netlist Writer        ; 00:00:04     ; 1.0                     ; --                  ; 00:00:04                           ;
-; Total                     ; 00:01:39     ; --                      ; --                  ; 00:01:04                           ;
+; Analysis & Synthesis      ; 00:00:13     ; 1.0                     ; --                  ; 00:00:11                           ;
+; Fitter                    ; 00:00:35     ; 1.0                     ; --                  ; 00:00:32                           ;
+; Assembler                 ; 00:00:10     ; 1.0                     ; --                  ; 00:00:08                           ;
+; TimeQuest Timing Analyzer ; 00:00:15     ; 1.0                     ; --                  ; 00:00:11                           ;
+; EDA Netlist Writer        ; 00:00:06     ; 1.0                     ; --                  ; 00:00:05                           ;
+; Total                     ; 00:01:19     ; --                      ; --                  ; 00:01:07                           ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 

@@ -6,7 +6,7 @@
 -- Author     : Jansen  <jansen@jansen-M1022E>
 -- Company    : 
 -- Created    : 2012-02-24
--- Last update: 2012-02-24
+-- Last update: 2012-02-26
 -- Platform   : 
 -- Standard   : VHDL'93
 -------------------------------------------------------------------------------
@@ -38,7 +38,6 @@ architecture stimulus of shift_reg_tb is
   signal shift_nLoad : std_logic;
   signal shift_en    : std_logic;
   signal serial_in   : std_logic;
-  signal serial_out  : std_logic;
   signal data_in     : std_logic_vector(N - 1 downto 0);
   signal data_out    : std_logic_vector(N - 1 downto 0);
 
@@ -57,7 +56,6 @@ begin  -- architecture stimulus
       shift_nLoad_i => shift_nLoad,
       shift_en_i    => shift_en,
       serial_i      => serial_in,
-      serial_o      => serial_out,
       data_i        => data_in,
       data_o        => data_out);
 
