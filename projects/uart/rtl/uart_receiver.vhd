@@ -15,7 +15,7 @@ entity uart_receiver is
     rx_done_tick_o : out std_logic;
 
     -- Configuration inputs --
-    trans_length_i : in integer range 0 to N  -- Number of data + parity bits
+    trans_length_i : in integer range 7 to N  -- Number of data + parity bits
                                               -- to be received
     );
 

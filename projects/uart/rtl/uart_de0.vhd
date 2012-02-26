@@ -78,7 +78,7 @@ architecture structure of uart_de0 is
   signal rx_done_tick : std_logic;
   signal rx_data      : std_logic_vector(7 downto 0);
 
-  signal tx_reg_empty : std_logic;
+  signal tx_done_tick : std_logic;
   
 begin
 
@@ -95,7 +95,7 @@ begin
       rx_done_tick_o    => rx_done_tick,
       rx_data_o         => rx_data,
       tx_o              => UART_TXD,
-      tx_reg_empty_o    => tx_reg_empty,
+      tx_done_tick_o    => tx_done_tick,
       tx_start_tick_i   => '0',
       tx_data_i         => x"00",
       trans_length_i    => 8,

@@ -15,7 +15,7 @@ entity uart_receiver_fsm is
     sample_tick_i  : in std_logic;
     sc_cnt_i       : in integer range 0 to 15;  -- Counts sample ticks.
     bc_cnt_i       : in integer range 0 to N;  -- Counts number of bits received.
-    trans_length_i : in integer range 0 to N;  -- Amount of bits to be received
+    trans_length_i : in integer range 7 to N;  -- Amount of bits to be received
 
     -- FSM outputs --
     sc_cnt_en_o    : out std_logic;
