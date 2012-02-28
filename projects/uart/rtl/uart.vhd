@@ -12,10 +12,10 @@ entity uart is
        rx_done_tick_o : out std_logic;
        rx_data_o      : out std_logic_vector(7 downto 0);
 
-       tx_o            : out std_logic;
-       tx_done_tick_o  : out std_logic;
-       tx_start_tick_i : in  std_logic;
-       tx_data_i       : in  std_logic_vector(7 downto 0);
+       tx_o           : out std_logic;
+       tx_done_tick_o : out std_logic;
+       tx_start_i     : in  std_logic;
+       tx_data_i      : in  std_logic_vector(7 downto 0);
 
        -- Error signal ticks --
        rx_frame_err_tick_o : out std_logic;
@@ -49,6 +49,20 @@ begin
       par_odd_nEven_i   => par_odd_nEven_i,
       stop_bits_num_i   => stop_bits_num_i
       );
+
+  uart_transmitter_1: entity work.uart_transmitter
+    port map (
+      clk_i           => clk_i,
+      rst_i           => rst_i,
+      sample_tick_i   => bg_tick,
+      data_i          => tx_data_i,
+      tx_start_i      => tx_start_i,
+      tx_done_tick_o  => tx_done_tick_o,
+      --tx_idle_o       => tx_idle_o,
+      tx_o            => tx_o,
+      par_en_i        => par_en_i,
+      par_odd_nEven_i => par_odd_nEven_i,
+      stop_bits_num_i => stop_bits_num_i);
 
   baud_rate_generator_1 : entity work.baud_rate_generator
     generic map (

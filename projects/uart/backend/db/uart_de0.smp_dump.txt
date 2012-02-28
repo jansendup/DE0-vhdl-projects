@@ -1,4 +1,11 @@
 
+State Machine - |uart_de0|uart:uart_1|uart_transmitter:uart_transmitter_1|uart_transmitter_fsm:uart_transmitter_fsm_1|state
+Name state.START_S state.STOP_S state.DATA_S state.IDLE_S 
+state.IDLE_S 0 0 0 0 
+state.DATA_S 0 0 1 1 
+state.STOP_S 0 1 0 1 
+state.START_S 1 0 0 1 
+
 State Machine - |uart_de0|uart:uart_1|uart_receiver:uart_receiver_1|uart_receiver_fsm:uart_receiver_fsm_1|l_state
 Name l_state.STOP_S l_state.DATA_S l_state.START_S l_state.IDLE_S 
 l_state.IDLE_S 0 0 0 0 

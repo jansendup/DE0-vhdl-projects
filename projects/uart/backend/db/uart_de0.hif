@@ -347,6 +347,7 @@ USR
 }
 # hierarchies {
 uart:uart_1|uart_receiver:uart_receiver_1|counter:sample_counter
+uart:uart_1|uart_transmitter:uart_transmitter_1|counter:sample_ticks_counter
 }
 # macro_sequence
 
@@ -383,122 +384,6 @@ USR
 }
 # hierarchies {
 uart:uart_1|uart_receiver:uart_receiver_1|uart_receiver_fsm:uart_receiver_fsm_1
-}
-# macro_sequence
-
-# end
-# entity
-uart
-# storage
-db|uart_de0.(1).cnf
-db|uart_de0.(1).cnf
-# logic_option {
-AUTO_RAM_RECOGNITION
-ON
-}
-# case_insensitive
-# source_file
-|home|jansen|vhdl|projects|uart|rtl|uart.vhd
-ed8412742985462f64b71f9213b51ea
-5
-# internal_option {
-HDL_INITIAL_FANOUT_LIMIT
-OFF
-AUTO_RESOURCE_SHARING
-OFF
-AUTO_RAM_RECOGNITION
-ON
-AUTO_ROM_RECOGNITION
-ON
-}
-# user_parameter {
-max_cycles_per_tick
-255
-PARAMETER_SIGNED_DEC
-USR
- constraint(rx_data_o)
-7 downto 0
-PARAMETER_STRING
-USR
- constraint(tx_data_i)
-7 downto 0
-PARAMETER_STRING
-USR
- constraint(stop_bits_num_i)
-1 downto 0
-PARAMETER_STRING
-USR
-}
-# include_file {
-|home|jansen|vhdl|projects|primatives|rtl|shift_reg.vhd
-bed8c33240419e93ef55a1a25e621f
-|home|jansen|vhdl|projects|primatives|rtl|schmitt_trigger_filter.vhd
-a9c4de68b6cd89972e559d3164670
-|home|jansen|vhdl|projects|primatives|rtl|counter.vhd
-a928111c22b5e055fcae84a595275a5
-|home|jansen|vhdl|projects|uart|rtl|parity_generator.vhd
-bb8df95f8a28ef4710c053a9ea410
-|home|jansen|vhdl|projects|uart|rtl|baud_rate_generator.vhd
-70df812eba11ac18cc5a1b9fa5b18e
-|home|jansen|vhdl|projects|uart|rtl|uart_receiver.vhd
-f0ac1f7bc9641efe25e436e6c1acca22
-|home|jansen|vhdl|projects|uart|rtl|uart_receiver_fsm.vhd
-f4a18ee1f13d62cc3dbf8e73cb649e5e
-}
-# hierarchies {
-uart:uart_1
-}
-# macro_sequence
-
-# end
-# entity
-uart_receiver
-# storage
-db|uart_de0.(2).cnf
-db|uart_de0.(2).cnf
-# logic_option {
-AUTO_RAM_RECOGNITION
-ON
-}
-# case_insensitive
-# source_file
-|home|jansen|vhdl|projects|uart|rtl|uart_receiver.vhd
-f0ac1f7bc9641efe25e436e6c1acca22
-5
-# internal_option {
-HDL_INITIAL_FANOUT_LIMIT
-OFF
-AUTO_RESOURCE_SHARING
-OFF
-AUTO_RAM_RECOGNITION
-ON
-AUTO_ROM_RECOGNITION
-ON
-}
-# user_parameter {
- constraint(data_o)
-7 downto 0
-PARAMETER_STRING
-USR
- constraint(stop_bits_num_i)
-1 downto 0
-PARAMETER_STRING
-USR
-}
-# include_file {
-|home|jansen|vhdl|projects|primatives|rtl|shift_reg.vhd
-bed8c33240419e93ef55a1a25e621f
-|home|jansen|vhdl|projects|primatives|rtl|schmitt_trigger_filter.vhd
-a9c4de68b6cd89972e559d3164670
-|home|jansen|vhdl|projects|primatives|rtl|counter.vhd
-a928111c22b5e055fcae84a595275a5
-|home|jansen|vhdl|projects|uart|rtl|parity_generator.vhd
-bb8df95f8a28ef4710c053a9ea410
-|home|jansen|vhdl|projects|uart|rtl|uart_receiver_fsm.vhd
-f4a18ee1f13d62cc3dbf8e73cb649e5e
-}
-# hierarchies {
-uart:uart_1|uart_receiver:uart_receiver_1
 }
 # macro_sequence
 
@@ -624,6 +509,224 @@ uart:uart_1|baud_rate_generator:baud_rate_generator_1|counter:cycles_counter
 
 # end
 # entity
+uart_transmitter
+# storage
+db|uart_de0.(15).cnf
+db|uart_de0.(15).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+|home|jansen|vhdl|projects|uart|rtl|uart_transmitter.vhd
+9ec3759161c4ce3b439d11fc32cd958
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# user_parameter {
+ constraint(data_i)
+7 downto 0
+PARAMETER_STRING
+USR
+ constraint(stop_bits_num_i)
+1 downto 0
+PARAMETER_STRING
+USR
+}
+# include_file {
+|home|jansen|vhdl|projects|primatives|rtl|shift_reg.vhd
+bed8c33240419e93ef55a1a25e621f
+|home|jansen|vhdl|projects|uart|rtl|parity_generator.vhd
+bb8df95f8a28ef4710c053a9ea410
+|home|jansen|vhdl|projects|uart|rtl|uart_transmitter_fsm.vhd
+c4e365345270f5bce1b7900e4dc9587
+|home|jansen|vhdl|projects|primatives|rtl|counter.vhd
+a928111c22b5e055fcae84a595275a5
+}
+# hierarchies {
+uart:uart_1|uart_transmitter:uart_transmitter_1
+}
+# macro_sequence
+
+# end
+# entity
+counter
+# storage
+db|uart_de0.(16).cnf
+db|uart_de0.(16).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+|home|jansen|vhdl|projects|primatives|rtl|counter.vhd
+a928111c22b5e055fcae84a595275a5
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# user_parameter {
+max_cnt
+9
+PARAMETER_SIGNED_DEC
+USR
+rst_val
+0
+PARAMETER_SIGNED_DEC
+USR
+}
+# hierarchies {
+uart:uart_1|uart_transmitter:uart_transmitter_1|counter:bits_counter
+}
+# macro_sequence
+
+# end
+# entity
+shift_reg
+# storage
+db|uart_de0.(17).cnf
+db|uart_de0.(17).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+|home|jansen|vhdl|projects|primatives|rtl|shift_reg.vhd
+bed8c33240419e93ef55a1a25e621f
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# user_parameter {
+n
+9
+PARAMETER_SIGNED_DEC
+USR
+reset_val
+000000000
+PARAMETER_UNSIGNED_BIN
+USR
+ constraint(reset_val)
+0 to 8
+PARAMETER_STRING
+USR
+ constraint(data_i)
+8 downto 0
+PARAMETER_STRING
+USR
+ constraint(data_o)
+8 downto 0
+PARAMETER_STRING
+USR
+}
+# hierarchies {
+uart:uart_1|uart_transmitter:uart_transmitter_1|shift_reg:t_shift_reg
+}
+# macro_sequence
+
+# end
+# entity
+parity_generator
+# storage
+db|uart_de0.(18).cnf
+db|uart_de0.(18).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+|home|jansen|vhdl|projects|uart|rtl|parity_generator.vhd
+bb8df95f8a28ef4710c053a9ea410
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# user_parameter {
+n
+8
+PARAMETER_SIGNED_DEC
+USR
+ constraint(din_i)
+7 downto 0
+PARAMETER_STRING
+USR
+}
+# hierarchies {
+uart:uart_1|uart_transmitter:uart_transmitter_1|parity_generator:parity_generator_1
+}
+# macro_sequence
+
+# end
+# entity
+uart_transmitter_fsm
+# storage
+db|uart_de0.(19).cnf
+db|uart_de0.(19).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+|home|jansen|vhdl|projects|uart|rtl|uart_transmitter_fsm.vhd
+c4e365345270f5bce1b7900e4dc9587
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# user_parameter {
+ constraint(stop_bits_num_i)
+1 downto 0
+PARAMETER_STRING
+USR
+}
+# hierarchies {
+uart:uart_1|uart_transmitter:uart_transmitter_1|uart_transmitter_fsm:uart_transmitter_fsm_1
+}
+# macro_sequence
+
+# end
+# entity
 uart_de0
 # storage
 db|uart_de0.(0).cnf
@@ -635,7 +738,7 @@ ON
 # case_insensitive
 # source_file
 |home|jansen|vhdl|projects|uart|rtl|uart_de0.vhd
-1dacf89e4de9937fca377f017175
+9bd195dacd9e66cde1b45741b9537de5
 5
 # internal_option {
 HDL_INITIAL_FANOUT_LIMIT
@@ -648,22 +751,26 @@ AUTO_ROM_RECOGNITION
 ON
 }
 # include_file {
-|home|jansen|vhdl|projects|primatives|rtl|schmitt_trigger_filter.vhd
-a9c4de68b6cd89972e559d3164670
+|home|jansen|vhdl|projects|uart|rtl|uart.vhd
+44c32a48536f4e32224b1d9cc0f7c0c
+|home|jansen|vhdl|projects|uart|rtl|uart_transmitter.vhd
+9ec3759161c4ce3b439d11fc32cd958
 |home|jansen|vhdl|projects|uart|rtl|uart_receiver_fsm.vhd
 f4a18ee1f13d62cc3dbf8e73cb649e5e
-|home|jansen|vhdl|projects|uart|rtl|parity_generator.vhd
-bb8df95f8a28ef4710c053a9ea410
-|home|jansen|vhdl|projects|uart|rtl|baud_rate_generator.vhd
-70df812eba11ac18cc5a1b9fa5b18e
+|home|jansen|vhdl|projects|uart|rtl|uart_receiver.vhd
+9fcac0e56446b63093553ec7dc78d
 |home|jansen|vhdl|projects|primatives|rtl|shift_reg.vhd
 bed8c33240419e93ef55a1a25e621f
+|home|jansen|vhdl|projects|uart|rtl|baud_rate_generator.vhd
+70df812eba11ac18cc5a1b9fa5b18e
+|home|jansen|vhdl|projects|uart|rtl|parity_generator.vhd
+bb8df95f8a28ef4710c053a9ea410
+|home|jansen|vhdl|projects|uart|rtl|uart_transmitter_fsm.vhd
+c4e365345270f5bce1b7900e4dc9587
+|home|jansen|vhdl|projects|primatives|rtl|schmitt_trigger_filter.vhd
+a9c4de68b6cd89972e559d3164670
 |home|jansen|vhdl|projects|primatives|rtl|counter.vhd
 a928111c22b5e055fcae84a595275a5
-|home|jansen|vhdl|projects|uart|rtl|uart_receiver.vhd
-f0ac1f7bc9641efe25e436e6c1acca22
-|home|jansen|vhdl|projects|uart|rtl|uart.vhd
-ed8412742985462f64b71f9213b51ea
 }
 # hierarchies {
 |
@@ -672,10 +779,130 @@ ed8412742985462f64b71f9213b51ea
 
 # end
 # entity
+uart
+# storage
+db|uart_de0.(1).cnf
+db|uart_de0.(1).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+|home|jansen|vhdl|projects|uart|rtl|uart.vhd
+44c32a48536f4e32224b1d9cc0f7c0c
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# user_parameter {
+max_cycles_per_tick
+255
+PARAMETER_SIGNED_DEC
+USR
+ constraint(rx_data_o)
+7 downto 0
+PARAMETER_STRING
+USR
+ constraint(tx_data_i)
+7 downto 0
+PARAMETER_STRING
+USR
+ constraint(stop_bits_num_i)
+1 downto 0
+PARAMETER_STRING
+USR
+}
+# include_file {
+|home|jansen|vhdl|projects|uart|rtl|uart_transmitter.vhd
+9ec3759161c4ce3b439d11fc32cd958
+|home|jansen|vhdl|projects|uart|rtl|uart_receiver_fsm.vhd
+f4a18ee1f13d62cc3dbf8e73cb649e5e
+|home|jansen|vhdl|projects|uart|rtl|uart_receiver.vhd
+9fcac0e56446b63093553ec7dc78d
+|home|jansen|vhdl|projects|primatives|rtl|shift_reg.vhd
+bed8c33240419e93ef55a1a25e621f
+|home|jansen|vhdl|projects|uart|rtl|baud_rate_generator.vhd
+70df812eba11ac18cc5a1b9fa5b18e
+|home|jansen|vhdl|projects|uart|rtl|parity_generator.vhd
+bb8df95f8a28ef4710c053a9ea410
+|home|jansen|vhdl|projects|uart|rtl|uart_transmitter_fsm.vhd
+c4e365345270f5bce1b7900e4dc9587
+|home|jansen|vhdl|projects|primatives|rtl|schmitt_trigger_filter.vhd
+a9c4de68b6cd89972e559d3164670
+|home|jansen|vhdl|projects|primatives|rtl|counter.vhd
+a928111c22b5e055fcae84a595275a5
+}
+# hierarchies {
+uart:uart_1
+}
+# macro_sequence
+
+# end
+# entity
+uart_receiver
+# storage
+db|uart_de0.(2).cnf
+db|uart_de0.(2).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+|home|jansen|vhdl|projects|uart|rtl|uart_receiver.vhd
+9fcac0e56446b63093553ec7dc78d
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# user_parameter {
+ constraint(data_o)
+7 downto 0
+PARAMETER_STRING
+USR
+ constraint(stop_bits_num_i)
+1 downto 0
+PARAMETER_STRING
+USR
+}
+# include_file {
+|home|jansen|vhdl|projects|uart|rtl|uart_receiver_fsm.vhd
+f4a18ee1f13d62cc3dbf8e73cb649e5e
+|home|jansen|vhdl|projects|primatives|rtl|shift_reg.vhd
+bed8c33240419e93ef55a1a25e621f
+|home|jansen|vhdl|projects|uart|rtl|parity_generator.vhd
+bb8df95f8a28ef4710c053a9ea410
+|home|jansen|vhdl|projects|primatives|rtl|schmitt_trigger_filter.vhd
+a9c4de68b6cd89972e559d3164670
+|home|jansen|vhdl|projects|primatives|rtl|counter.vhd
+a928111c22b5e055fcae84a595275a5
+}
+# hierarchies {
+uart:uart_1|uart_receiver:uart_receiver_1
+}
+# macro_sequence
+
+# end
+# entity
 reset_control
 # storage
-db|uart_de0.(15).cnf
-db|uart_de0.(15).cnf
+db|uart_de0.(20).cnf
+db|uart_de0.(20).cnf
 # logic_option {
 AUTO_RAM_RECOGNITION
 ON
@@ -683,7 +910,7 @@ ON
 # case_insensitive
 # source_file
 |home|jansen|vhdl|projects|uart|rtl|uart_de0.vhd
-1dacf89e4de9937fca377f017175
+9bd195dacd9e66cde1b45741b9537de5
 5
 # internal_option {
 HDL_INITIAL_FANOUT_LIMIT
@@ -696,22 +923,26 @@ AUTO_ROM_RECOGNITION
 ON
 }
 # include_file {
-|home|jansen|vhdl|projects|primatives|rtl|schmitt_trigger_filter.vhd
-a9c4de68b6cd89972e559d3164670
+|home|jansen|vhdl|projects|uart|rtl|uart.vhd
+44c32a48536f4e32224b1d9cc0f7c0c
+|home|jansen|vhdl|projects|uart|rtl|uart_transmitter.vhd
+9ec3759161c4ce3b439d11fc32cd958
 |home|jansen|vhdl|projects|uart|rtl|uart_receiver_fsm.vhd
 f4a18ee1f13d62cc3dbf8e73cb649e5e
-|home|jansen|vhdl|projects|uart|rtl|parity_generator.vhd
-bb8df95f8a28ef4710c053a9ea410
-|home|jansen|vhdl|projects|uart|rtl|baud_rate_generator.vhd
-70df812eba11ac18cc5a1b9fa5b18e
+|home|jansen|vhdl|projects|uart|rtl|uart_receiver.vhd
+9fcac0e56446b63093553ec7dc78d
 |home|jansen|vhdl|projects|primatives|rtl|shift_reg.vhd
 bed8c33240419e93ef55a1a25e621f
+|home|jansen|vhdl|projects|uart|rtl|baud_rate_generator.vhd
+70df812eba11ac18cc5a1b9fa5b18e
+|home|jansen|vhdl|projects|uart|rtl|parity_generator.vhd
+bb8df95f8a28ef4710c053a9ea410
+|home|jansen|vhdl|projects|uart|rtl|uart_transmitter_fsm.vhd
+c4e365345270f5bce1b7900e4dc9587
+|home|jansen|vhdl|projects|primatives|rtl|schmitt_trigger_filter.vhd
+a9c4de68b6cd89972e559d3164670
 |home|jansen|vhdl|projects|primatives|rtl|counter.vhd
 a928111c22b5e055fcae84a595275a5
-|home|jansen|vhdl|projects|uart|rtl|uart_receiver.vhd
-f0ac1f7bc9641efe25e436e6c1acca22
-|home|jansen|vhdl|projects|uart|rtl|uart.vhd
-ed8412742985462f64b71f9213b51ea
 }
 # hierarchies {
 reset_control:reset_control_1
@@ -722,8 +953,8 @@ reset_control:reset_control_1
 # entity
 error_indicator
 # storage
-db|uart_de0.(16).cnf
-db|uart_de0.(16).cnf
+db|uart_de0.(21).cnf
+db|uart_de0.(21).cnf
 # logic_option {
 AUTO_RAM_RECOGNITION
 ON
@@ -731,7 +962,7 @@ ON
 # case_insensitive
 # source_file
 |home|jansen|vhdl|projects|uart|rtl|uart_de0.vhd
-1dacf89e4de9937fca377f017175
+9bd195dacd9e66cde1b45741b9537de5
 5
 # internal_option {
 HDL_INITIAL_FANOUT_LIMIT
@@ -744,22 +975,26 @@ AUTO_ROM_RECOGNITION
 ON
 }
 # include_file {
-|home|jansen|vhdl|projects|primatives|rtl|schmitt_trigger_filter.vhd
-a9c4de68b6cd89972e559d3164670
+|home|jansen|vhdl|projects|uart|rtl|uart.vhd
+44c32a48536f4e32224b1d9cc0f7c0c
+|home|jansen|vhdl|projects|uart|rtl|uart_transmitter.vhd
+9ec3759161c4ce3b439d11fc32cd958
 |home|jansen|vhdl|projects|uart|rtl|uart_receiver_fsm.vhd
 f4a18ee1f13d62cc3dbf8e73cb649e5e
-|home|jansen|vhdl|projects|uart|rtl|parity_generator.vhd
-bb8df95f8a28ef4710c053a9ea410
-|home|jansen|vhdl|projects|uart|rtl|baud_rate_generator.vhd
-70df812eba11ac18cc5a1b9fa5b18e
+|home|jansen|vhdl|projects|uart|rtl|uart_receiver.vhd
+9fcac0e56446b63093553ec7dc78d
 |home|jansen|vhdl|projects|primatives|rtl|shift_reg.vhd
 bed8c33240419e93ef55a1a25e621f
+|home|jansen|vhdl|projects|uart|rtl|baud_rate_generator.vhd
+70df812eba11ac18cc5a1b9fa5b18e
+|home|jansen|vhdl|projects|uart|rtl|parity_generator.vhd
+bb8df95f8a28ef4710c053a9ea410
+|home|jansen|vhdl|projects|uart|rtl|uart_transmitter_fsm.vhd
+c4e365345270f5bce1b7900e4dc9587
+|home|jansen|vhdl|projects|primatives|rtl|schmitt_trigger_filter.vhd
+a9c4de68b6cd89972e559d3164670
 |home|jansen|vhdl|projects|primatives|rtl|counter.vhd
 a928111c22b5e055fcae84a595275a5
-|home|jansen|vhdl|projects|uart|rtl|uart_receiver.vhd
-f0ac1f7bc9641efe25e436e6c1acca22
-|home|jansen|vhdl|projects|uart|rtl|uart.vhd
-ed8412742985462f64b71f9213b51ea
 }
 # hierarchies {
 error_indicator:error_indicator_1

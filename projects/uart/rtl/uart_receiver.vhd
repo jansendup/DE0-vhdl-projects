@@ -36,6 +36,7 @@ architecture structure of uart_receiver is
 
   signal sc_cnt : integer range 0 to 31;
 
+  signal l_pg_in  : std_logic_vector(8 downto 0);
   signal l_parity : std_logic;
 
   signal fsm_sc_cnt_en      : std_logic;
@@ -43,7 +44,6 @@ architecture structure of uart_receiver is
   signal fsm_r_shift_en     : std_logic;
   signal fsm_r_shift_nLoad  : std_logic;
   signal rx_done_tick       : std_logic;
-  signal fsm_frame_err_tick : std_logic;
   
 begin  -- structure
 
@@ -108,7 +108,7 @@ begin  -- structure
       r_shift_nLoad_o  => fsm_r_shift_nLoad,
       r_shift_en_o     => fsm_r_shift_en,
       rx_done_tick_o   => rx_done_tick,
-      frame_err_tick_o => fsm_frame_err_tick,
+      frame_err_tick_o => frame_err_tick_o,
 
       stop_bits_num_i => stop_bits_num_i);
 
@@ -116,9 +116,10 @@ begin  -- structure
     generic map (
       N => 9)
     port map (
-      din_i    => (r_data & p_data),
+      din_i    => l_pg_in,
       parity_o => l_parity);
 
+  l_pg_in           <= r_data & p_data;
   parity_err_tick_o <= par_en_i and rx_done_tick and (l_parity xor par_odd_nEven_i);
 
   r_serial_in <= p_data(0) when par_en_i = '1' else f_rx;

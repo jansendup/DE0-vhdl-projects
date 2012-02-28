@@ -321,6 +321,8 @@ set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
 set_global_assignment -name RTLV_REMOVE_FANOUT_FREE_REGISTERS ON
 set_global_assignment -name RTLV_SIMPLIFIED_LOGIC OFF
 set_global_assignment -name RTLV_GROUP_RELATED_NODES OFF
+set_global_assignment -name VHDL_FILE ../rtl/uart_transmitter.vhd
+set_global_assignment -name VHDL_FILE ../rtl/uart_transmitter_fsm.vhd
 set_global_assignment -name VHDL_FILE ../rtl/parity_generator.vhd
 set_global_assignment -name VHDL_FILE ../rtl/uart_de0.vhd
 set_global_assignment -name VHDL_FILE ../../primatives/rtl/shift_reg.vhd

@@ -246,24 +246,30 @@ DRAM_ADDR[12] => ~NO_FANOUT~
 
 |uart_de0|uart:uart_1
 clk_i => uart_receiver:uart_receiver_1.clk_i
+clk_i => uart_transmitter:uart_transmitter_1.clk_i
 clk_i => baud_rate_generator:baud_rate_generator_1.clk_i
 rst_i => uart_receiver:uart_receiver_1.rst_i
+rst_i => uart_transmitter:uart_transmitter_1.rst_i
 rst_i => baud_rate_generator:baud_rate_generator_1.rst_i
 en_i => baud_rate_generator:baud_rate_generator_1.en_i
 rx_i => uart_receiver:uart_receiver_1.rx_i
-tx_start_tick_i => ~NO_FANOUT~
-tx_data_i[0] => ~NO_FANOUT~
-tx_data_i[1] => ~NO_FANOUT~
-tx_data_i[2] => ~NO_FANOUT~
-tx_data_i[3] => ~NO_FANOUT~
-tx_data_i[4] => ~NO_FANOUT~
-tx_data_i[5] => ~NO_FANOUT~
-tx_data_i[6] => ~NO_FANOUT~
-tx_data_i[7] => ~NO_FANOUT~
+tx_start_i => uart_transmitter:uart_transmitter_1.tx_start_i
+tx_data_i[0] => uart_transmitter:uart_transmitter_1.data_i[0]
+tx_data_i[1] => uart_transmitter:uart_transmitter_1.data_i[1]
+tx_data_i[2] => uart_transmitter:uart_transmitter_1.data_i[2]
+tx_data_i[3] => uart_transmitter:uart_transmitter_1.data_i[3]
+tx_data_i[4] => uart_transmitter:uart_transmitter_1.data_i[4]
+tx_data_i[5] => uart_transmitter:uart_transmitter_1.data_i[5]
+tx_data_i[6] => uart_transmitter:uart_transmitter_1.data_i[6]
+tx_data_i[7] => uart_transmitter:uart_transmitter_1.data_i[7]
 par_en_i => uart_receiver:uart_receiver_1.par_en_i
+par_en_i => uart_transmitter:uart_transmitter_1.par_en_i
 par_odd_nEven_i => uart_receiver:uart_receiver_1.par_odd_nEven_i
+par_odd_nEven_i => uart_transmitter:uart_transmitter_1.par_odd_nEven_i
 stop_bits_num_i[0] => uart_receiver:uart_receiver_1.stop_bits_num_i[0]
+stop_bits_num_i[0] => uart_transmitter:uart_transmitter_1.stop_bits_num_i[0]
 stop_bits_num_i[1] => uart_receiver:uart_receiver_1.stop_bits_num_i[1]
+stop_bits_num_i[1] => uart_transmitter:uart_transmitter_1.stop_bits_num_i[1]
 cycles_per_tick_i[0] => baud_rate_generator:baud_rate_generator_1.cycles_per_tick_i[0]
 cycles_per_tick_i[1] => baud_rate_generator:baud_rate_generator_1.cycles_per_tick_i[1]
 cycles_per_tick_i[2] => baud_rate_generator:baud_rate_generator_1.cycles_per_tick_i[2]
@@ -432,6 +438,193 @@ din_i[5] => xor_outputs[4].IN1
 din_i[6] => xor_outputs[5].IN1
 din_i[7] => xor_outputs[6].IN1
 din_i[8] => xor_outputs.IN1
+
+
+|uart_de0|uart:uart_1|uart_transmitter:uart_transmitter_1
+clk_i => counter:sample_ticks_counter.clk_i
+clk_i => counter:bits_counter.clk_i
+clk_i => shift_reg:t_shift_reg.clk_i
+clk_i => uart_transmitter_fsm:uart_transmitter_fsm_1.clk_i
+rst_i => counter:sample_ticks_counter.rst_i
+rst_i => counter:bits_counter.rst_i
+rst_i => shift_reg:t_shift_reg.rst_i
+rst_i => uart_transmitter_fsm:uart_transmitter_fsm_1.rst_i
+sample_tick_i => uart_transmitter_fsm:uart_transmitter_fsm_1.sample_tick_i
+data_i[0] => shift_reg:t_shift_reg.data_i[0]
+data_i[0] => parity_generator:parity_generator_1.din_i[0]
+data_i[1] => shift_reg:t_shift_reg.data_i[1]
+data_i[1] => parity_generator:parity_generator_1.din_i[1]
+data_i[2] => shift_reg:t_shift_reg.data_i[2]
+data_i[2] => parity_generator:parity_generator_1.din_i[2]
+data_i[3] => shift_reg:t_shift_reg.data_i[3]
+data_i[3] => parity_generator:parity_generator_1.din_i[3]
+data_i[4] => shift_reg:t_shift_reg.data_i[4]
+data_i[4] => parity_generator:parity_generator_1.din_i[4]
+data_i[5] => shift_reg:t_shift_reg.data_i[5]
+data_i[5] => parity_generator:parity_generator_1.din_i[5]
+data_i[6] => shift_reg:t_shift_reg.data_i[6]
+data_i[6] => parity_generator:parity_generator_1.din_i[6]
+data_i[7] => shift_reg:t_shift_reg.data_i[7]
+data_i[7] => parity_generator:parity_generator_1.din_i[7]
+tx_start_i => uart_transmitter_fsm:uart_transmitter_fsm_1.tx_start_i
+par_en_i => uart_transmitter_fsm:uart_transmitter_fsm_1.par_en_i
+par_odd_nEven_i => t_data_in[8].IN1
+par_odd_nEven_i => uart_transmitter_fsm:uart_transmitter_fsm_1.par_odd_nEven_i
+stop_bits_num_i[0] => uart_transmitter_fsm:uart_transmitter_fsm_1.stop_bits_num_i[0]
+stop_bits_num_i[1] => uart_transmitter_fsm:uart_transmitter_fsm_1.stop_bits_num_i[1]
+
+
+|uart_de0|uart:uart_1|uart_transmitter:uart_transmitter_1|counter:sample_ticks_counter
+clk_i => l_cnt[0].CLK
+clk_i => l_cnt[1].CLK
+clk_i => l_cnt[2].CLK
+clk_i => l_cnt[3].CLK
+clk_i => l_cnt[4].CLK
+rst_i => l_cnt[0].ACLR
+rst_i => l_cnt[1].ACLR
+rst_i => l_cnt[2].ACLR
+rst_i => l_cnt[3].ACLR
+rst_i => l_cnt[4].ACLR
+cnt_en_i => Mux0.IN4
+cnt_en_i => Mux1.IN4
+cnt_en_i => Mux2.IN4
+cnt_en_i => Mux3.IN4
+cnt_en_i => Mux4.IN4
+load_i => Mux0.IN5
+load_i => Mux1.IN5
+load_i => Mux2.IN5
+load_i => Mux3.IN5
+load_i => Mux4.IN5
+load_cnt_i[0] => Mux4.IN1
+load_cnt_i[0] => Mux4.IN2
+load_cnt_i[1] => Mux3.IN1
+load_cnt_i[1] => Mux3.IN2
+load_cnt_i[2] => Mux2.IN1
+load_cnt_i[2] => Mux2.IN2
+load_cnt_i[3] => Mux1.IN1
+load_cnt_i[3] => Mux1.IN2
+load_cnt_i[4] => Mux0.IN1
+load_cnt_i[4] => Mux0.IN2
+
+
+|uart_de0|uart:uart_1|uart_transmitter:uart_transmitter_1|counter:bits_counter
+clk_i => l_cnt[0].CLK
+clk_i => l_cnt[1].CLK
+clk_i => l_cnt[2].CLK
+clk_i => l_cnt[3].CLK
+rst_i => l_cnt[0].ACLR
+rst_i => l_cnt[1].ACLR
+rst_i => l_cnt[2].ACLR
+rst_i => l_cnt[3].ACLR
+cnt_en_i => Mux0.IN4
+cnt_en_i => Mux1.IN4
+cnt_en_i => Mux2.IN4
+cnt_en_i => Mux3.IN4
+load_i => Mux0.IN5
+load_i => Mux1.IN5
+load_i => Mux2.IN5
+load_i => Mux3.IN5
+load_cnt_i[0] => Mux3.IN1
+load_cnt_i[0] => Mux3.IN2
+load_cnt_i[1] => Mux2.IN1
+load_cnt_i[1] => Mux2.IN2
+load_cnt_i[2] => Mux1.IN1
+load_cnt_i[2] => Mux1.IN2
+load_cnt_i[3] => Mux0.IN1
+load_cnt_i[3] => Mux0.IN2
+
+
+|uart_de0|uart:uart_1|uart_transmitter:uart_transmitter_1|shift_reg:t_shift_reg
+clk_i => reg[0].CLK
+clk_i => reg[1].CLK
+clk_i => reg[2].CLK
+clk_i => reg[3].CLK
+clk_i => reg[4].CLK
+clk_i => reg[5].CLK
+clk_i => reg[6].CLK
+clk_i => reg[7].CLK
+clk_i => reg[8].CLK
+rst_i => reg[0].ACLR
+rst_i => reg[1].ACLR
+rst_i => reg[2].ACLR
+rst_i => reg[3].ACLR
+rst_i => reg[4].ACLR
+rst_i => reg[5].ACLR
+rst_i => reg[6].ACLR
+rst_i => reg[7].ACLR
+rst_i => reg[8].ACLR
+shift_nLoad_i => shift_load_proc.IN0
+shift_nLoad_i => reg.OUTPUTSELECT
+shift_nLoad_i => reg.OUTPUTSELECT
+shift_nLoad_i => reg.OUTPUTSELECT
+shift_nLoad_i => reg.OUTPUTSELECT
+shift_nLoad_i => reg.OUTPUTSELECT
+shift_nLoad_i => reg.OUTPUTSELECT
+shift_nLoad_i => reg.OUTPUTSELECT
+shift_nLoad_i => reg.OUTPUTSELECT
+shift_nLoad_i => reg.OUTPUTSELECT
+shift_en_i => shift_load_proc.IN1
+serial_i => reg.DATAB
+data_i[0] => reg.DATAB
+data_i[1] => reg.DATAB
+data_i[2] => reg.DATAB
+data_i[3] => reg.DATAB
+data_i[4] => reg.DATAB
+data_i[5] => reg.DATAB
+data_i[6] => reg.DATAB
+data_i[7] => reg.DATAB
+data_i[8] => reg.DATAB
+
+
+|uart_de0|uart:uart_1|uart_transmitter:uart_transmitter_1|parity_generator:parity_generator_1
+din_i[0] => xor_outputs[0].IN0
+din_i[1] => xor_outputs[0].IN1
+din_i[2] => xor_outputs[1].IN1
+din_i[3] => xor_outputs[2].IN1
+din_i[4] => xor_outputs[3].IN1
+din_i[5] => xor_outputs[4].IN1
+din_i[6] => xor_outputs[5].IN1
+din_i[7] => xor_outputs.IN1
+
+
+|uart_de0|uart:uart_1|uart_transmitter:uart_transmitter_1|uart_transmitter_fsm:uart_transmitter_fsm_1
+clk_i => state~1.DATAIN
+rst_i => state~3.DATAIN
+sample_tick_i => data_stop_cond.IN1
+sample_tick_i => stop_idle_cond.IN1
+sample_tick_i => start_data_cond.IN1
+sample_tick_i => sc_cnt_en_o.IN0
+tx_start_i => Selector0.IN5
+tx_start_i => idle_start_trans.IN0
+tx_start_i => Selector3.IN1
+t_bit_o => Selector4.IN3
+sc_cnt_i[0] => LessThan0.IN10
+sc_cnt_i[0] => LessThan1.IN10
+sc_cnt_i[0] => LessThan2.IN10
+sc_cnt_i[1] => LessThan0.IN9
+sc_cnt_i[1] => LessThan1.IN9
+sc_cnt_i[1] => LessThan2.IN9
+sc_cnt_i[2] => LessThan0.IN8
+sc_cnt_i[2] => LessThan1.IN8
+sc_cnt_i[2] => LessThan2.IN8
+sc_cnt_i[3] => LessThan0.IN7
+sc_cnt_i[3] => LessThan1.IN7
+sc_cnt_i[3] => LessThan2.IN7
+sc_cnt_i[4] => LessThan0.IN6
+sc_cnt_i[4] => LessThan1.IN6
+sc_cnt_i[4] => LessThan2.IN6
+bc_cnt_i[0] => LessThan3.IN8
+bc_cnt_i[0] => LessThan4.IN8
+bc_cnt_i[1] => LessThan3.IN7
+bc_cnt_i[1] => LessThan4.IN7
+bc_cnt_i[2] => LessThan3.IN6
+bc_cnt_i[2] => LessThan4.IN6
+bc_cnt_i[3] => LessThan3.IN5
+bc_cnt_i[3] => LessThan4.IN5
+par_en_i => at_last_bit.OUTPUTSELECT
+par_odd_nEven_i => ~NO_FANOUT~
+stop_bits_num_i[0] => Mux0.IN1
+stop_bits_num_i[1] => Mux0.IN0
 
 
 |uart_de0|uart:uart_1|baud_rate_generator:baud_rate_generator_1

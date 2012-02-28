@@ -1,189 +1,5 @@
 # Loading project uart
-# Compile of uart.vhd failed with 1 errors.
-# Compile of uart_receiver.vhd failed with 1 errors.
-# Compile of uart_receiver_fsm.vhd failed with 1 errors.
-# Compile of counter.vhd was successful.
-# Compile of primatives_pkg.vhd was successful.
-# Compile of schmitt_trigger_filter.vhd was successful.
-# Compile of shift_reg.vhd was successful.
-# Compile of uart_receiver_tb.vhd was successful.
-# 8 compiles, 4 failed with 3 errors. 
-# Compile of uart.vhd failed with 1 errors.
-# Compile of uart_receiver.vhd failed with 1 errors.
-# Compile of uart_receiver_fsm.vhd failed with 1 errors.
-# Compile of counter.vhd was successful.
-# Compile of primatives_pkg.vhd was successful.
-# Compile of schmitt_trigger_filter.vhd was successful.
-# Compile of shift_reg.vhd was successful.
-# Compile of uart_receiver_tb.vhd was successful.
-# 8 compiles, 3 failed with 3 errors. 
-# Compile of uart.vhd failed with 1 errors.
-# Compile of uart_receiver.vhd failed with 1 errors.
-# Compile of uart_receiver_fsm.vhd failed with 1 errors.
-# Compile of counter.vhd was successful.
-# Compile of primatives_pkg.vhd was successful.
-# Compile of schmitt_trigger_filter.vhd was successful.
-# Compile of shift_reg.vhd was successful.
-# Compile of uart_receiver_tb.vhd was successful.
-# Compile of baud_rate_generator.vhd was successful.
-# Compile of uart_de0.vhd failed with 1 errors.
-# 10 compiles, 4 failed with 4 errors. 
 # Compile of uart.vhd was successful.
-# Compile of uart_receiver.vhd failed with 2 errors.
-# Compile of uart_receiver_fsm.vhd failed with 1 errors.
-# Compile of counter.vhd was successful.
-# Compile of primatives_pkg.vhd was successful.
-# Compile of schmitt_trigger_filter.vhd was successful.
-# Compile of shift_reg.vhd was successful.
-# Compile of uart_receiver_tb.vhd failed with 1 errors.
-# Compile of baud_rate_generator.vhd was successful.
-# Compile of uart_de0.vhd failed with 1 errors.
-# 10 compiles, 4 failed with 5 errors. 
-# Compile of uart.vhd failed with 2 errors.
-# Compile of uart_receiver.vhd failed with 1 errors.
-# Compile of uart_receiver_fsm.vhd failed with 1 errors.
-# Compile of counter.vhd was successful.
-# Compile of primatives_pkg.vhd was successful.
-# Compile of schmitt_trigger_filter.vhd was successful.
-# Compile of shift_reg.vhd was successful.
-# Compile of uart_receiver_tb.vhd failed with 1 errors.
-# Compile of baud_rate_generator.vhd was successful.
-# Compile of uart_de0.vhd failed with 1 errors.
-# 10 compiles, 5 failed with 6 errors. 
-# Compile of uart.vhd failed with 2 errors.
-# Compile of uart_receiver.vhd was successful.
-# Compile of uart_receiver_fsm.vhd failed with 1 errors.
-# Compile of counter.vhd was successful.
-# Compile of primatives_pkg.vhd was successful.
-# Compile of schmitt_trigger_filter.vhd was successful.
-# Compile of shift_reg.vhd was successful.
-# Compile of uart_receiver_tb.vhd failed with 1 errors.
-# Compile of baud_rate_generator.vhd was successful.
-# Compile of uart_de0.vhd failed with 1 errors.
-# 10 compiles, 4 failed with 5 errors. 
-# Compile of uart.vhd failed with 2 errors.
-# Compile of uart_receiver.vhd was successful.
-# Compile of uart_receiver_fsm.vhd failed with 1 errors.
-# Compile of counter.vhd was successful.
-# Compile of primatives_pkg.vhd was successful.
-# Compile of schmitt_trigger_filter.vhd was successful.
-# Compile of shift_reg.vhd was successful.
-# Compile of uart_receiver_tb.vhd failed with 1 errors.
-# Compile of baud_rate_generator.vhd was successful.
-# Compile of uart_de0.vhd failed with 1 errors.
-# 10 compiles, 4 failed with 5 errors. 
-# Compile of uart.vhd failed with 2 errors.
-# Compile of uart_receiver.vhd was successful.
-# Compile of uart_receiver_fsm.vhd was successful.
-# Compile of counter.vhd was successful.
-# Compile of primatives_pkg.vhd was successful.
-# Compile of schmitt_trigger_filter.vhd was successful.
-# Compile of shift_reg.vhd was successful.
-# Compile of uart_receiver_tb.vhd failed with 1 errors.
-# Compile of baud_rate_generator.vhd was successful.
-# Compile of uart_de0.vhd failed with 1 errors.
-# 10 compiles, 3 failed with 4 errors. 
-# Compile of uart.vhd failed with 1 errors.
-# Compile of uart_receiver.vhd was successful.
-# Compile of uart_receiver_fsm.vhd was successful.
-# Compile of counter.vhd was successful.
-# Compile of primatives_pkg.vhd was successful.
-# Compile of schmitt_trigger_filter.vhd was successful.
-# Compile of shift_reg.vhd was successful.
-# Compile of uart_receiver_tb.vhd failed with 1 errors.
-# Compile of baud_rate_generator.vhd was successful.
-# Compile of uart_de0.vhd failed with 1 errors.
-# 10 compiles, 3 failed with 3 errors. 
-# Compile of uart.vhd was successful.
-# Compile of uart_receiver.vhd was successful.
-# Compile of uart_receiver_fsm.vhd was successful.
-# Compile of counter.vhd was successful.
-# Compile of primatives_pkg.vhd was successful.
-# Compile of schmitt_trigger_filter.vhd was successful.
-# Compile of shift_reg.vhd was successful.
-# Compile of uart_receiver_tb.vhd failed with 1 errors.
-# Compile of baud_rate_generator.vhd was successful.
-# Compile of uart_de0.vhd failed with 1 errors.
-# 10 compiles, 2 failed with 2 errors. 
-# Compile of uart.vhd was successful.
-# Compile of uart_receiver.vhd was successful.
-# Compile of uart_receiver_fsm.vhd was successful.
-# Compile of counter.vhd was successful.
-# Compile of primatives_pkg.vhd was successful.
-# Compile of schmitt_trigger_filter.vhd was successful.
-# Compile of shift_reg.vhd was successful.
-# Compile of uart_receiver_tb.vhd failed with 2 errors.
-# Compile of baud_rate_generator.vhd was successful.
-# Compile of uart_de0.vhd failed with 1 errors.
-# 10 compiles, 2 failed with 3 errors. 
-# Compile of uart.vhd was successful.
-# Compile of uart_receiver.vhd was successful.
-# Compile of uart_receiver_fsm.vhd was successful.
-# Compile of counter.vhd was successful.
-# Compile of primatives_pkg.vhd was successful.
-# Compile of schmitt_trigger_filter.vhd was successful.
-# Compile of shift_reg.vhd was successful.
-# Compile of uart_receiver_tb.vhd failed with 2 errors.
-# Compile of baud_rate_generator.vhd was successful.
-# Compile of uart_de0.vhd failed with 1 errors.
-# 10 compiles, 2 failed with 3 errors. 
-# Compile of uart.vhd was successful.
-# Compile of uart_receiver.vhd was successful.
-# Compile of uart_receiver_fsm.vhd was successful.
-# Compile of counter.vhd was successful.
-# Compile of primatives_pkg.vhd was successful.
-# Compile of schmitt_trigger_filter.vhd was successful.
-# Compile of shift_reg.vhd was successful.
-# Compile of uart_receiver_tb.vhd failed with 3 errors.
-# Compile of baud_rate_generator.vhd was successful.
-# Compile of uart_de0.vhd failed with 1 errors.
-# 10 compiles, 2 failed with 4 errors. 
-# Compile of uart.vhd was successful.
-# Compile of uart_receiver.vhd was successful.
-# Compile of uart_receiver_fsm.vhd was successful.
-# Compile of counter.vhd was successful.
-# Compile of primatives_pkg.vhd was successful.
-# Compile of schmitt_trigger_filter.vhd was successful.
-# Compile of shift_reg.vhd was successful.
-# Compile of uart_receiver_tb.vhd failed with 2 errors.
-# Compile of baud_rate_generator.vhd was successful.
-# Compile of uart_de0.vhd failed with 1 errors.
-# 10 compiles, 2 failed with 3 errors. 
-# Compile of uart.vhd was successful.
-# Compile of uart_receiver.vhd was successful.
-# Compile of uart_receiver_fsm.vhd was successful.
-# Compile of counter.vhd was successful.
-# Compile of primatives_pkg.vhd was successful.
-# Compile of schmitt_trigger_filter.vhd was successful.
-# Compile of shift_reg.vhd was successful.
-# Compile of uart_receiver_tb.vhd failed with 2 errors.
-# Compile of baud_rate_generator.vhd was successful.
-# Compile of uart_de0.vhd failed with 1 errors.
-# 10 compiles, 2 failed with 3 errors. 
-# Compile of uart.vhd was successful.
-# Compile of uart_receiver.vhd was successful.
-# Compile of uart_receiver_fsm.vhd was successful.
-# Compile of counter.vhd was successful.
-# Compile of primatives_pkg.vhd was successful.
-# Compile of schmitt_trigger_filter.vhd was successful.
-# Compile of shift_reg.vhd was successful.
-# Compile of uart_receiver_tb.vhd failed with 2 errors.
-# Compile of baud_rate_generator.vhd was successful.
-# Compile of uart_de0.vhd failed with 1 errors.
-# 10 compiles, 2 failed with 3 errors. 
-# Compile of uart.vhd was successful.
-# Compile of uart_receiver.vhd was successful.
-# Compile of uart_receiver_fsm.vhd was successful.
-# Compile of counter.vhd was successful.
-# Compile of primatives_pkg.vhd was successful.
-# Compile of schmitt_trigger_filter.vhd was successful.
-# Compile of shift_reg.vhd was successful.
-# Compile of uart_receiver_tb.vhd was successful with warnings.
-# Compile of baud_rate_generator.vhd was successful.
-# Compile of uart_de0.vhd failed with 1 errors.
-# 10 compiles, 1 failed with 1 error. 
-# Compile of uart.vhd was successful.
-# Compile of uart_receiver.vhd was successful.
 # Compile of uart_receiver_fsm.vhd was successful.
 # Compile of counter.vhd was successful.
 # Compile of primatives_pkg.vhd was successful.
@@ -191,22 +7,96 @@
 # Compile of shift_reg.vhd was successful.
 # Compile of uart_receiver_tb.vhd was successful.
 # Compile of baud_rate_generator.vhd was successful.
-# Compile of uart_de0.vhd failed with 1 errors.
-# 10 compiles, 1 failed with 1 error. 
-vsim work.uart_receiver_tb
-# vsim work.uart_receiver_tb 
+# Compile of parity_generator.vhd was successful.
+# Compile of uart_receiver.vhd was successful.
+# Compile of uart_de0.vhd was successful.
+# Compile of uart_transmitter.vhd was successful.
+# Compile of uart_transmitter_fsm.vhd was successful with warnings.
+# Compile of uart_transmitter_tb.vhd was successful.
+# 14 compiles, 0 failed with no errors. 
+vsim work.uart_transmitter_tb
+# vsim work.uart_transmitter_tb 
 # Loading std.standard
 # Loading ieee.std_logic_1164(body)
-# Loading work.uart_receiver_tb(stimulus)
-# Loading work.uart_receiver(structure)
-# Loading work.schmitt_trigger_filter(behaviour)
+# Loading work.uart_transmitter_tb(stimulus)
+# Loading work.uart_transmitter(structure)
+# Loading work.counter(behaviour)
 # Loading work.shift_reg(behaviour)
-# ** Fatal: (vsim-3348) Port size (8) does not match actual size (9) for port '/uart_receiver_tb/dut/rx_shift_reg/data_i'.
-#    Time: 0 ps  Iteration: 0  Instance: /uart_receiver_tb/dut/rx_shift_reg File: /home/jansen/vhdl/projects/primatives/rtl/shift_reg.vhd Line: 13
-# FATAL ERROR while loading design
-# Error loading design
+# Loading work.parity_generator(behaviour)
+# Loading work.uart_transmitter_fsm(behaviour)
+step -over
+step -over
+step -over
+step -over
+step -over
+step -over
+step -over
+step -over
+step -over
+step -over
+step -over
+step -over
+step -over
+step -over
+step -over
+step -over
+step -over
+step -over
+step -over
+step -over
+step -over
+step -over
+step -over
+step -over
+step -over
+step -over
+step -over
+step -over
+step -over
+step -over
+step -over
+step -over
+step -over
+step -over
+step -over
+step -over
+step -over
+step -over
+step -over
+step -over
+step -over
+step -over
+step -over
+step -over
+step -over
+step -over
+step -over
+step -over
+step -over
+step -over
+step -over
+step -over
+step -over
+step -over
+step -over
+step -over
+step -over
+step -over
+step -over
+step -over
+step -over
+step -over
+step -over
+step -over
+step -over
+step -over
+step -over
+step -over
+step -over
+step -over
+step -over
+restart -f
 # Compile of uart.vhd was successful.
-# Compile of uart_receiver.vhd was successful.
 # Compile of uart_receiver_fsm.vhd was successful.
 # Compile of counter.vhd was successful.
 # Compile of primatives_pkg.vhd was successful.
@@ -214,57 +104,316 @@ vsim work.uart_receiver_tb
 # Compile of shift_reg.vhd was successful.
 # Compile of uart_receiver_tb.vhd was successful.
 # Compile of baud_rate_generator.vhd was successful.
-# Compile of uart_de0.vhd failed with 1 errors.
-# 10 compiles, 1 failed with 1 error. 
-vsim work.uart_receiver_tb
-# vsim work.uart_receiver_tb 
+# Compile of parity_generator.vhd was successful.
+# Compile of uart_receiver.vhd was successful.
+# Compile of uart_de0.vhd was successful.
+# Compile of uart_transmitter.vhd was successful.
+# Compile of uart_transmitter_fsm.vhd was successful.
+# Compile of uart_transmitter_tb.vhd was successful.
+# 14 compiles, 0 failed with no errors. 
+restart -f
+# Loading work.uart_transmitter_tb(stimulus)
+# Loading work.uart_transmitter(structure)
+# Loading work.counter(behaviour)
+# Loading work.shift_reg(behaviour)
+# Loading work.parity_generator(behaviour)
+# Loading work.uart_transmitter_fsm(behaviour)
+add wave \
+{sim:/uart_transmitter_tb/sigs } \
+{sim:/uart_transmitter_tb/clk } \
+{sim:/uart_transmitter_tb/rst } \
+{sim:/uart_transmitter_tb/sample_tick } \
+{sim:/uart_transmitter_tb/data_in } \
+{sim:/uart_transmitter_tb/tx_start } \
+{sim:/uart_transmitter_tb/tx_done_tick } \
+{sim:/uart_transmitter_tb/tx_idle } \
+{sim:/uart_transmitter_tb/tx } \
+{sim:/uart_transmitter_tb/par_en } \
+{sim:/uart_transmitter_tb/par_odd_neven } \
+{sim:/uart_transmitter_tb/stop_bits_num } \
+{sim:/uart_transmitter_tb/done } 
+run
+run -all
+# Compile of uart.vhd was successful.
+# Compile of uart_receiver_fsm.vhd was successful.
+# Compile of counter.vhd was successful.
+# Compile of primatives_pkg.vhd was successful.
+# Compile of schmitt_trigger_filter.vhd was successful.
+# Compile of shift_reg.vhd was successful.
+# Compile of uart_receiver_tb.vhd was successful.
+# Compile of baud_rate_generator.vhd was successful.
+# Compile of parity_generator.vhd was successful.
+# Compile of uart_receiver.vhd was successful.
+# Compile of uart_de0.vhd was successful.
+# Compile of uart_transmitter.vhd was successful.
+# Compile of uart_transmitter_fsm.vhd was successful.
+# Compile of uart_transmitter_tb.vhd was successful.
+# 14 compiles, 0 failed with no errors. 
+restart -f
+# Loading work.uart_transmitter_tb(stimulus)
+# Loading work.uart_transmitter(structure)
+# Loading work.counter(behaviour)
+# Loading work.shift_reg(behaviour)
+# Loading work.parity_generator(behaviour)
+# Loading work.uart_transmitter_fsm(behaviour)
+run -all
+# Compile of uart.vhd was successful.
+# Compile of uart_receiver_fsm.vhd was successful.
+# Compile of counter.vhd was successful.
+# Compile of primatives_pkg.vhd was successful.
+# Compile of schmitt_trigger_filter.vhd was successful.
+# Compile of shift_reg.vhd was successful.
+# Compile of uart_receiver_tb.vhd was successful.
+# Compile of baud_rate_generator.vhd was successful.
+# Compile of parity_generator.vhd was successful.
+# Compile of uart_receiver.vhd was successful.
+# Compile of uart_de0.vhd was successful.
+# Compile of uart_transmitter.vhd was successful.
+# Compile of uart_transmitter_fsm.vhd was successful.
+# Compile of uart_transmitter_tb.vhd was successful.
+# 14 compiles, 0 failed with no errors. 
+restart -f
+# Loading work.uart_transmitter_tb(stimulus)
+# Loading work.uart_transmitter(structure)
+# Loading work.counter(behaviour)
+# Loading work.shift_reg(behaviour)
+# Loading work.parity_generator(behaviour)
+# Loading work.uart_transmitter_fsm(behaviour)
+run -all
+# Compile of uart.vhd was successful.
+# Compile of uart_receiver_fsm.vhd was successful.
+# Compile of counter.vhd was successful.
+# Compile of primatives_pkg.vhd was successful.
+# Compile of schmitt_trigger_filter.vhd was successful.
+# Compile of shift_reg.vhd was successful.
+# Compile of uart_receiver_tb.vhd was successful.
+# Compile of baud_rate_generator.vhd was successful.
+# Compile of parity_generator.vhd was successful.
+# Compile of uart_receiver.vhd was successful.
+# Compile of uart_de0.vhd was successful.
+# Compile of uart_transmitter.vhd was successful.
+# Compile of uart_transmitter_fsm.vhd was successful.
+# Compile of uart_transmitter_tb.vhd failed with 1 errors.
+# 14 compiles, 1 failed with 1 error. 
+# Compile of uart.vhd was successful.
+# Compile of uart_receiver_fsm.vhd was successful.
+# Compile of counter.vhd was successful.
+# Compile of primatives_pkg.vhd was successful.
+# Compile of schmitt_trigger_filter.vhd was successful.
+# Compile of shift_reg.vhd was successful.
+# Compile of uart_receiver_tb.vhd was successful.
+# Compile of baud_rate_generator.vhd was successful.
+# Compile of parity_generator.vhd was successful.
+# Compile of uart_receiver.vhd was successful.
+# Compile of uart_de0.vhd was successful.
+# Compile of uart_transmitter.vhd was successful.
+# Compile of uart_transmitter_fsm.vhd was successful.
+# Compile of uart_transmitter_tb.vhd was successful.
+# 14 compiles, 0 failed with no errors. 
+restart -f
+# Loading work.uart_transmitter_tb(stimulus)
+# Loading work.uart_transmitter(structure)
+# Loading work.counter(behaviour)
+# Loading work.shift_reg(behaviour)
+# Loading work.parity_generator(behaviour)
+# Loading work.uart_transmitter_fsm(behaviour)
+run -all
+# ** Fatal: (vsim-3421) Value 32 for l_cnt_next is out of range 0 to 31.
+#    Time: 289990 ns  Iteration: 1  Process: /uart_transmitter_tb/dut/sample_ticks_counter/count_proc File: /home/jansen/vhdl/projects/primatives/rtl/counter.vhd
+# Fatal error in Process count_proc at /home/jansen/vhdl/projects/primatives/rtl/counter.vhd line 37
+# 
+# HDL call sequence:
+# Stopped at /home/jansen/vhdl/projects/primatives/rtl/counter.vhd 37 Process count_proc
+# 
+add wave \
+{sim:/uart_transmitter_tb/dut/uart_transmitter_fsm_1/state } 
+restart -f
+run -all
+# ** Fatal: (vsim-3421) Value 32 for l_cnt_next is out of range 0 to 31.
+#    Time: 289990 ns  Iteration: 1  Process: /uart_transmitter_tb/dut/sample_ticks_counter/count_proc File: /home/jansen/vhdl/projects/primatives/rtl/counter.vhd
+# Fatal error in Process count_proc at /home/jansen/vhdl/projects/primatives/rtl/counter.vhd line 37
+# 
+# HDL call sequence:
+# Stopped at /home/jansen/vhdl/projects/primatives/rtl/counter.vhd 37 Process count_proc
+# 
+add wave \
+{sim:/uart_transmitter_tb/dut/t_shift_reg/reg } 
+restart -f
+run -all
+# ** Fatal: (vsim-3421) Value 32 for l_cnt_next is out of range 0 to 31.
+#    Time: 289990 ns  Iteration: 1  Process: /uart_transmitter_tb/dut/sample_ticks_counter/count_proc File: /home/jansen/vhdl/projects/primatives/rtl/counter.vhd
+# Fatal error in Process count_proc at /home/jansen/vhdl/projects/primatives/rtl/counter.vhd line 37
+# 
+# HDL call sequence:
+# Stopped at /home/jansen/vhdl/projects/primatives/rtl/counter.vhd 37 Process count_proc
+# 
+# Compile of uart.vhd was successful.
+# Compile of uart_receiver_fsm.vhd was successful.
+# Compile of counter.vhd was successful.
+# Compile of primatives_pkg.vhd was successful.
+# Compile of schmitt_trigger_filter.vhd was successful.
+# Compile of shift_reg.vhd was successful.
+# Compile of uart_receiver_tb.vhd was successful.
+# Compile of baud_rate_generator.vhd was successful.
+# Compile of parity_generator.vhd was successful.
+# Compile of uart_receiver.vhd was successful.
+# Compile of uart_de0.vhd was successful.
+# Compile of uart_transmitter.vhd was successful.
+# Compile of uart_transmitter_fsm.vhd was successful.
+# Compile of uart_transmitter_tb.vhd was successful.
+# 14 compiles, 0 failed with no errors. 
+restart -f
+# Loading work.uart_transmitter_tb(stimulus)
+# Loading work.uart_transmitter(structure)
+# Loading work.counter(behaviour)
+# Loading work.shift_reg(behaviour)
+# Loading work.parity_generator(behaviour)
+# Loading work.uart_transmitter_fsm(behaviour)
+run -all
+# ** Fatal: (vsim-3421) Value 32 for l_cnt_next is out of range 0 to 31.
+#    Time: 289990 ns  Iteration: 1  Process: /uart_transmitter_tb/dut/sample_ticks_counter/count_proc File: /home/jansen/vhdl/projects/primatives/rtl/counter.vhd
+# Fatal error in Process count_proc at /home/jansen/vhdl/projects/primatives/rtl/counter.vhd line 37
+# 
+# HDL call sequence:
+# Stopped at /home/jansen/vhdl/projects/primatives/rtl/counter.vhd 37 Process count_proc
+# 
+# Compile of uart.vhd was successful.
+# Compile of uart_receiver_fsm.vhd was successful.
+# Compile of counter.vhd was successful.
+# Compile of primatives_pkg.vhd was successful.
+# Compile of schmitt_trigger_filter.vhd was successful.
+# Compile of shift_reg.vhd was successful.
+# Compile of uart_receiver_tb.vhd was successful.
+# Compile of baud_rate_generator.vhd was successful.
+# Compile of parity_generator.vhd was successful.
+# Compile of uart_receiver.vhd was successful.
+# Compile of uart_de0.vhd was successful.
+# Compile of uart_transmitter.vhd was successful.
+# Compile of uart_transmitter_fsm.vhd was successful.
+# Compile of uart_transmitter_tb.vhd was successful.
+# 14 compiles, 0 failed with no errors. 
+restart -f
+# Loading work.uart_transmitter_tb(stimulus)
+# Loading work.uart_transmitter(structure)
+# Loading work.counter(behaviour)
+# Loading work.shift_reg(behaviour)
+# Loading work.parity_generator(behaviour)
+# Loading work.uart_transmitter_fsm(behaviour)
+run -all
+# Compile of uart.vhd was successful.
+# Compile of uart_receiver_fsm.vhd was successful.
+# Compile of counter.vhd was successful.
+# Compile of primatives_pkg.vhd was successful.
+# Compile of schmitt_trigger_filter.vhd was successful.
+# Compile of shift_reg.vhd was successful.
+# Compile of uart_receiver_tb.vhd was successful.
+# Compile of baud_rate_generator.vhd was successful.
+# Compile of parity_generator.vhd was successful.
+# Compile of uart_receiver.vhd was successful.
+# Compile of uart_de0.vhd was successful.
+# Compile of uart_transmitter.vhd was successful.
+# Compile of uart_transmitter_fsm.vhd was successful.
+# Compile of uart_transmitter_tb.vhd was successful.
+# 14 compiles, 0 failed with no errors. 
+restart -f
+# Loading work.uart_transmitter_tb(stimulus)
+# Loading work.uart_transmitter(structure)
+# Loading work.counter(behaviour)
+# Loading work.shift_reg(behaviour)
+# Loading work.parity_generator(behaviour)
+# Loading work.uart_transmitter_fsm(behaviour)
+run -all
+# Compile of uart.vhd was successful.
+# Compile of uart_receiver_fsm.vhd was successful.
+# Compile of counter.vhd was successful.
+# Compile of primatives_pkg.vhd was successful.
+# Compile of schmitt_trigger_filter.vhd was successful.
+# Compile of shift_reg.vhd was successful.
+# Compile of uart_receiver_tb.vhd was successful.
+# Compile of baud_rate_generator.vhd was successful.
+# Compile of parity_generator.vhd was successful.
+# Compile of uart_receiver.vhd was successful.
+# Compile of uart_de0.vhd was successful.
+# Compile of uart_transmitter.vhd was successful.
+# Compile of uart_transmitter_fsm.vhd was successful.
+# Compile of uart_transmitter_tb.vhd was successful.
+# 14 compiles, 0 failed with no errors. 
+restart -f
+# Loading work.uart_transmitter_tb(stimulus)
+# Loading work.uart_transmitter(structure)
+# Loading work.counter(behaviour)
+# Loading work.shift_reg(behaviour)
+# Loading work.parity_generator(behaviour)
+# Loading work.uart_transmitter_fsm(behaviour)
+run -all
+# Compile of uart.vhd was successful.
+# Compile of uart.vhd was successful.
+# Compile of uart_receiver_fsm.vhd was successful.
+# Compile of counter.vhd was successful.
+# Compile of primatives_pkg.vhd was successful.
+# Compile of schmitt_trigger_filter.vhd was successful.
+# Compile of shift_reg.vhd was successful.
+# Compile of uart_receiver_tb.vhd was successful.
+# Compile of baud_rate_generator.vhd was successful.
+# Compile of parity_generator.vhd was successful.
+# Compile of uart_receiver.vhd was successful.
+# Compile of uart_de0.vhd was successful.
+# Compile of uart_transmitter.vhd was successful.
+# Compile of uart_transmitter_fsm.vhd failed with 1 errors.
+# Compile of uart_transmitter_tb.vhd was successful.
+# 14 compiles, 1 failed with 1 error. 
+# Compile of uart.vhd was successful.
+# Compile of uart_receiver_fsm.vhd was successful.
+# Compile of counter.vhd was successful.
+# Compile of primatives_pkg.vhd was successful.
+# Compile of schmitt_trigger_filter.vhd was successful.
+# Compile of shift_reg.vhd was successful.
+# Compile of uart_receiver_tb.vhd was successful.
+# Compile of baud_rate_generator.vhd was successful.
+# Compile of parity_generator.vhd was successful.
+# Compile of uart_receiver.vhd was successful.
+# Compile of uart_de0.vhd was successful.
+# Compile of uart_transmitter.vhd was successful.
+# Compile of uart_transmitter_fsm.vhd was successful.
+# Compile of uart_transmitter_tb.vhd was successful.
+# 14 compiles, 0 failed with no errors. 
+vsim work.uart_transmitter_tb
+# vsim work.uart_transmitter_tb 
 # Loading std.standard
 # Loading ieee.std_logic_1164(body)
-# Loading work.uart_receiver_tb(stimulus)
-# Loading work.uart_receiver(structure)
-# Loading work.schmitt_trigger_filter(behaviour)
-# Loading work.shift_reg(behaviour)
+# Loading work.uart_transmitter_tb(stimulus)
+# Loading work.uart_transmitter(structure)
 # Loading work.counter(behaviour)
-# Loading work.uart_receiver_fsm(behaviour)
-# ** Warning: (vsim-8683) Uninitialized out port /uart_receiver_tb/dut/frame_err_tick_o has no driver.
-# This port will contribute value (U) to the signal network.
-#         Region: /uart_receiver_tb
-# ** Warning: (vsim-8683) Uninitialized out port /uart_receiver_tb/dut/parity_err_tick_o has no driver.
-# This port will contribute value (U) to the signal network.
-#         Region: /uart_receiver_tb
+# Loading work.shift_reg(behaviour)
+# Loading work.parity_generator(behaviour)
+# Loading work.uart_transmitter_fsm(behaviour)
 add wave \
-{sim:/uart_receiver_tb/raw_sigs } \
-{sim:/uart_receiver_tb/sig_cnt } \
-{sim:/uart_receiver_tb/clk } \
-{sim:/uart_receiver_tb/rst } \
-{sim:/uart_receiver_tb/rx } \
-{sim:/uart_receiver_tb/sample_tick } \
-{sim:/uart_receiver_tb/data } \
-{sim:/uart_receiver_tb/rx_done_tick } \
-{sim:/uart_receiver_tb/frame_err_tick } \
-{sim:/uart_receiver_tb/par_err_tick } \
-{sim:/uart_receiver_tb/par_en } \
-{sim:/uart_receiver_tb/par_odd_neven } \
-{sim:/uart_receiver_tb/stop_bits_num } 
-run -all
-# ** Failure: Sent data was not received correctly.
-#    Time: 1475600 ns  Iteration: 5  Process: /uart_receiver_tb/rx_out_check_proc File: /home/jansen/vhdl/projects/uart/bench/uart_receiver_tb.vhd
-# Break in Process rx_out_check_proc at /home/jansen/vhdl/projects/uart/bench/uart_receiver_tb.vhd line 152
+{sim:/uart_transmitter_tb/sample_tick } \
+{sim:/uart_transmitter_tb/data_in } \
+{sim:/uart_transmitter_tb/tx_start } \
+{sim:/uart_transmitter_tb/tx_done_tick } \
+{sim:/uart_transmitter_tb/tx } \
+{sim:/uart_transmitter_tb/par_en } \
+{sim:/uart_transmitter_tb/par_odd_neven } 
 add wave \
-{sim:/uart_receiver_tb/dut/uart_receiver_fsm_1/l_state } 
+{sim:/uart_transmitter_tb/dut/sc_cnt_en } \
+{sim:/uart_transmitter_tb/dut/sc_load } \
+{sim:/uart_transmitter_tb/dut/sc_cnt } \
+{sim:/uart_transmitter_tb/dut/bc_cnt_en } \
+{sim:/uart_transmitter_tb/dut/bc_load } \
+{sim:/uart_transmitter_tb/dut/bc_cnt } 
+add wave \
+{sim:/uart_transmitter_tb/dut/t_shift_reg/shift_nload_i } \
+{sim:/uart_transmitter_tb/dut/t_shift_reg/shift_en_i } \
+{sim:/uart_transmitter_tb/dut/t_shift_reg/reg } 
+add wave \
+{sim:/uart_transmitter_tb/dut/uart_transmitter_fsm_1/state } 
+add wave \
+{sim:/uart_transmitter_tb/clk } 
+write format wave -window .main_pane.wave.interior.cs.body.pw.wf /home/jansen/vhdl/projects/uart/sim/rtl_sim/wave.do
 restart -f
-# ** Warning: (vsim-8683) Uninitialized out port /uart_receiver_tb/dut/frame_err_tick_o has no driver.
-# This port will contribute value (U) to the signal network.
-#         Region: /uart_receiver_tb
-# ** Warning: (vsim-8683) Uninitialized out port /uart_receiver_tb/dut/parity_err_tick_o has no driver.
-# This port will contribute value (U) to the signal network.
-#         Region: /uart_receiver_tb
 run -all
-# ** Failure: Sent data was not received correctly.
-#    Time: 1475600 ns  Iteration: 5  Process: /uart_receiver_tb/rx_out_check_proc File: /home/jansen/vhdl/projects/uart/bench/uart_receiver_tb.vhd
-# Break in Process rx_out_check_proc at /home/jansen/vhdl/projects/uart/bench/uart_receiver_tb.vhd line 152
 # Compile of uart.vhd was successful.
-# Compile of uart_receiver.vhd was successful.
 # Compile of uart_receiver_fsm.vhd was successful.
 # Compile of counter.vhd was successful.
 # Compile of primatives_pkg.vhd was successful.
@@ -272,727 +421,60 @@ run -all
 # Compile of shift_reg.vhd was successful.
 # Compile of uart_receiver_tb.vhd was successful.
 # Compile of baud_rate_generator.vhd was successful.
-# Compile of uart_de0.vhd failed with 1 errors.
-# 10 compiles, 1 failed with 1 error. 
+# Compile of parity_generator.vhd was successful.
+# Compile of uart_receiver.vhd was successful.
+# Compile of uart_de0.vhd was successful.
+# Compile of uart_transmitter.vhd was successful.
+# Compile of uart_transmitter_fsm.vhd was successful.
+# Compile of uart_transmitter_tb.vhd was successful.
+# 14 compiles, 0 failed with no errors. 
+run -all
 restart -f
-# Loading work.uart_receiver_tb(stimulus)
-# Loading work.uart_receiver(structure)
-# Loading work.schmitt_trigger_filter(behaviour)
-# Loading work.shift_reg(behaviour)
+# Loading work.uart_transmitter_tb(stimulus)
+# Loading work.uart_transmitter(structure)
 # Loading work.counter(behaviour)
-# Loading work.uart_receiver_fsm(behaviour)
-# ** Warning: (vsim-8683) Uninitialized out port /uart_receiver_tb/dut/frame_err_tick_o has no driver.
-# This port will contribute value (U) to the signal network.
-#         Region: /uart_receiver_tb
-# ** Warning: (vsim-8683) Uninitialized out port /uart_receiver_tb/dut/parity_err_tick_o has no driver.
-# This port will contribute value (U) to the signal network.
-#         Region: /uart_receiver_tb
-run -all
-# Compile of uart.vhd was successful.
-# Compile of uart_receiver.vhd was successful.
-# Compile of uart_receiver_fsm.vhd was successful.
-# Compile of counter.vhd was successful.
-# Compile of primatives_pkg.vhd was successful.
-# Compile of schmitt_trigger_filter.vhd was successful.
-# Compile of shift_reg.vhd was successful.
-# Compile of uart_receiver_tb.vhd was successful.
-# Compile of baud_rate_generator.vhd was successful.
-# Compile of uart_de0.vhd failed with 1 errors.
-# 10 compiles, 1 failed with 1 error. 
-restart -f
-# Loading work.uart_receiver_tb(stimulus)
-# Loading work.uart_receiver(structure)
-# Loading work.schmitt_trigger_filter(behaviour)
 # Loading work.shift_reg(behaviour)
-# ** Fatal: (vsim-3348) Port size (10) does not match actual size (9) for port '/uart_receiver_tb/dut/rx_shift_reg/data_o'.
-#    Time: 0 ps  Iteration: 0  Instance: /uart_receiver_tb/dut/rx_shift_reg File: /home/jansen/vhdl/projects/primatives/rtl/shift_reg.vhd Line: 14
-# FATAL ERROR while loading design
-# Compile of uart.vhd was successful.
-# Compile of uart_receiver.vhd failed with 1 errors.
-# Compile of uart_receiver_fsm.vhd was successful.
-# Compile of counter.vhd was successful.
-# Compile of primatives_pkg.vhd was successful.
-# Compile of schmitt_trigger_filter.vhd was successful.
-# Compile of shift_reg.vhd was successful.
-# Compile of uart_receiver_tb.vhd was successful.
-# Compile of baud_rate_generator.vhd was successful.
-# Compile of uart_de0.vhd failed with 1 errors.
-# 10 compiles, 2 failed with 2 errors. 
-# Compile of uart.vhd was successful.
-# Compile of uart_receiver.vhd was successful.
-# Compile of uart_receiver_fsm.vhd was successful.
-# Compile of counter.vhd was successful.
-# Compile of primatives_pkg.vhd was successful.
-# Compile of schmitt_trigger_filter.vhd was successful.
-# Compile of shift_reg.vhd was successful.
-# Compile of uart_receiver_tb.vhd was successful.
-# Compile of baud_rate_generator.vhd was successful.
-# Compile of uart_de0.vhd failed with 1 errors.
-# 10 compiles, 1 failed with 1 error. 
-restart
-# No Design Loaded!
-vsim work.uart_receiver_tb
-# vsim work.uart_receiver_tb 
-# Loading std.standard
-# Loading ieee.std_logic_1164(body)
-# Loading work.uart_receiver_tb(stimulus)
-# Loading work.uart_receiver(structure)
-# Loading work.schmitt_trigger_filter(behaviour)
-# Loading work.shift_reg(behaviour)
-# Loading work.counter(behaviour)
-# Loading work.uart_receiver_fsm(behaviour)
-# ** Warning: (vsim-8683) Uninitialized out port /uart_receiver_tb/dut/frame_err_tick_o has no driver.
-# This port will contribute value (U) to the signal network.
-#         Region: /uart_receiver_tb
-# ** Warning: (vsim-8683) Uninitialized out port /uart_receiver_tb/dut/parity_err_tick_o has no driver.
-# This port will contribute value (U) to the signal network.
-#         Region: /uart_receiver_tb
-add wave \
-{sim:/uart_receiver_tb/raw_sigs } \
-{sim:/uart_receiver_tb/sig_cnt } \
-{sim:/uart_receiver_tb/clk } \
-{sim:/uart_receiver_tb/rst } \
-{sim:/uart_receiver_tb/rx } \
-{sim:/uart_receiver_tb/sample_tick } \
-{sim:/uart_receiver_tb/data } \
-{sim:/uart_receiver_tb/rx_done_tick } \
-{sim:/uart_receiver_tb/frame_err_tick } \
-{sim:/uart_receiver_tb/par_err_tick } \
-{sim:/uart_receiver_tb/par_en } \
-{sim:/uart_receiver_tb/par_odd_neven } \
-{sim:/uart_receiver_tb/stop_bits_num } 
-add wave \
-{sim:/uart_receiver_tb/dut/uart_receiver_fsm_1/l_state } 
+# Loading work.parity_generator(behaviour)
+# Loading work.uart_transmitter_fsm(behaviour)
 run -all
-# ** Failure: Sent data was not received correctly.
-#    Time: 1510320 ns  Iteration: 5  Process: /uart_receiver_tb/rx_out_check_proc File: /home/jansen/vhdl/projects/uart/bench/uart_receiver_tb.vhd
-# Break in Process rx_out_check_proc at /home/jansen/vhdl/projects/uart/bench/uart_receiver_tb.vhd line 154
-add wave \
-{sim:/uart_receiver_tb/dut/sample_tick_i } \
-{sim:/uart_receiver_tb/dut/data_o } \
-{sim:/uart_receiver_tb/dut/rx_done_tick_o } \
-{sim:/uart_receiver_tb/dut/frame_err_tick_o } \
-{sim:/uart_receiver_tb/dut/f_rx } \
-{sim:/uart_receiver_tb/dut/sc_cnt } \
-{sim:/uart_receiver_tb/dut/rx_data } 
-add wave \
-{sim:/uart_receiver_tb/dut/uart_receiver_fsm_1/l_last_dbit } 
-add wave \
-{sim:/uart_receiver_tb/dut/uart_receiver_fsm_1/rx_shift_en_o } 
-add wave \
-{sim:/uart_receiver_tb/dut/uart_receiver_fsm_1/rx_shift_nload_o } 
-restart -f
-# ** Warning: (vsim-8683) Uninitialized out port /uart_receiver_tb/dut/frame_err_tick_o has no driver.
-# This port will contribute value (U) to the signal network.
-#         Region: /uart_receiver_tb
-# ** Warning: (vsim-8683) Uninitialized out port /uart_receiver_tb/dut/parity_err_tick_o has no driver.
-# This port will contribute value (U) to the signal network.
-#         Region: /uart_receiver_tb
-run -all
-# ** Failure: Sent data was not received correctly.
-#    Time: 1510320 ns  Iteration: 5  Process: /uart_receiver_tb/rx_out_check_proc File: /home/jansen/vhdl/projects/uart/bench/uart_receiver_tb.vhd
-# Break in Process rx_out_check_proc at /home/jansen/vhdl/projects/uart/bench/uart_receiver_tb.vhd line 154
-add wave \
-{sim:/uart_receiver_tb/dut/uart_receiver_fsm_1/l_state } 
-restart -f
-# ** Warning: (vsim-8683) Uninitialized out port /uart_receiver_tb/dut/frame_err_tick_o has no driver.
-# This port will contribute value (U) to the signal network.
-#         Region: /uart_receiver_tb
-# ** Warning: (vsim-8683) Uninitialized out port /uart_receiver_tb/dut/parity_err_tick_o has no driver.
-# This port will contribute value (U) to the signal network.
-#         Region: /uart_receiver_tb
-run -all
-# ** Failure: Sent data was not received correctly.
-#    Time: 1510320 ns  Iteration: 5  Process: /uart_receiver_tb/rx_out_check_proc File: /home/jansen/vhdl/projects/uart/bench/uart_receiver_tb.vhd
-# Break in Process rx_out_check_proc at /home/jansen/vhdl/projects/uart/bench/uart_receiver_tb.vhd line 154
-# Compile of uart.vhd was successful.
-# Compile of uart_receiver.vhd failed with 1 errors.
-# Compile of uart_receiver_fsm.vhd was successful.
-# Compile of counter.vhd was successful.
-# Compile of primatives_pkg.vhd was successful.
-# Compile of schmitt_trigger_filter.vhd was successful.
-# Compile of shift_reg.vhd was successful.
-# Compile of uart_receiver_tb.vhd was successful.
-# Compile of baud_rate_generator.vhd was successful.
-# Compile of uart_de0.vhd failed with 1 errors.
-# 10 compiles, 2 failed with 2 errors. 
-# Compile of uart.vhd was successful.
-# Compile of uart_receiver.vhd was successful.
-# Compile of uart_receiver_fsm.vhd was successful.
-# Compile of counter.vhd was successful.
-# Compile of primatives_pkg.vhd was successful.
-# Compile of schmitt_trigger_filter.vhd was successful.
-# Compile of shift_reg.vhd was successful.
-# Compile of uart_receiver_tb.vhd was successful.
-# Compile of baud_rate_generator.vhd was successful.
-# Compile of uart_de0.vhd failed.
-# Compile of uart.vhd was successful.
-# Compile of uart_receiver.vhd was successful.
-# Compile of uart_receiver_fsm.vhd was successful.
-# Compile of counter.vhd was successful.
-# Compile of primatives_pkg.vhd was successful.
-# Compile of schmitt_trigger_filter.vhd was successful.
-# Compile of shift_reg.vhd was successful.
-# Compile of uart_receiver_tb.vhd was successful.
-# Compile of baud_rate_generator.vhd was successful.
-# Compile of uart_de0.vhd failed with 1 errors.
-# 10 compiles, 1 failed with 1 error. 
-restart -f
-# Loading work.uart_receiver_tb(stimulus)
-# Loading work.uart_receiver(structure)
-# Loading work.schmitt_trigger_filter(behaviour)
-# Loading work.shift_reg(behaviour)
-# Loading work.counter(behaviour)
-# Loading work.uart_receiver_fsm(behaviour)
-# ** Warning: (vsim-8683) Uninitialized out port /uart_receiver_tb/dut/frame_err_tick_o has no driver.
-# This port will contribute value (U) to the signal network.
-#         Region: /uart_receiver_tb
-# ** Warning: (vsim-8683) Uninitialized out port /uart_receiver_tb/dut/parity_err_tick_o has no driver.
-# This port will contribute value (U) to the signal network.
-#         Region: /uart_receiver_tb
-run -all
-# Compile of uart.vhd was successful.
-# Compile of uart_receiver.vhd failed with 1 errors.
-# Compile of uart_receiver_fsm.vhd was successful.
-# Compile of counter.vhd was successful.
-# Compile of primatives_pkg.vhd was successful.
-# Compile of schmitt_trigger_filter.vhd was successful.
-# Compile of shift_reg.vhd was successful.
-# Compile of uart_receiver_tb.vhd was successful.
-# Compile of baud_rate_generator.vhd was successful.
-# Compile of uart_de0.vhd failed with 1 errors.
-# 10 compiles, 2 failed with 2 errors. 
-restart -f
-# Loading work.uart_receiver_tb(stimulus)
-# ** Error: (vsim-13) Recompile work.uart_receiver(structure) because work.uart_receiver_fsm has changed.
-# Load interrupted
-# Compile of uart.vhd was successful.
-# Compile of uart_receiver.vhd was successful.
-# Compile of uart_receiver_fsm.vhd was successful.
-# Compile of counter.vhd was successful.
-# Compile of primatives_pkg.vhd was successful.
-# Compile of schmitt_trigger_filter.vhd was successful.
-# Compile of shift_reg.vhd was successful.
-# Compile of uart_receiver_tb.vhd was successful.
-# Compile of baud_rate_generator.vhd was successful.
-# Compile of uart_de0.vhd failed with 1 errors.
-# 10 compiles, 1 failed with 1 error. 
-vsim work.uart_receiver_tb
-# vsim work.uart_receiver_tb 
-# Error loading design
-# Compile of uart.vhd was successful.
-# Compile of uart_receiver.vhd was successful.
-# Compile of uart_receiver_fsm.vhd was successful.
-# Compile of counter.vhd was successful.
-# Compile of primatives_pkg.vhd was successful.
-# Compile of schmitt_trigger_filter.vhd was successful.
-# Compile of shift_reg.vhd was successful.
-# Compile of uart_receiver_tb.vhd was successful.
-# Compile of baud_rate_generator.vhd was successful.
-# Compile of uart_de0.vhd failed with 1 errors.
-# 10 compiles, 1 failed with 1 error. 
-# Compile of uart.vhd was successful.
-# Compile of uart_receiver.vhd was successful.
-# Compile of uart_receiver_fsm.vhd was successful.
-# Compile of counter.vhd was successful.
-# Compile of primatives_pkg.vhd was successful.
-# Compile of schmitt_trigger_filter.vhd was successful.
-# Compile of shift_reg.vhd was successful.
-# Compile of uart_receiver_tb.vhd was successful.
-# Compile of baud_rate_generator.vhd was successful.
-# Compile of uart_de0.vhd failed with 1 errors.
-# 10 compiles, 1 failed with 1 error. 
-# Compile of uart.vhd was successful.
-# Compile of uart_receiver.vhd was successful.
-# Compile of uart_receiver_fsm.vhd was successful.
-# Compile of counter.vhd was successful.
-# Compile of primatives_pkg.vhd was successful.
-# Compile of schmitt_trigger_filter.vhd was successful.
-# Compile of shift_reg.vhd was successful.
-# Compile of uart_receiver_tb.vhd was successful.
-# Compile of baud_rate_generator.vhd was successful.
-# Compile of uart_de0.vhd failed.
-vsim work.uart_receiver_tb
-# vsim work.uart_receiver_tb 
-# Loading std.standard
-# Loading ieee.std_logic_1164(body)
-# Loading work.uart_receiver_tb(stimulus)
-# Loading work.uart_receiver(structure)
-# Loading work.schmitt_trigger_filter(behaviour)
-# Loading work.shift_reg(behaviour)
-# Loading work.counter(behaviour)
-# Loading work.uart_receiver_fsm(behaviour)
-# ** Warning: (vsim-8683) Uninitialized out port /uart_receiver_tb/dut/frame_err_tick_o has no driver.
-# This port will contribute value (U) to the signal network.
-#         Region: /uart_receiver_tb
-# ** Warning: (vsim-8683) Uninitialized out port /uart_receiver_tb/dut/parity_err_tick_o has no driver.
-# This port will contribute value (U) to the signal network.
-#         Region: /uart_receiver_tb
-run -all
-# ** Failure: Sent data was not received correctly.
-#    Time: 1510320 ns  Iteration: 5  Process: /uart_receiver_tb/rx_out_check_proc File: /home/jansen/vhdl/projects/uart/bench/uart_receiver_tb.vhd
-# Break in Process rx_out_check_proc at /home/jansen/vhdl/projects/uart/bench/uart_receiver_tb.vhd line 154
-# Compile of uart.vhd was successful.
-# Compile of uart_receiver.vhd failed with 1 errors.
-# Compile of uart_receiver_fsm.vhd was successful.
-# Compile of counter.vhd was successful.
-# Compile of primatives_pkg.vhd was successful.
-# Compile of schmitt_trigger_filter.vhd was successful.
-# Compile of shift_reg.vhd was successful.
-# Compile of uart_receiver_tb.vhd was successful.
-# Compile of baud_rate_generator.vhd was successful.
-# Compile of uart_de0.vhd failed with 1 errors.
-# 10 compiles, 2 failed with 2 errors. 
-# Compile of uart.vhd was successful.
-# Compile of uart_receiver.vhd was successful.
-# Compile of uart_receiver_fsm.vhd was successful.
-# Compile of counter.vhd was successful.
-# Compile of primatives_pkg.vhd was successful.
-# Compile of schmitt_trigger_filter.vhd was successful.
-# Compile of shift_reg.vhd was successful.
-# Compile of uart_receiver_tb.vhd was successful.
-# Compile of baud_rate_generator.vhd was successful.
-# Compile of uart_de0.vhd failed with 1 errors.
-# 10 compiles, 1 failed with 1 error. 
-restart -f
-# Loading work.uart_receiver_tb(stimulus)
-# Loading work.uart_receiver(structure)
-# Loading work.schmitt_trigger_filter(behaviour)
-# Loading work.shift_reg(behaviour)
-# Loading work.counter(behaviour)
-# Loading work.uart_receiver_fsm(behaviour)
-# ** Warning: (vsim-8683) Uninitialized out port /uart_receiver_tb/dut/frame_err_tick_o has no driver.
-# This port will contribute value (U) to the signal network.
-#         Region: /uart_receiver_tb
-# ** Warning: (vsim-8683) Uninitialized out port /uart_receiver_tb/dut/parity_err_tick_o has no driver.
-# This port will contribute value (U) to the signal network.
-#         Region: /uart_receiver_tb
-run -all
-# ** Failure: Sent data was not received correctly.
-#    Time: 1501640 ns  Iteration: 5  Process: /uart_receiver_tb/rx_out_check_proc File: /home/jansen/vhdl/projects/uart/bench/uart_receiver_tb.vhd
-# Break in Process rx_out_check_proc at /home/jansen/vhdl/projects/uart/bench/uart_receiver_tb.vhd line 154
-add wave \
-{sim:/uart_receiver_tb/data } 
-# Compile of uart.vhd was successful.
-# Compile of uart_receiver.vhd was successful.
-# Compile of uart_receiver_fsm.vhd was successful.
-# Compile of counter.vhd was successful.
-# Compile of primatives_pkg.vhd was successful.
-# Compile of schmitt_trigger_filter.vhd was successful.
-# Compile of shift_reg.vhd was successful.
-# Compile of uart_receiver_tb.vhd was successful.
-# Compile of baud_rate_generator.vhd was successful.
-# Compile of uart_de0.vhd failed with 1 errors.
-# 10 compiles, 1 failed with 1 error. 
-# Compile of uart.vhd was successful.
-# Compile of uart_receiver.vhd was successful.
-# Compile of uart_receiver_fsm.vhd was successful.
-# Compile of counter.vhd was successful.
-# Compile of primatives_pkg.vhd was successful.
-# Compile of schmitt_trigger_filter.vhd was successful.
-# Compile of shift_reg.vhd was successful.
-# Compile of uart_receiver_tb.vhd was successful.
-# Compile of baud_rate_generator.vhd was successful.
-# Compile of uart_de0.vhd failed with 1 errors.
-# 10 compiles, 1 failed with 1 error. 
-restart -f
-# Loading work.uart_receiver_tb(stimulus)
-# Loading work.uart_receiver(structure)
-# Loading work.schmitt_trigger_filter(behaviour)
-# Loading work.shift_reg(behaviour)
-# Loading work.counter(behaviour)
-# Loading work.uart_receiver_fsm(behaviour)
-# ** Warning: (vsim-8683) Uninitialized out port /uart_receiver_tb/dut/frame_err_tick_o has no driver.
-# This port will contribute value (U) to the signal network.
-#         Region: /uart_receiver_tb
-# ** Warning: (vsim-8683) Uninitialized out port /uart_receiver_tb/dut/parity_err_tick_o has no driver.
-# This port will contribute value (U) to the signal network.
-#         Region: /uart_receiver_tb
-run -all
-# ** Failure: Sent data was not received correctly.
-#    Time: 1501640 ns  Iteration: 5  Process: /uart_receiver_tb/rx_out_check_proc File: /home/jansen/vhdl/projects/uart/bench/uart_receiver_tb.vhd
-# Break in Process rx_out_check_proc at /home/jansen/vhdl/projects/uart/bench/uart_receiver_tb.vhd line 154
-step -out
-step -out
-# Next activity is in 10 ns.
-step -out
-step -out
-step -out
-step -out
-step -out
-step -out
-# Next activity is in 10 ns.
-step -out
-step -out
-step -out
-step -out
-step -out
-step -out
-step -out
-step -out
-step -out
-step -out
-run -continue
-# ** Failure: Sent data was not received correctly.
-#    Time: 2890440 ns  Iteration: 5  Process: /uart_receiver_tb/rx_out_check_proc File: /home/jansen/vhdl/projects/uart/bench/uart_receiver_tb.vhd
-# Break in Process rx_out_check_proc at /home/jansen/vhdl/projects/uart/bench/uart_receiver_tb.vhd line 154
-# Compile of uart.vhd was successful.
-# Compile of uart_receiver.vhd was successful.
-# Compile of uart_receiver_fsm.vhd was successful.
-# Compile of counter.vhd was successful.
-# Compile of primatives_pkg.vhd was successful.
-# Compile of schmitt_trigger_filter.vhd was successful.
-# Compile of shift_reg.vhd was successful.
-# Compile of uart_receiver_tb.vhd was successful.
-# Compile of baud_rate_generator.vhd was successful.
-# Compile of uart_de0.vhd failed with 1 errors.
-# 10 compiles, 1 failed with 1 error. 
-restart -f
-# Loading work.uart_receiver_tb(stimulus)
-# Loading work.uart_receiver(structure)
-# Loading work.schmitt_trigger_filter(behaviour)
-# Loading work.shift_reg(behaviour)
-# Loading work.counter(behaviour)
-# Loading work.uart_receiver_fsm(behaviour)
-# ** Warning: (vsim-8683) Uninitialized out port /uart_receiver_tb/dut/frame_err_tick_o has no driver.
-# This port will contribute value (U) to the signal network.
-#         Region: /uart_receiver_tb
-# ** Warning: (vsim-8683) Uninitialized out port /uart_receiver_tb/dut/parity_err_tick_o has no driver.
-# This port will contribute value (U) to the signal network.
-#         Region: /uart_receiver_tb
-run -all
-# ** Failure: Sent data was not received correctly.
-#    Time: 1501640 ns  Iteration: 5  Process: /uart_receiver_tb/rx_out_check_proc File: /home/jansen/vhdl/projects/uart/bench/uart_receiver_tb.vhd
-# Break in Process rx_out_check_proc at /home/jansen/vhdl/projects/uart/bench/uart_receiver_tb.vhd line 154
-# Compile of uart.vhd was successful.
-# Compile of uart_receiver.vhd was successful.
-# Compile of uart_receiver_fsm.vhd was successful.
-# Compile of counter.vhd was successful.
-# Compile of primatives_pkg.vhd was successful.
-# Compile of schmitt_trigger_filter.vhd was successful.
-# Compile of shift_reg.vhd was successful.
-# Compile of uart_receiver_tb.vhd was successful.
-# Compile of baud_rate_generator.vhd was successful.
-# Compile of uart_de0.vhd failed with 1 errors.
-# 10 compiles, 1 failed with 1 error. 
-restart -f
-# Loading work.uart_receiver_tb(stimulus)
-# Loading work.uart_receiver(structure)
-# Loading work.schmitt_trigger_filter(behaviour)
-# Loading work.shift_reg(behaviour)
-# Loading work.counter(behaviour)
-# Loading work.uart_receiver_fsm(behaviour)
-# ** Warning: (vsim-8683) Uninitialized out port /uart_receiver_tb/dut/frame_err_tick_o has no driver.
-# This port will contribute value (U) to the signal network.
-#         Region: /uart_receiver_tb
-# ** Warning: (vsim-8683) Uninitialized out port /uart_receiver_tb/dut/parity_err_tick_o has no driver.
-# This port will contribute value (U) to the signal network.
-#         Region: /uart_receiver_tb
-run -all
-# ** Failure: Sent data was not received correctly.
-#    Time: 1501641 ns  Iteration: 0  Process: /uart_receiver_tb/rx_out_check_proc File: /home/jansen/vhdl/projects/uart/bench/uart_receiver_tb.vhd
-# Break in Process rx_out_check_proc at /home/jansen/vhdl/projects/uart/bench/uart_receiver_tb.vhd line 155
-run -continue
-# ** Failure: Sent data was not received correctly.
-#    Time: 2890441 ns  Iteration: 0  Process: /uart_receiver_tb/rx_out_check_proc File: /home/jansen/vhdl/projects/uart/bench/uart_receiver_tb.vhd
-# Break in Process rx_out_check_proc at /home/jansen/vhdl/projects/uart/bench/uart_receiver_tb.vhd line 155
-# Compile of uart.vhd was successful.
-# Compile of uart_receiver.vhd failed with 2 errors.
-# Compile of uart_receiver_fsm.vhd failed with 1 errors.
-# Compile of counter.vhd was successful.
-# Compile of primatives_pkg.vhd was successful.
-# Compile of schmitt_trigger_filter.vhd was successful.
-# Compile of shift_reg.vhd was successful.
-# Compile of uart_receiver_tb.vhd was successful.
-# Compile of baud_rate_generator.vhd was successful.
-# Compile of uart_de0.vhd failed with 1 errors.
-# 10 compiles, 3 failed with 4 errors. 
-# Compile of uart.vhd was successful.
-# Compile of uart_receiver.vhd failed with 2 errors.
-# Compile of uart_receiver_fsm.vhd failed with 1 errors.
-# Compile of counter.vhd was successful.
-# Compile of primatives_pkg.vhd was successful.
-# Compile of schmitt_trigger_filter.vhd was successful.
-# Compile of shift_reg.vhd was successful.
-# Compile of uart_receiver_tb.vhd was successful.
-# Compile of baud_rate_generator.vhd was successful.
-# Compile of uart_de0.vhd failed with 1 errors.
-# 10 compiles, 3 failed with 4 errors. 
-# Compile of uart.vhd was successful.
-# Compile of uart_receiver.vhd failed with 1 errors.
-# Compile of uart_receiver_fsm.vhd failed with 1 errors.
-# Compile of counter.vhd was successful.
-# Compile of primatives_pkg.vhd was successful.
-# Compile of schmitt_trigger_filter.vhd was successful.
-# Compile of shift_reg.vhd was successful.
-# Compile of uart_receiver_tb.vhd failed with 1 errors.
-# Compile of baud_rate_generator.vhd was successful.
-# Compile of uart_de0.vhd failed with 1 errors.
-# 10 compiles, 4 failed with 4 errors. 
-# Compile of uart.vhd was successful.
-# Compile of uart_receiver.vhd failed with 1 errors.
-# Compile of uart_receiver_fsm.vhd failed with 1 errors.
-# Compile of counter.vhd was successful.
-# Compile of primatives_pkg.vhd was successful.
-# Compile of schmitt_trigger_filter.vhd was successful.
-# Compile of shift_reg.vhd was successful.
-# Compile of uart_receiver_tb.vhd failed with 1 errors.
-# Compile of baud_rate_generator.vhd was successful.
-# Compile of uart_de0.vhd failed with 1 errors.
-# 10 compiles, 4 failed with 4 errors. 
-# Compile of uart.vhd was successful.
-# Compile of uart_receiver.vhd was successful.
-# Compile of uart_receiver_fsm.vhd failed with 1 errors.
-# Compile of counter.vhd was successful.
-# Compile of primatives_pkg.vhd was successful.
-# Compile of schmitt_trigger_filter.vhd was successful.
-# Compile of shift_reg.vhd was successful.
-# Compile of uart_receiver_tb.vhd failed with 1 errors.
-# Compile of baud_rate_generator.vhd was successful.
-# Compile of uart_de0.vhd failed with 1 errors.
-# 10 compiles, 3 failed with 3 errors. 
-# Compile of uart.vhd was successful.
-# Compile of uart_receiver.vhd was successful.
-# Compile of uart_receiver_fsm.vhd was successful.
-# Compile of counter.vhd was successful.
-# Compile of primatives_pkg.vhd was successful.
-# Compile of schmitt_trigger_filter.vhd was successful.
-# Compile of shift_reg.vhd was successful.
-# Compile of uart_receiver_tb.vhd failed with 1 errors.
-# Compile of baud_rate_generator.vhd was successful.
-# Compile of uart_de0.vhd failed with 1 errors.
-# 10 compiles, 2 failed with 2 errors. 
-# Compile of uart.vhd was successful.
-# Compile of uart_receiver.vhd was successful.
-# Compile of uart_receiver_fsm.vhd was successful.
-# Compile of counter.vhd was successful.
-# Compile of primatives_pkg.vhd was successful.
-# Compile of schmitt_trigger_filter.vhd was successful.
-# Compile of shift_reg.vhd was successful.
-# Compile of uart_receiver_tb.vhd was successful with warnings.
-# Compile of baud_rate_generator.vhd was successful.
-# Compile of uart_de0.vhd failed with 1 errors.
-# 10 compiles, 1 failed with 1 error. 
-restart -f
-# Loading work.uart_receiver_tb(stimulus)
-# Loading work.uart_receiver(structure)
-# Loading work.schmitt_trigger_filter(behaviour)
-# Loading work.shift_reg(behaviour)
-# Loading work.counter(behaviour)
-# Loading work.uart_receiver_fsm(behaviour)
-# ** Warning: (vsim-8683) Uninitialized out port /uart_receiver_tb/dut/frame_err_tick_o has no driver.
-# This port will contribute value (U) to the signal network.
-#         Region: /uart_receiver_tb
-# ** Warning: (vsim-8683) Uninitialized out port /uart_receiver_tb/dut/parity_err_tick_o has no driver.
-# This port will contribute value (U) to the signal network.
-#         Region: /uart_receiver_tb
-# Warning in wave window restart: (vish-4014) No objects found matching '/uart_receiver_tb/dut/rx_data'. 
-# Warning in wave window restart: (vish-4014) No objects found matching '/uart_receiver_tb/dut/uart_receiver_fsm_1/rx_shift_en_o'. 
-# Warning in wave window restart: (vish-4014) No objects found matching '/uart_receiver_tb/dut/uart_receiver_fsm_1/rx_shift_nload_o'. 
-run -all
-# ** Failure: Sent data was not received correctly.
-#    Time: 1501641 ns  Iteration: 0  Process: /uart_receiver_tb/rx_out_check_proc File: /home/jansen/vhdl/projects/uart/bench/uart_receiver_tb.vhd
-# Break in Process rx_out_check_proc at /home/jansen/vhdl/projects/uart/bench/uart_receiver_tb.vhd line 155
-# Compile of uart.vhd was successful.
-# Compile of uart_receiver.vhd was successful.
-# Compile of uart_receiver_fsm.vhd was successful.
-# Compile of counter.vhd was successful.
-# Compile of primatives_pkg.vhd was successful.
-# Compile of schmitt_trigger_filter.vhd was successful.
-# Compile of shift_reg.vhd was successful.
-# Compile of uart_receiver_tb.vhd was successful.
-# Compile of baud_rate_generator.vhd was successful.
-# Compile of uart_de0.vhd failed with 1 errors.
-# 10 compiles, 1 failed with 1 error. 
-restart -f
-# Loading work.uart_receiver_tb(stimulus)
-# Loading work.uart_receiver(structure)
-# Loading work.schmitt_trigger_filter(behaviour)
-# Loading work.shift_reg(behaviour)
-# Loading work.counter(behaviour)
-# Loading work.uart_receiver_fsm(behaviour)
-# ** Warning: (vsim-8683) Uninitialized out port /uart_receiver_tb/dut/frame_err_tick_o has no driver.
-# This port will contribute value (U) to the signal network.
-#         Region: /uart_receiver_tb
-# ** Warning: (vsim-8683) Uninitialized out port /uart_receiver_tb/dut/parity_err_tick_o has no driver.
-# This port will contribute value (U) to the signal network.
-#         Region: /uart_receiver_tb
-# Compile of uart.vhd was successful.
-# Compile of uart_receiver.vhd was successful.
-# Compile of uart_receiver_fsm.vhd was successful.
-# Compile of counter.vhd was successful.
-# Compile of primatives_pkg.vhd was successful.
-# Compile of schmitt_trigger_filter.vhd was successful.
-# Compile of shift_reg.vhd was successful.
-# Compile of uart_receiver_tb.vhd was successful.
-# Compile of baud_rate_generator.vhd was successful.
-# Compile of uart_de0.vhd failed with 1 errors.
-# 10 compiles, 1 failed with 1 error. 
-restart -f
-# Loading work.uart_receiver_tb(stimulus)
-# Loading work.uart_receiver(structure)
-# Loading work.schmitt_trigger_filter(behaviour)
-# Loading work.shift_reg(behaviour)
-# Loading work.counter(behaviour)
-# Loading work.uart_receiver_fsm(behaviour)
-# ** Warning: (vsim-8683) Uninitialized out port /uart_receiver_tb/dut/frame_err_tick_o has no driver.
-# This port will contribute value (U) to the signal network.
-#         Region: /uart_receiver_tb
-# ** Warning: (vsim-8683) Uninitialized out port /uart_receiver_tb/dut/parity_err_tick_o has no driver.
-# This port will contribute value (U) to the signal network.
-#         Region: /uart_receiver_tb
-run -all
-# Compile of uart.vhd was successful.
-# Compile of uart_receiver.vhd was successful.
-# Compile of uart_receiver_fsm.vhd was successful.
-# Compile of counter.vhd was successful.
-# Compile of primatives_pkg.vhd was successful.
-# Compile of schmitt_trigger_filter.vhd was successful.
-# Compile of shift_reg.vhd was successful.
-# Compile of uart_receiver_tb.vhd was successful.
-# Compile of baud_rate_generator.vhd was successful.
-# Compile of uart_de0.vhd failed with 1 errors.
-# 10 compiles, 1 failed with 1 error. 
-restart -f
-# Loading work.uart_receiver_tb(stimulus)
-# Loading work.uart_receiver(structure)
-# Loading work.schmitt_trigger_filter(behaviour)
-# Loading work.shift_reg(behaviour)
-# Loading work.counter(behaviour)
-# Loading work.uart_receiver_fsm(behaviour)
-# ** Warning: (vsim-8683) Uninitialized out port /uart_receiver_tb/dut/frame_err_tick_o has no driver.
-# This port will contribute value (U) to the signal network.
-#         Region: /uart_receiver_tb
-# ** Warning: (vsim-8683) Uninitialized out port /uart_receiver_tb/dut/parity_err_tick_o has no driver.
-# This port will contribute value (U) to the signal network.
-#         Region: /uart_receiver_tb
-add wave \
-{sim:/uart_receiver_tb/rx_done_tick } \
-{sim:/uart_receiver_tb/frame_err_tick } \
-{sim:/uart_receiver_tb/par_err_tick } 
-add wave \
-{sim:/uart_receiver_tb/dut/f_rx } 
-add wave \
-{sim:/uart_receiver_tb/dut/r_data } 
-add wave \
-{sim:/uart_receiver_tb/dut/p_data } 
-add wave \
-{sim:/uart_receiver_tb/dut/uart_receiver_fsm_1/l_state } 
-add wave \
-{sim:/uart_receiver_tb/dut/sample_tick_i } 
-run -all
-# ** Fatal: (vsim-3734) Index value -1 is out of range 0 to 2.
-#    Time: 1779401 ns  Iteration: 0  Process: /uart_receiver_tb/rx_out_check_proc File: /home/jansen/vhdl/projects/uart/bench/uart_receiver_tb.vhd
-# Fatal error in Process rx_out_check_proc at /home/jansen/vhdl/projects/uart/bench/uart_receiver_tb.vhd line 154
+# ** Fatal: (vsim-3421) Value 32 for l_cnt_next is out of range 0 to 31.
+#    Time: 288370 ns  Iteration: 1  Process: /uart_transmitter_tb/dut/sample_ticks_counter/count_proc File: /home/jansen/vhdl/projects/primatives/rtl/counter.vhd
+# Fatal error in Process count_proc at /home/jansen/vhdl/projects/primatives/rtl/counter.vhd line 37
 # 
 # HDL call sequence:
-# Stopped at /home/jansen/vhdl/projects/uart/bench/uart_receiver_tb.vhd 154 Process rx_out_check_proc
+# Stopped at /home/jansen/vhdl/projects/primatives/rtl/counter.vhd 37 Process count_proc
 # 
-add wave \
-{sim:/uart_receiver_tb/dut/r_serial_in } 
-add wave \
-{sim:/uart_receiver_tb/dut/r_reg_load } 
+# Compile of uart.vhd was successful.
+# Compile of uart_receiver_fsm.vhd was successful.
+# Compile of counter.vhd was successful.
+# Compile of primatives_pkg.vhd was successful.
+# Compile of schmitt_trigger_filter.vhd was successful.
+# Compile of shift_reg.vhd was successful.
+# Compile of uart_receiver_tb.vhd was successful.
+# Compile of baud_rate_generator.vhd was successful.
+# Compile of parity_generator.vhd was successful.
+# Compile of uart_receiver.vhd was successful.
+# Compile of uart_de0.vhd was successful.
+# Compile of uart_transmitter.vhd was successful.
+# Compile of uart_transmitter_fsm.vhd was successful.
+# Compile of uart_transmitter_tb.vhd was successful.
+# 14 compiles, 0 failed with no errors. 
 restart -f
-# ** Warning: (vsim-8683) Uninitialized out port /uart_receiver_tb/dut/frame_err_tick_o has no driver.
-# This port will contribute value (U) to the signal network.
-#         Region: /uart_receiver_tb
-# ** Warning: (vsim-8683) Uninitialized out port /uart_receiver_tb/dut/parity_err_tick_o has no driver.
-# This port will contribute value (U) to the signal network.
-#         Region: /uart_receiver_tb
-run -all
-# ** Fatal: (vsim-3734) Index value -1 is out of range 0 to 2.
-#    Time: 1779401 ns  Iteration: 0  Process: /uart_receiver_tb/rx_out_check_proc File: /home/jansen/vhdl/projects/uart/bench/uart_receiver_tb.vhd
-# Fatal error in Process rx_out_check_proc at /home/jansen/vhdl/projects/uart/bench/uart_receiver_tb.vhd line 154
-# 
-# HDL call sequence:
-# Stopped at /home/jansen/vhdl/projects/uart/bench/uart_receiver_tb.vhd 154 Process rx_out_check_proc
-# 
-# Compile of uart.vhd was successful.
-# Compile of uart_receiver.vhd was successful.
-# Compile of uart_receiver_fsm.vhd was successful.
-# Compile of counter.vhd was successful.
-# Compile of primatives_pkg.vhd was successful.
-# Compile of schmitt_trigger_filter.vhd was successful.
-# Compile of shift_reg.vhd was successful.
-# Compile of uart_receiver_tb.vhd was successful.
-# Compile of baud_rate_generator.vhd was successful.
-# Compile of uart_de0.vhd failed with 1 errors.
-# 10 compiles, 1 failed with 1 error. 
-restart -f
-# Loading work.uart_receiver_tb(stimulus)
-# ** Error: (vsim-13) Recompile work.uart_receiver(structure) because work.shift_reg has changed.
-# Load interrupted
-# Compile of uart.vhd was successful.
-# Compile of uart_receiver.vhd was successful.
-# Compile of uart_receiver_fsm.vhd was successful.
-# Compile of counter.vhd was successful.
-# Compile of primatives_pkg.vhd was successful.
-# Compile of schmitt_trigger_filter.vhd was successful.
-# Compile of shift_reg.vhd was successful.
-# Compile of uart_receiver_tb.vhd was successful.
-# Compile of baud_rate_generator.vhd was successful.
-# Compile of uart_de0.vhd failed with 1 errors.
-# 10 compiles, 1 failed with 1 error. 
-vsim work.uart_receiver_tb
-# vsim work.uart_receiver_tb 
-# Error loading design
-# Compile of uart.vhd was successful.
-# Compile of uart_receiver.vhd was successful.
-# Compile of uart_receiver_fsm.vhd was successful.
-# Compile of counter.vhd was successful.
-# Compile of primatives_pkg.vhd was successful.
-# Compile of schmitt_trigger_filter.vhd was successful.
-# Compile of shift_reg.vhd was successful.
-# Compile of uart_receiver_tb.vhd was successful.
-# Compile of baud_rate_generator.vhd was successful.
-# Compile of uart_de0.vhd failed with 1 errors.
-# 10 compiles, 1 failed with 1 error. 
-# Compile of uart.vhd was successful.
-# Compile of uart_receiver.vhd was successful.
-# Compile of uart_receiver_fsm.vhd was successful.
-# Compile of counter.vhd was successful.
-# Compile of primatives_pkg.vhd was successful.
-# Compile of schmitt_trigger_filter.vhd was successful.
-# Compile of shift_reg.vhd was successful.
-# Compile of uart_receiver_tb.vhd was successful.
-# Compile of baud_rate_generator.vhd was successful.
-# Compile of uart_de0.vhd failed.
-vsim work.uart_receiver_tb
-# vsim work.uart_receiver_tb 
-# Loading std.standard
-# Loading ieee.std_logic_1164(body)
-# Loading work.uart_receiver_tb(stimulus)
-# Loading work.uart_receiver(structure)
-# Loading work.schmitt_trigger_filter(behaviour)
-# Loading work.shift_reg(behaviour)
+# Loading work.uart_transmitter_tb(stimulus)
+# Loading work.uart_transmitter(structure)
 # Loading work.counter(behaviour)
-# Loading work.uart_receiver_fsm(behaviour)
-# ** Warning: (vsim-8683) Uninitialized out port /uart_receiver_tb/dut/frame_err_tick_o has no driver.
-# This port will contribute value (U) to the signal network.
-#         Region: /uart_receiver_tb
-# ** Warning: (vsim-8683) Uninitialized out port /uart_receiver_tb/dut/parity_err_tick_o has no driver.
-# This port will contribute value (U) to the signal network.
-#         Region: /uart_receiver_tb
+# Loading work.shift_reg(behaviour)
+# Loading work.parity_generator(behaviour)
+# Loading work.uart_transmitter_fsm(behaviour)
 run -all
-# ** Fatal: (vsim-3734) Index value -1 is out of range 0 to 2.
-#    Time: 1640521 ns  Iteration: 0  Process: /uart_receiver_tb/rx_out_check_proc File: /home/jansen/vhdl/projects/uart/bench/uart_receiver_tb.vhd
-# Fatal error in Process rx_out_check_proc at /home/jansen/vhdl/projects/uart/bench/uart_receiver_tb.vhd line 154
+# ** Fatal: (vsim-3421) Value 32 for l_cnt_next is out of range 0 to 31.
+#    Time: 286750 ns  Iteration: 1  Process: /uart_transmitter_tb/dut/sample_ticks_counter/count_proc File: /home/jansen/vhdl/projects/primatives/rtl/counter.vhd
+# Fatal error in Process count_proc at /home/jansen/vhdl/projects/primatives/rtl/counter.vhd line 37
 # 
 # HDL call sequence:
-# Stopped at /home/jansen/vhdl/projects/uart/bench/uart_receiver_tb.vhd 154 Process rx_out_check_proc
-# 
-run -continue
-# Cannot continue because of fatal error.
-# HDL call sequence:
-# Stopped at /home/jansen/vhdl/projects/uart/bench/uart_receiver_tb.vhd 154 Process rx_out_check_proc
-# 
-run -continue
-# Cannot continue because of fatal error.
-# HDL call sequence:
-# Stopped at /home/jansen/vhdl/projects/uart/bench/uart_receiver_tb.vhd 154 Process rx_out_check_proc
+# Stopped at /home/jansen/vhdl/projects/primatives/rtl/counter.vhd 37 Process count_proc
 # 
 # Compile of uart.vhd was successful.
-# Compile of uart_receiver.vhd was successful.
 # Compile of uart_receiver_fsm.vhd was successful.
 # Compile of counter.vhd was successful.
 # Compile of primatives_pkg.vhd was successful.
@@ -1000,51 +482,18 @@ run -continue
 # Compile of shift_reg.vhd was successful.
 # Compile of uart_receiver_tb.vhd was successful.
 # Compile of baud_rate_generator.vhd was successful.
-# Compile of uart_de0.vhd failed with 1 errors.
-# 10 compiles, 1 failed with 1 error. 
-restart -f
-# Loading work.uart_receiver_tb(stimulus)
-# Loading work.uart_receiver(structure)
-# Loading work.schmitt_trigger_filter(behaviour)
-# Loading work.shift_reg(behaviour)
-# Loading work.counter(behaviour)
-# Loading work.uart_receiver_fsm(behaviour)
-# ** Warning: (vsim-8683) Uninitialized out port /uart_receiver_tb/dut/frame_err_tick_o has no driver.
-# This port will contribute value (U) to the signal network.
-#         Region: /uart_receiver_tb
-# ** Warning: (vsim-8683) Uninitialized out port /uart_receiver_tb/dut/parity_err_tick_o has no driver.
-# This port will contribute value (U) to the signal network.
-#         Region: /uart_receiver_tb
-run -all
-# ** Fatal: (vsim-3734) Index value -1 is out of range 0 to 2.
-#    Time: 1640520 ns  Iteration: 5  Process: /uart_receiver_tb/rx_out_check_proc File: /home/jansen/vhdl/projects/uart/bench/uart_receiver_tb.vhd
-# Fatal error in Process rx_out_check_proc at /home/jansen/vhdl/projects/uart/bench/uart_receiver_tb.vhd line 153
-# 
-# HDL call sequence:
-# Stopped at /home/jansen/vhdl/projects/uart/bench/uart_receiver_tb.vhd 153 Process rx_out_check_proc
-# 
-# Compile of uart.vhd was successful.
+# Compile of parity_generator.vhd was successful.
 # Compile of uart_receiver.vhd was successful.
-# Compile of uart_receiver_fsm.vhd was successful.
-# Compile of counter.vhd was successful.
-# Compile of primatives_pkg.vhd was successful.
-# Compile of schmitt_trigger_filter.vhd was successful.
-# Compile of shift_reg.vhd was successful.
-# Compile of uart_receiver_tb.vhd was successful.
-# Compile of baud_rate_generator.vhd was successful.
-# Compile of uart_de0.vhd failed with 1 errors.
-# 10 compiles, 1 failed with 1 error. 
+# Compile of uart_de0.vhd was successful.
+# Compile of uart_transmitter.vhd was successful.
+# Compile of uart_transmitter_fsm.vhd was successful.
+# Compile of uart_transmitter_tb.vhd was successful.
+# 14 compiles, 0 failed with no errors. 
 restart -f
-# Loading work.uart_receiver_tb(stimulus)
-# Loading work.uart_receiver(structure)
-# Loading work.schmitt_trigger_filter(behaviour)
-# Loading work.shift_reg(behaviour)
+# Loading work.uart_transmitter_tb(stimulus)
+# Loading work.uart_transmitter(structure)
 # Loading work.counter(behaviour)
-# Loading work.uart_receiver_fsm(behaviour)
-# ** Warning: (vsim-8683) Uninitialized out port /uart_receiver_tb/dut/frame_err_tick_o has no driver.
-# This port will contribute value (U) to the signal network.
-#         Region: /uart_receiver_tb
-# ** Warning: (vsim-8683) Uninitialized out port /uart_receiver_tb/dut/parity_err_tick_o has no driver.
-# This port will contribute value (U) to the signal network.
-#         Region: /uart_receiver_tb
+# Loading work.shift_reg(behaviour)
+# Loading work.parity_generator(behaviour)
+# Loading work.uart_transmitter_fsm(behaviour)
 run -all

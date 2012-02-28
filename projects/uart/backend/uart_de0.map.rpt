@@ -1,5 +1,5 @@
 Analysis & Synthesis report for uart_de0
-Sun Feb 26 19:27:32 2012
+Tue Feb 28 16:20:34 2012
 Quartus II Version 11.0 Build 157 04/27/2011 SJ Web Edition
 
 
@@ -12,8 +12,8 @@ Quartus II Version 11.0 Build 157 04/27/2011 SJ Web Edition
   4. Analysis & Synthesis Source Files Read
   5. Analysis & Synthesis Resource Usage Summary
   6. Analysis & Synthesis Resource Utilization by Entity
-  7. State Machine - |uart_de0|uart:uart_1|uart_receiver:uart_receiver_1|uart_receiver_fsm:uart_receiver_fsm_1|l_state
-  8. Registers Removed During Synthesis
+  7. State Machine - |uart_de0|uart:uart_1|uart_transmitter:uart_transmitter_1|uart_transmitter_fsm:uart_transmitter_fsm_1|state
+  8. State Machine - |uart_de0|uart:uart_1|uart_receiver:uart_receiver_1|uart_receiver_fsm:uart_receiver_fsm_1|l_state
   9. General Register Statistics
  10. Inverted Register Statistics
  11. Multiplexer Restructuring Statistics (Restructuring Performed)
@@ -23,16 +23,23 @@ Quartus II Version 11.0 Build 157 04/27/2011 SJ Web Edition
  15. Parameter Settings for User Entity Instance: uart:uart_1|uart_receiver:uart_receiver_1|shift_reg:r_shift_reg
  16. Parameter Settings for User Entity Instance: uart:uart_1|uart_receiver:uart_receiver_1|counter:sample_counter
  17. Parameter Settings for User Entity Instance: uart:uart_1|uart_receiver:uart_receiver_1|parity_generator:parity_generator_1
- 18. Parameter Settings for User Entity Instance: uart:uart_1|baud_rate_generator:baud_rate_generator_1
- 19. Parameter Settings for User Entity Instance: uart:uart_1|baud_rate_generator:baud_rate_generator_1|counter:cycles_counter
- 20. Port Connectivity Checks: "uart:uart_1|baud_rate_generator:baud_rate_generator_1|counter:cycles_counter"
- 21. Port Connectivity Checks: "uart:uart_1|uart_receiver:uart_receiver_1|uart_receiver_fsm:uart_receiver_fsm_1"
- 22. Port Connectivity Checks: "uart:uart_1|uart_receiver:uart_receiver_1|counter:sample_counter"
- 23. Port Connectivity Checks: "uart:uart_1|uart_receiver:uart_receiver_1|shift_reg:r_shift_reg"
- 24. Port Connectivity Checks: "uart:uart_1|uart_receiver:uart_receiver_1|shift_reg:p_shift_reg"
- 25. Port Connectivity Checks: "uart:uart_1"
- 26. Elapsed Time Per Partition
- 27. Analysis & Synthesis Messages
+ 18. Parameter Settings for User Entity Instance: uart:uart_1|uart_transmitter:uart_transmitter_1|counter:sample_ticks_counter
+ 19. Parameter Settings for User Entity Instance: uart:uart_1|uart_transmitter:uart_transmitter_1|counter:bits_counter
+ 20. Parameter Settings for User Entity Instance: uart:uart_1|uart_transmitter:uart_transmitter_1|shift_reg:t_shift_reg
+ 21. Parameter Settings for User Entity Instance: uart:uart_1|uart_transmitter:uart_transmitter_1|parity_generator:parity_generator_1
+ 22. Parameter Settings for User Entity Instance: uart:uart_1|baud_rate_generator:baud_rate_generator_1
+ 23. Parameter Settings for User Entity Instance: uart:uart_1|baud_rate_generator:baud_rate_generator_1|counter:cycles_counter
+ 24. Port Connectivity Checks: "uart:uart_1|baud_rate_generator:baud_rate_generator_1|counter:cycles_counter"
+ 25. Port Connectivity Checks: "uart:uart_1|uart_transmitter:uart_transmitter_1|shift_reg:t_shift_reg"
+ 26. Port Connectivity Checks: "uart:uart_1|uart_transmitter:uart_transmitter_1|counter:bits_counter"
+ 27. Port Connectivity Checks: "uart:uart_1|uart_transmitter:uart_transmitter_1|counter:sample_ticks_counter"
+ 28. Port Connectivity Checks: "uart:uart_1|uart_transmitter:uart_transmitter_1"
+ 29. Port Connectivity Checks: "uart:uart_1|uart_receiver:uart_receiver_1|counter:sample_counter"
+ 30. Port Connectivity Checks: "uart:uart_1|uart_receiver:uart_receiver_1|shift_reg:r_shift_reg"
+ 31. Port Connectivity Checks: "uart:uart_1|uart_receiver:uart_receiver_1|shift_reg:p_shift_reg"
+ 32. Port Connectivity Checks: "uart:uart_1"
+ 33. Elapsed Time Per Partition
+ 34. Analysis & Synthesis Messages
 
 
 
@@ -58,15 +65,15 @@ applicable agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +------------------------------------+------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Sun Feb 26 19:27:32 2012    ;
+; Analysis & Synthesis Status        ; Successful - Tue Feb 28 16:20:33 2012    ;
 ; Quartus II Version                 ; 11.0 Build 157 04/27/2011 SJ Web Edition ;
 ; Revision Name                      ; uart_de0                                 ;
 ; Top-level Entity Name              ; uart_de0                                 ;
 ; Family                             ; Cyclone III                              ;
-; Total logic elements               ; 98                                       ;
-;     Total combinational functions  ; 96                                       ;
-;     Dedicated logic registers      ; 62                                       ;
-; Total registers                    ; 62                                       ;
+; Total logic elements               ; 142                                      ;
+;     Total combinational functions  ; 140                                      ;
+;     Dedicated logic registers      ; 85                                       ;
+; Total registers                    ; 85                                       ;
 ; Total pins                         ; 252                                      ;
 ; Total virtual pins                 ; 0                                        ;
 ; Total memory bits                  ; 0                                        ;
@@ -164,6 +171,8 @@ applicable agreement for further details.
 +-------------------------------------------------+-----------------+-----------------+----------------------------------------------------------------------+
 ; File Name with User-Entered Path                ; Used in Netlist ; File Type       ; File Name with Absolute Path                                         ;
 +-------------------------------------------------+-----------------+-----------------+----------------------------------------------------------------------+
+; ../rtl/uart_transmitter.vhd                     ; yes             ; User VHDL File  ; /home/jansen/vhdl/projects/uart/rtl/uart_transmitter.vhd             ;
+; ../rtl/uart_transmitter_fsm.vhd                 ; yes             ; User VHDL File  ; /home/jansen/vhdl/projects/uart/rtl/uart_transmitter_fsm.vhd         ;
 ; ../rtl/parity_generator.vhd                     ; yes             ; User VHDL File  ; /home/jansen/vhdl/projects/uart/rtl/parity_generator.vhd             ;
 ; ../rtl/uart_de0.vhd                             ; yes             ; User VHDL File  ; /home/jansen/vhdl/projects/uart/rtl/uart_de0.vhd                     ;
 ; ../../primatives/rtl/shift_reg.vhd              ; yes             ; User VHDL File  ; /home/jansen/vhdl/projects/primatives/rtl/shift_reg.vhd              ;
@@ -181,49 +190,67 @@ applicable agreement for further details.
 +---------------------------------------------+----------------+
 ; Resource                                    ; Usage          ;
 +---------------------------------------------+----------------+
-; Estimated Total logic elements              ; 98             ;
+; Estimated Total logic elements              ; 142            ;
 ;                                             ;                ;
-; Total combinational functions               ; 96             ;
+; Total combinational functions               ; 140            ;
 ; Logic element usage by number of LUT inputs ;                ;
-;     -- 4 input functions                    ; 35             ;
-;     -- 3 input functions                    ; 13             ;
-;     -- <=2 input functions                  ; 48             ;
+;     -- 4 input functions                    ; 51             ;
+;     -- 3 input functions                    ; 35             ;
+;     -- <=2 input functions                  ; 54             ;
 ;                                             ;                ;
 ; Logic elements by mode                      ;                ;
-;     -- normal mode                          ; 57             ;
-;     -- arithmetic mode                      ; 39             ;
+;     -- normal mode                          ; 97             ;
+;     -- arithmetic mode                      ; 43             ;
 ;                                             ;                ;
-; Total registers                             ; 62             ;
-;     -- Dedicated logic registers            ; 62             ;
+; Total registers                             ; 85             ;
+;     -- Dedicated logic registers            ; 85             ;
 ;     -- I/O registers                        ; 0              ;
 ;                                             ;                ;
 ; I/O pins                                    ; 252            ;
 ; Maximum fan-out node                        ; CLOCK_50~input ;
-; Maximum fan-out                             ; 62             ;
-; Total fan-out                               ; 766            ;
-; Average fan-out                             ; 1.16           ;
+; Maximum fan-out                             ; 85             ;
+; Total fan-out                               ; 1000           ;
+; Average fan-out                             ; 1.37           ;
 +---------------------------------------------+----------------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                      ;
-+---------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------------------------------------------------+--------------+
-; Compilation Hierarchy Node                        ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                       ; Library Name ;
-+---------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------------------------------------------------+--------------+
-; |uart_de0                                         ; 96 (1)            ; 62 (0)       ; 0           ; 0            ; 0       ; 0         ; 252  ; 0            ; |uart_de0                                                                                 ;              ;
-;    |error_indicator:error_indicator_1|            ; 34 (34)           ; 26 (26)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |uart_de0|error_indicator:error_indicator_1                                               ;              ;
-;    |reset_control:reset_control_1|                ; 9 (9)             ; 7 (7)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |uart_de0|reset_control:reset_control_1                                                   ;              ;
-;    |uart:uart_1|                                  ; 52 (0)            ; 29 (0)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |uart_de0|uart:uart_1                                                                     ;              ;
-;       |baud_rate_generator:baud_rate_generator_1| ; 11 (3)            ; 8 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |uart_de0|uart:uart_1|baud_rate_generator:baud_rate_generator_1                           ;              ;
-;          |counter:cycles_counter|                 ; 8 (8)             ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |uart_de0|uart:uart_1|baud_rate_generator:baud_rate_generator_1|counter:cycles_counter    ;              ;
-;       |uart_receiver:uart_receiver_1|             ; 41 (4)            ; 21 (0)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |uart_de0|uart:uart_1|uart_receiver:uart_receiver_1                                       ;              ;
-;          |counter:sample_counter|                 ; 6 (6)             ; 5 (5)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |uart_de0|uart:uart_1|uart_receiver:uart_receiver_1|counter:sample_counter                ;              ;
-;          |schmitt_trigger_filter:rx_filter|       ; 1 (1)             ; 3 (3)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |uart_de0|uart:uart_1|uart_receiver:uart_receiver_1|schmitt_trigger_filter:rx_filter      ;              ;
-;          |shift_reg:p_shift_reg|                  ; 1 (1)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |uart_de0|uart:uart_1|uart_receiver:uart_receiver_1|shift_reg:p_shift_reg                 ;              ;
-;          |shift_reg:r_shift_reg|                  ; 9 (9)             ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |uart_de0|uart:uart_1|uart_receiver:uart_receiver_1|shift_reg:r_shift_reg                 ;              ;
-;          |uart_receiver_fsm:uart_receiver_fsm_1|  ; 20 (20)           ; 4 (4)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |uart_de0|uart:uart_1|uart_receiver:uart_receiver_1|uart_receiver_fsm:uart_receiver_fsm_1 ;              ;
-+---------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------------------------------------------------+--------------+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                       ;
++--------------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------------------------------------------------------------+--------------+
+; Compilation Hierarchy Node                             ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                   ; Library Name ;
++--------------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------------------------------------------------------------+--------------+
+; |uart_de0                                              ; 140 (1)           ; 85 (0)       ; 0           ; 0            ; 0       ; 0         ; 252  ; 0            ; |uart_de0                                                                                             ;              ;
+;    |error_indicator:error_indicator_1|                 ; 36 (36)           ; 27 (27)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |uart_de0|error_indicator:error_indicator_1                                                           ;              ;
+;    |reset_control:reset_control_1|                     ; 9 (9)             ; 7 (7)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |uart_de0|reset_control:reset_control_1                                                               ;              ;
+;    |uart:uart_1|                                       ; 94 (0)            ; 51 (0)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |uart_de0|uart:uart_1                                                                                 ;              ;
+;       |baud_rate_generator:baud_rate_generator_1|      ; 11 (3)            ; 8 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |uart_de0|uart:uart_1|baud_rate_generator:baud_rate_generator_1                                       ;              ;
+;          |counter:cycles_counter|                      ; 8 (8)             ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |uart_de0|uart:uart_1|baud_rate_generator:baud_rate_generator_1|counter:cycles_counter                ;              ;
+;       |uart_receiver:uart_receiver_1|                  ; 42 (4)            ; 21 (0)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |uart_de0|uart:uart_1|uart_receiver:uart_receiver_1                                                   ;              ;
+;          |counter:sample_counter|                      ; 8 (8)             ; 5 (5)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |uart_de0|uart:uart_1|uart_receiver:uart_receiver_1|counter:sample_counter                            ;              ;
+;          |schmitt_trigger_filter:rx_filter|            ; 1 (1)             ; 3 (3)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |uart_de0|uart:uart_1|uart_receiver:uart_receiver_1|schmitt_trigger_filter:rx_filter                  ;              ;
+;          |shift_reg:p_shift_reg|                       ; 1 (1)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |uart_de0|uart:uart_1|uart_receiver:uart_receiver_1|shift_reg:p_shift_reg                             ;              ;
+;          |shift_reg:r_shift_reg|                       ; 10 (10)           ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |uart_de0|uart:uart_1|uart_receiver:uart_receiver_1|shift_reg:r_shift_reg                             ;              ;
+;          |uart_receiver_fsm:uart_receiver_fsm_1|       ; 18 (18)           ; 4 (4)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |uart_de0|uart:uart_1|uart_receiver:uart_receiver_1|uart_receiver_fsm:uart_receiver_fsm_1             ;              ;
+;       |uart_transmitter:uart_transmitter_1|            ; 41 (0)            ; 22 (0)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |uart_de0|uart:uart_1|uart_transmitter:uart_transmitter_1                                             ;              ;
+;          |counter:bits_counter|                        ; 6 (6)             ; 4 (4)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |uart_de0|uart:uart_1|uart_transmitter:uart_transmitter_1|counter:bits_counter                        ;              ;
+;          |counter:sample_ticks_counter|                ; 6 (6)             ; 5 (5)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |uart_de0|uart:uart_1|uart_transmitter:uart_transmitter_1|counter:sample_ticks_counter                ;              ;
+;          |shift_reg:t_shift_reg|                       ; 9 (9)             ; 9 (9)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |uart_de0|uart:uart_1|uart_transmitter:uart_transmitter_1|shift_reg:t_shift_reg                       ;              ;
+;          |uart_transmitter_fsm:uart_transmitter_fsm_1| ; 20 (20)           ; 4 (4)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |uart_de0|uart:uart_1|uart_transmitter:uart_transmitter_1|uart_transmitter_fsm:uart_transmitter_fsm_1 ;              ;
++--------------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------------------------------------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
+Encoding Type:  One-Hot
++-----------------------------------------------------------------------------------------------------------------------------+
+; State Machine - |uart_de0|uart:uart_1|uart_transmitter:uart_transmitter_1|uart_transmitter_fsm:uart_transmitter_fsm_1|state ;
++---------------+---------------+--------------+--------------+---------------------------------------------------------------+
+; Name          ; state.START_S ; state.STOP_S ; state.DATA_S ; state.IDLE_S                                                  ;
++---------------+---------------+--------------+--------------+---------------------------------------------------------------+
+; state.IDLE_S  ; 0             ; 0            ; 0            ; 0                                                             ;
+; state.DATA_S  ; 0             ; 0            ; 1            ; 1                                                             ;
+; state.STOP_S  ; 0             ; 1            ; 0            ; 1                                                             ;
+; state.START_S ; 1             ; 0            ; 0            ; 1                                                             ;
++---------------+---------------+--------------+--------------+---------------------------------------------------------------+
 
 
 Encoding Type:  One-Hot
@@ -239,27 +266,17 @@ Encoding Type:  One-Hot
 +-----------------+----------------+----------------+-----------------+---------------------------------------------+
 
 
-+---------------------------------------------------------------------------------------------+
-; Registers Removed During Synthesis                                                          ;
-+-----------------------------------------------+---------------------------------------------+
-; Register name                                 ; Reason for Removal                          ;
-+-----------------------------------------------+---------------------------------------------+
-; error_indicator:error_indicator_1|l_frame_err ; Stuck at GND due to stuck port clock_enable ;
-; Total Number of Removed Registers = 1         ;                                             ;
-+-----------------------------------------------+---------------------------------------------+
-
-
 +------------------------------------------------------+
 ; General Register Statistics                          ;
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 62    ;
-; Number of registers using Synchronous Clear  ; 37    ;
+; Total registers                              ; 85    ;
+; Number of registers using Synchronous Clear  ; 42    ;
 ; Number of registers using Synchronous Load   ; 0     ;
-; Number of registers using Asynchronous Clear ; 31    ;
+; Number of registers using Asynchronous Clear ; 54    ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 42    ;
+; Number of registers using Clock Enable       ; 59    ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -269,20 +286,24 @@ Encoding Type:  One-Hot
 +------------------------------------------------------------------------+---------+
 ; Inverted Register                                                      ; Fan out ;
 +------------------------------------------------------------------------+---------+
-; error_indicator:error_indicator_1|l_flash                              ; 2       ;
+; error_indicator:error_indicator_1|l_flash                              ; 3       ;
 ; uart:uart_1|uart_receiver:uart_receiver_1|shift_reg:p_shift_reg|reg[0] ; 3       ;
 ; Total number of inverted registers = 2                                 ;         ;
 +------------------------------------------------------------------------+---------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                                                                    ;
-+--------------------+-----------+---------------+----------------------+------------------------+-------------------------------------------------------------------------------------+----------------------------+
-; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered                                                                          ; Example Multiplexer Output ;
-+--------------------+-----------+---------------+----------------------+------------------------+-------------------------------------------------------------------------------------+----------------------------+
-; 4:1                ; 5 bits    ; 10 LEs        ; 5 LEs                ; 5 LEs                  ; |uart_de0|uart:uart_1|uart_receiver:uart_receiver_1|counter:sample_counter|l_cnt[4] ;                            ;
-; 3:1                ; 7 bits    ; 14 LEs        ; 7 LEs                ; 7 LEs                  ; |uart_de0|uart:uart_1|uart_receiver:uart_receiver_1|shift_reg:r_shift_reg|reg[0]    ;                            ;
-+--------------------+-----------+---------------+----------------------+------------------------+-------------------------------------------------------------------------------------+----------------------------+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                                                                                ;
++--------------------+-----------+---------------+----------------------+------------------------+-------------------------------------------------------------------------------------------------+----------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered                                                                                      ; Example Multiplexer Output ;
++--------------------+-----------+---------------+----------------------+------------------------+-------------------------------------------------------------------------------------------------+----------------------------+
+; 4:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; |uart_de0|uart:uart_1|uart_transmitter:uart_transmitter_1|counter:bits_counter|l_cnt[3]         ;                            ;
+; 4:1                ; 5 bits    ; 10 LEs        ; 5 LEs                ; 5 LEs                  ; |uart_de0|uart:uart_1|uart_transmitter:uart_transmitter_1|counter:sample_ticks_counter|l_cnt[0] ;                            ;
+; 4:1                ; 5 bits    ; 10 LEs        ; 5 LEs                ; 5 LEs                  ; |uart_de0|uart:uart_1|uart_receiver:uart_receiver_1|counter:sample_counter|l_cnt[4]             ;                            ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; |uart_de0|uart:uart_1|uart_transmitter:uart_transmitter_1|shift_reg:t_shift_reg|reg[2]          ;                            ;
+; 3:1                ; 7 bits    ; 14 LEs        ; 7 LEs                ; 7 LEs                  ; |uart_de0|uart:uart_1|uart_receiver:uart_receiver_1|shift_reg:r_shift_reg|reg[5]                ;                            ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; |uart_de0|uart:uart_1|uart_receiver:uart_receiver_1|uart_receiver_fsm:uart_receiver_fsm_1|Mux0  ;                            ;
++--------------------+-----------+---------------+----------------------+------------------------+-------------------------------------------------------------------------------------------------+----------------------------+
 
 
 +----------------------------------------------------------+
@@ -349,6 +370,49 @@ Note: In order to hide this table in the UI and the text report file, please set
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
++---------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: uart:uart_1|uart_transmitter:uart_transmitter_1|counter:sample_ticks_counter ;
++----------------+-------+--------------------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                             ;
++----------------+-------+--------------------------------------------------------------------------------------------------+
+; max_cnt        ; 31    ; Signed Integer                                                                                   ;
+; rst_val        ; 0     ; Signed Integer                                                                                   ;
++----------------+-------+--------------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: uart:uart_1|uart_transmitter:uart_transmitter_1|counter:bits_counter ;
++----------------+-------+------------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                     ;
++----------------+-------+------------------------------------------------------------------------------------------+
+; max_cnt        ; 9     ; Signed Integer                                                                           ;
+; rst_val        ; 0     ; Signed Integer                                                                           ;
++----------------+-------+------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: uart:uart_1|uart_transmitter:uart_transmitter_1|shift_reg:t_shift_reg ;
++----------------+-----------+---------------------------------------------------------------------------------------+
+; Parameter Name ; Value     ; Type                                                                                  ;
++----------------+-----------+---------------------------------------------------------------------------------------+
+; n              ; 9         ; Signed Integer                                                                        ;
+; reset_val      ; 000000000 ; Unsigned Binary                                                                       ;
++----------------+-----------+---------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: uart:uart_1|uart_transmitter:uart_transmitter_1|parity_generator:parity_generator_1 ;
++----------------+-------+---------------------------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                                    ;
++----------------+-------+---------------------------------------------------------------------------------------------------------+
+; n              ; 8     ; Signed Integer                                                                                          ;
++----------------+-------+---------------------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
 +----------------------------------------------------------------------------------------------------+
 ; Parameter Settings for User Entity Instance: uart:uart_1|baud_rate_generator:baud_rate_generator_1 ;
 +---------------------+-------+----------------------------------------------------------------------+
@@ -379,13 +443,40 @@ Note: In order to hide this table in the UI and the text report file, please set
 +------------+-------+----------+--------------------------------------------------------------------------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "uart:uart_1|uart_receiver:uart_receiver_1|uart_receiver_fsm:uart_receiver_fsm_1"                ;
-+------------------+--------+----------+-------------------------------------------------------------------------------------+
-; Port             ; Type   ; Severity ; Details                                                                             ;
-+------------------+--------+----------+-------------------------------------------------------------------------------------+
-; frame_err_tick_o ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+------------------+--------+----------+-------------------------------------------------------------------------------------+
++------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "uart:uart_1|uart_transmitter:uart_transmitter_1|shift_reg:t_shift_reg"                      ;
++--------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port         ; Type   ; Severity ; Details                                                                             ;
++--------------+--------+----------+-------------------------------------------------------------------------------------+
+; data_o[8..1] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++--------------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "uart:uart_1|uart_transmitter:uart_transmitter_1|counter:bits_counter" ;
++------------+-------+----------+------------------------------------------------------------------+
+; Port       ; Type  ; Severity ; Details                                                          ;
++------------+-------+----------+------------------------------------------------------------------+
+; load_cnt_i ; Input ; Info     ; Stuck at GND                                                     ;
++------------+-------+----------+------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "uart:uart_1|uart_transmitter:uart_transmitter_1|counter:sample_ticks_counter" ;
++------------+-------+----------+--------------------------------------------------------------------------+
+; Port       ; Type  ; Severity ; Details                                                                  ;
++------------+-------+----------+--------------------------------------------------------------------------+
+; load_cnt_i ; Input ; Info     ; Stuck at GND                                                             ;
++------------+-------+----------+--------------------------------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "uart:uart_1|uart_transmitter:uart_transmitter_1"                                         ;
++-----------+--------+----------+-------------------------------------------------------------------------------------+
+; Port      ; Type   ; Severity ; Details                                                                             ;
++-----------+--------+----------+-------------------------------------------------------------------------------------+
+; tx_idle_o ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++-----------+--------+----------+-------------------------------------------------------------------------------------+
 
 
 +----------------------------------------------------------------------------------------------+
@@ -421,10 +512,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; Port                    ; Type   ; Severity ; Details                                                                             ;
 +-------------------------+--------+----------+-------------------------------------------------------------------------------------+
 ; en_i                    ; Input  ; Info     ; Stuck at VCC                                                                        ;
-; rx_done_tick_o          ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
 ; tx_done_tick_o          ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-; tx_start_tick_i         ; Input  ; Info     ; Stuck at GND                                                                        ;
-; tx_data_i               ; Input  ; Info     ; Stuck at GND                                                                        ;
 ; cycles_per_tick_i[3..0] ; Input  ; Info     ; Stuck at GND                                                                        ;
 ; cycles_per_tick_i[7]    ; Input  ; Info     ; Stuck at GND                                                                        ;
 ; cycles_per_tick_i[6]    ; Input  ; Info     ; Stuck at VCC                                                                        ;
@@ -438,7 +526,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:04     ;
+; Top            ; 00:00:06     ;
 +----------------+--------------+
 
 
@@ -448,19 +536,25 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus II Analysis & Synthesis
     Info: Version 11.0 Build 157 04/27/2011 SJ Web Edition
-    Info: Processing started: Sun Feb 26 19:27:17 2012
+    Info: Processing started: Tue Feb 28 16:20:18 2012
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off uart_de0 -c uart_de0
 Warning: Parallel compilation is not licensed and has been disabled
+Info: Found 2 design units, including 1 entities, in source file /home/jansen/vhdl/projects/uart/rtl/uart_transmitter.vhd
+    Info: Found design unit 1: uart_transmitter-structure
+    Info: Found entity 1: uart_transmitter
+Info: Found 2 design units, including 1 entities, in source file /home/jansen/vhdl/projects/uart/rtl/uart_transmitter_fsm.vhd
+    Info: Found design unit 1: uart_transmitter_fsm-behaviour
+    Info: Found entity 1: uart_transmitter_fsm
 Info: Found 2 design units, including 1 entities, in source file /home/jansen/vhdl/projects/uart/rtl/parity_generator.vhd
     Info: Found design unit 1: parity_generator-behaviour
     Info: Found entity 1: parity_generator
 Info: Found 6 design units, including 3 entities, in source file /home/jansen/vhdl/projects/uart/rtl/uart_de0.vhd
-    Info: Found design unit 1: uart_de0-structure
-    Info: Found design unit 2: reset_control-behaviour
-    Info: Found design unit 3: error_indicator-behaviour
-    Info: Found entity 1: uart_de0
-    Info: Found entity 2: reset_control
-    Info: Found entity 3: error_indicator
+    Info: Found design unit 1: reset_control-behaviour
+    Info: Found design unit 2: error_indicator-behaviour
+    Info: Found design unit 3: uart_de0-structure
+    Info: Found entity 1: reset_control
+    Info: Found entity 2: error_indicator
+    Info: Found entity 3: uart_de0
 Info: Found 2 design units, including 1 entities, in source file /home/jansen/vhdl/projects/primatives/rtl/shift_reg.vhd
     Info: Found design unit 1: shift_reg-behaviour
     Info: Found entity 1: shift_reg
@@ -485,14 +579,9 @@ Info: Found 2 design units, including 1 entities, in source file /home/jansen/vh
     Info: Found design unit 1: baud_rate_generator-structure
     Info: Found entity 1: baud_rate_generator
 Info: Elaborating entity "uart_de0" for the top level hierarchy
-Warning (10036): Verilog HDL or VHDL warning at uart_de0.vhd(80): object "rx_done_tick" assigned a value but never read
-Warning (10036): Verilog HDL or VHDL warning at uart_de0.vhd(84): object "tx_done_tick" assigned a value but never read
+Warning (10036): Verilog HDL or VHDL warning at uart_de0.vhd(168): object "tx_done_tick" assigned a value but never read
 Info: Elaborating entity "uart" for hierarchy "uart:uart_1"
-Warning (10541): VHDL Signal Declaration warning at uart.vhd(15): used implicit default value for signal "tx_o" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
-Warning (10541): VHDL Signal Declaration warning at uart.vhd(16): used implicit default value for signal "tx_done_tick_o" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
 Info: Elaborating entity "uart_receiver" for hierarchy "uart:uart_1|uart_receiver:uart_receiver_1"
-Warning (10541): VHDL Signal Declaration warning at uart_receiver.vhd(16): used implicit default value for signal "frame_err_tick_o" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
-Warning (10036): Verilog HDL or VHDL warning at uart_receiver.vhd(46): object "fsm_frame_err_tick" assigned a value but never read
 Info: Elaborating entity "schmitt_trigger_filter" for hierarchy "uart:uart_1|uart_receiver:uart_receiver_1|schmitt_trigger_filter:rx_filter"
 Info: Elaborating entity "shift_reg" for hierarchy "uart:uart_1|uart_receiver:uart_receiver_1|shift_reg:p_shift_reg"
 Warning (10445): VHDL Subtype or Type Declaration warning at shift_reg.vhd(30): subtype or type has null range
@@ -500,15 +589,17 @@ Info: Elaborating entity "shift_reg" for hierarchy "uart:uart_1|uart_receiver:ua
 Info: Elaborating entity "counter" for hierarchy "uart:uart_1|uart_receiver:uart_receiver_1|counter:sample_counter"
 Info: Elaborating entity "uart_receiver_fsm" for hierarchy "uart:uart_1|uart_receiver:uart_receiver_1|uart_receiver_fsm:uart_receiver_fsm_1"
 Info: Elaborating entity "parity_generator" for hierarchy "uart:uart_1|uart_receiver:uart_receiver_1|parity_generator:parity_generator_1"
+Info: Elaborating entity "uart_transmitter" for hierarchy "uart:uart_1|uart_transmitter:uart_transmitter_1"
+Info: Elaborating entity "counter" for hierarchy "uart:uart_1|uart_transmitter:uart_transmitter_1|counter:bits_counter"
+Info: Elaborating entity "shift_reg" for hierarchy "uart:uart_1|uart_transmitter:uart_transmitter_1|shift_reg:t_shift_reg"
+Info: Elaborating entity "parity_generator" for hierarchy "uart:uart_1|uart_transmitter:uart_transmitter_1|parity_generator:parity_generator_1"
+Info: Elaborating entity "uart_transmitter_fsm" for hierarchy "uart:uart_1|uart_transmitter:uart_transmitter_1|uart_transmitter_fsm:uart_transmitter_fsm_1"
 Info: Elaborating entity "baud_rate_generator" for hierarchy "uart:uart_1|baud_rate_generator:baud_rate_generator_1"
 Info: Elaborating entity "counter" for hierarchy "uart:uart_1|baud_rate_generator:baud_rate_generator_1|counter:cycles_counter"
 Info: Elaborating entity "reset_control" for hierarchy "reset_control:reset_control_1"
 Info: Elaborating entity "error_indicator" for hierarchy "error_indicator:error_indicator_1"
 Info: Registers with preset signals will power-up high
 Info: DEV_CLRn pin will set, and not reset, register with preset signal due to NOT Gate Push-Back
-Warning: Output pins are stuck at VCC or GND
-    Warning (13410): Pin "UART_TXD" is stuck at GND
-    Warning (13410): Pin "LEDG[8]" is stuck at GND
 Info: Timing-Driven Synthesis is running
 Info: Generating hard_block partition "hard_block:auto_generated_inst"
 Warning: Design contains 234 input pin(s) that do not drive logic
@@ -746,14 +837,14 @@ Warning: Design contains 234 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "DRAM_ADDR[10]"
     Warning (15610): No output dependent on input pin "DRAM_ADDR[11]"
     Warning (15610): No output dependent on input pin "DRAM_ADDR[12]"
-Info: Implemented 350 device resources after synthesis - the final resource count might be different
+Info: Implemented 394 device resources after synthesis - the final resource count might be different
     Info: Implemented 241 input pins
     Info: Implemented 11 output pins
-    Info: Implemented 98 logic cells
-Info: Quartus II Analysis & Synthesis was successful. 0 errors, 246 warnings
+    Info: Implemented 142 logic cells
+Info: Quartus II Analysis & Synthesis was successful. 0 errors, 238 warnings
     Info: Peak virtual memory: 287 megabytes
-    Info: Processing ended: Sun Feb 26 19:27:32 2012
-    Info: Elapsed time: 00:00:15
-    Info: Total CPU time (on all processors): 00:00:13
+    Info: Processing ended: Tue Feb 28 16:20:34 2012
+    Info: Elapsed time: 00:00:16
+    Info: Total CPU time (on all processors): 00:00:14
 
 
