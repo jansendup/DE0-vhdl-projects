@@ -26,7 +26,7 @@ begin
     if(rst_i = '1') then
         l_fsig_reg <= RESET_VAL;
         l_sreg <= (others=>RESET_VAL);
-    elsif(clk_i'event and clk_i = '0') then
+    elsif(clk_i'event and clk_i = '1') then
          l_sreg <= l_sreg_next;
          l_fsig_reg <= l_fsig_reg_next;
     end if;

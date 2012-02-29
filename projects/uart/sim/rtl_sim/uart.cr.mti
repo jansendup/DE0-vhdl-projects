@@ -21,15 +21,6 @@ Model Technology ModelSim ALTERA vcom 6.6d Compiler 2010.11 Nov  2 2010
 -- Compiling architecture stimulus of uart_receiver_tb
 -- Loading entity uart_receiver
 
-} {} {}} /home/jansen/vhdl/projects/uart/rtl/uart.vhd {1 {vcom -work work -2002 -explicit /home/jansen/vhdl/projects/uart/rtl/uart.vhd
-Model Technology ModelSim ALTERA vcom 6.6d Compiler 2010.11 Nov  2 2010
--- Loading package standard
--- Loading package std_logic_1164
--- Compiling entity uart
--- Compiling architecture structure of uart
--- Loading entity uart_receiver
--- Loading entity baud_rate_generator
-
 } {} {}} /home/jansen/vhdl/projects/uart/rtl/baud_rate_generator.vhd {1 {vcom -work work -2002 -explicit /home/jansen/vhdl/projects/uart/rtl/baud_rate_generator.vhd
 Model Technology ModelSim ALTERA vcom 6.6d Compiler 2010.11 Nov  2 2010
 -- Loading package standard
@@ -69,32 +60,6 @@ Model Technology ModelSim ALTERA vcom 6.6d Compiler 2010.11 Nov  2 2010
 -- Compiling entity counter
 -- Compiling architecture behaviour of counter
 
-} {} {}} /home/jansen/vhdl/projects/uart/rtl/uart_receiver.vhd {1 {vcom -work work -2002 -explicit /home/jansen/vhdl/projects/uart/rtl/uart_receiver.vhd
-Model Technology ModelSim ALTERA vcom 6.6d Compiler 2010.11 Nov  2 2010
--- Loading package standard
--- Loading package std_logic_1164
--- Compiling entity uart_receiver
--- Compiling architecture structure of uart_receiver
--- Loading entity schmitt_trigger_filter
--- Loading entity shift_reg
--- Loading entity counter
--- Loading entity uart_receiver_fsm
--- Loading entity parity_generator
-
-} {} {}} /home/jansen/vhdl/projects/uart/rtl/uart_de0.vhd {1 {vcom -work work -2002 -explicit /home/jansen/vhdl/projects/uart/rtl/uart_de0.vhd
-Model Technology ModelSim ALTERA vcom 6.6d Compiler 2010.11 Nov  2 2010
--- Loading package standard
--- Loading package std_logic_1164
--- Compiling entity reset_control
--- Compiling architecture behaviour of reset_control
--- Compiling entity error_indicator
--- Compiling architecture behaviour of error_indicator
--- Compiling entity uart_de0
--- Compiling architecture structure of uart_de0
--- Loading entity uart
--- Loading entity reset_control
--- Loading entity error_indicator
-
 } {} {}} /home/jansen/vhdl/projects/primatives/rtl/schmitt_trigger_filter.vhd {1 {vcom -work work -2002 -explicit /home/jansen/vhdl/projects/primatives/rtl/schmitt_trigger_filter.vhd
 Model Technology ModelSim ALTERA vcom 6.6d Compiler 2010.11 Nov  2 2010
 -- Loading package standard
@@ -102,18 +67,18 @@ Model Technology ModelSim ALTERA vcom 6.6d Compiler 2010.11 Nov  2 2010
 -- Compiling entity schmitt_trigger_filter
 -- Compiling architecture behaviour of schmitt_trigger_filter
 
-} {} {}} /home/jansen/vhdl/projects/uart/rtl/uart_receiver_fsm.vhd {1 {vcom -work work -2002 -explicit /home/jansen/vhdl/projects/uart/rtl/uart_receiver_fsm.vhd
-Model Technology ModelSim ALTERA vcom 6.6d Compiler 2010.11 Nov  2 2010
--- Loading package standard
--- Loading package std_logic_1164
--- Compiling entity uart_receiver_fsm
--- Compiling architecture behaviour of uart_receiver_fsm
-
 } {} {}} /home/jansen/vhdl/projects/uart/rtl/uart_transmitter_fsm.vhd {1 {vcom -work work -2002 -explicit /home/jansen/vhdl/projects/uart/rtl/uart_transmitter_fsm.vhd
 Model Technology ModelSim ALTERA vcom 6.6d Compiler 2010.11 Nov  2 2010
 -- Loading package standard
 -- Loading package std_logic_1164
 -- Compiling entity uart_transmitter_fsm
 -- Compiling architecture behaviour of uart_transmitter_fsm
+
+} {} {}} /home/jansen/vhdl/projects/uart/rtl/uart_receiver_fsm.vhd {1 {vcom -work work -2002 -explicit /home/jansen/vhdl/projects/uart/rtl/uart_receiver_fsm.vhd
+Model Technology ModelSim ALTERA vcom 6.6d Compiler 2010.11 Nov  2 2010
+-- Loading package standard
+-- Loading package std_logic_1164
+-- Compiling entity uart_receiver_fsm
+-- Compiling architecture behaviour of uart_receiver_fsm
 
 } {} {}}

@@ -1,0 +1,48 @@
+/home/jansen/vhdl/projects/ps2_controller/rtl/ps2_controller_fsm.vhd {1 {vcom -work work -2002 -explicit /home/jansen/vhdl/projects/ps2_controller/rtl/ps2_controller_fsm.vhd
+Model Technology ModelSim ALTERA vcom 6.6d Compiler 2010.11 Nov  2 2010
+-- Loading package standard
+-- Loading package std_logic_1164
+-- Compiling entity ps2_controller_fsm
+-- Compiling architecture behaviour of ps2_controller_fsm
+
+} {} {}} /home/jansen/vhdl/projects/primatives/rtl/shift_reg.vhd {1 {vcom -work work -2002 -explicit /home/jansen/vhdl/projects/primatives/rtl/shift_reg.vhd
+Model Technology ModelSim ALTERA vcom 6.6d Compiler 2010.11 Nov  2 2010
+-- Loading package standard
+-- Loading package std_logic_1164
+-- Compiling entity shift_reg
+-- Compiling architecture behaviour of shift_reg
+
+} {} {}} /home/jansen/vhdl/projects/ps2_controller/rtl/ps2_controller.vhd {1 {vcom -work work -2002 -explicit /home/jansen/vhdl/projects/ps2_controller/rtl/ps2_controller.vhd
+Model Technology ModelSim ALTERA vcom 6.6d Compiler 2010.11 Nov  2 2010
+-- Loading package standard
+-- Loading package std_logic_1164
+-- Compiling entity ps2_controller
+-- Compiling architecture behaviour of ps2_controller
+-- Loading entity schmitt_trigger_filter
+-- Loading entity shift_reg
+-- Loading entity counter
+-- Loading entity parity_generator
+-- Loading entity ps2_controller_fsm
+
+} {} {}} /home/jansen/vhdl/projects/primatives/rtl/schmitt_trigger_filter.vhd {1 {vcom -work work -2002 -explicit /home/jansen/vhdl/projects/primatives/rtl/schmitt_trigger_filter.vhd
+Model Technology ModelSim ALTERA vcom 6.6d Compiler 2010.11 Nov  2 2010
+-- Loading package standard
+-- Loading package std_logic_1164
+-- Compiling entity schmitt_trigger_filter
+-- Compiling architecture behaviour of schmitt_trigger_filter
+
+} {} {}} /home/jansen/vhdl/projects/common/rtl/parity_generator.vhd {1 {vcom -work work -2002 -explicit /home/jansen/vhdl/projects/common/rtl/parity_generator.vhd
+Model Technology ModelSim ALTERA vcom 6.6d Compiler 2010.11 Nov  2 2010
+-- Loading package standard
+-- Loading package std_logic_1164
+-- Compiling entity parity_generator
+-- Compiling architecture behaviour of parity_generator
+
+} {} {}} /home/jansen/vhdl/projects/primatives/rtl/counter.vhd {1 {vcom -work work -2002 -explicit /home/jansen/vhdl/projects/primatives/rtl/counter.vhd
+Model Technology ModelSim ALTERA vcom 6.6d Compiler 2010.11 Nov  2 2010
+-- Loading package standard
+-- Loading package std_logic_1164
+-- Compiling entity counter
+-- Compiling architecture behaviour of counter
+
+} {} {}}

@@ -1,138 +1,162 @@
 library ieee;
 use ieee.std_logic_1164.all;
-use work.primatives.schmitt_trigger_filter;
-use work.primatives_pkg.shift_reg;
 
 entity ps2_controller is
-    port( clk_i, reset_i :in std_logic;
-          ps2_clk_io, ps2_data_io: inout std_logic;
-          rx_en_i: in std_logic;
-          rx_buf_full_o, rx_parity_err_o: out std_logic;
-          rx_buf_o: out std_logic_vector(7 downto 0)
-          );
+  generic (
+    CLK_FREQ : integer);
+  port(clk_i, rst_i            : in    std_logic;
+       ps2_clk_io, ps2_data_io : inout std_logic;
+
+       rx_en_i              : in  std_logic;
+       rx_done_tick_o       : out std_logic;
+       rx_parity_err_tick_o : out std_logic;
+       rx_data_o            : out std_logic_vector(7 downto 0);
+
+       tx_start_tick_i : in  std_logic;
+       tx_data_i       : in  std_logic_vector(7 downto 0);
+       tx_done_tick_o  : out std_logic;
+
+       tx_nack_tick_o      : out std_logic;
+       watchdog_rst_tick_o : out std_logic;
+       bussy_flag_o        : out std_logic
+
+       );
 end ps2_controller;
 
 architecture behaviour of ps2_controller is
 
-type state is (IDLE_S,RX_START_S,RX_DATA_S,RX_STOP_S);
-constant ONES : std_logic_vector(9 downto 0) := (others=>'1');
+  type state is (IDLE_S, RX_START_S, RX_DATA_S, RX_STOP_S, TX_INHIBIT_S, TX_RTS_S, TX_START_S, TX_DATA_S, TX_STOP_S, TX_ACK_S);
 
-signal f_ps2_clk  : std_logic;
-signal f_ps2_data : std_logic;
+  constant ONES : std_logic_vector(7 downto 0) := (others => '1');
 
-signal l_pre_ps2_clk : std_logic;
-signal l_ps2_clk_falling : std_logic;
+  constant CYCLES_PER_10_MICRO_SECONDS : integer := CLK_FREQ/100000;
+  constant MAX_TIMER_TIME              : integer := 10;  -- Max time timer needs to store. (Multiples of 10us)
+  constant MAX_TIMER_COUNT             : integer := CYCLES_PER_10_MICRO_SECONDS * MAX_TIMER_TIME;
 
-signal l_next_state : state;
-signal l_state_reg  : state := IDLE_S;
+  signal f_ps2_clk  : std_logic;
+  signal f_ps2_data : std_logic;
 
-signal l_rx_buf_full_reg : std_logic;
+  signal buf_tx_nRx_sel  : std_logic;
+  signal buf_shift_nLoad : std_logic;
+  signal buf_shift_en    : std_logic;
+  signal buf_data_in     : std_logic_vector(8 downto 0);
+  signal buf_data_out    : std_logic_vector(8 downto 0);
 
-signal l_shift_nLoad : std_logic;
-signal l_shift_en : std_logic;
-signal r_serial_o : std_logic;
-signal r_data : std_logic_vector(10 downto 0);
+  signal bc_cnt    : integer range 0 to 9;
+  signal bc_cnt_en : std_logic;
+  signal bc_reload : std_logic;
 
+  signal tm_reload : std_logic;
+  signal tm_cnt    : integer range 0 to MAX_TIMER_COUNT;
 
-signal r_start_bit  : std_logic;
-signal r_data_bits  : std_logic_vector(7 downto 0);
-signal r_parity_bit : std_logic;
-signal r_stop_bit   : std_logic;
+  signal rx_done_tick : std_logic;
+  signal rx_parity    : std_logic;
+
+  signal tx_parity     : std_logic;
+  signal tx_parity_bit : std_logic;
+  signal tx_load_data  : std_logic_vector(8 downto 0);
 
 begin
 
-ps2_clk_filter: schmitt_trigger_filter
-    generic map(N => 4)
-    port map(clk_i => clk_i, reset_i => reset_i,
+  ps2_clk_filter : entity work.schmitt_trigger_filter
+    generic map(N => 3)
+    port map(clk_i => clk_i, rst_i => rst_i,
              sig_i => ps2_clk_io, fsig_o => f_ps2_clk);
-             
-ps2_data_filter: schmitt_trigger_filter
-    generic map(N => 4)
-    port map(clk_i => clk_i, reset_i => reset_i,
+
+  ps2_data_filter : entity work.schmitt_trigger_filter
+    generic map(N => 3)
+    port map(clk_i => clk_i, rst_i => rst_i,
              sig_i => ps2_data_io, fsig_o => f_ps2_data);
-             
-rx_shift_reg: shift_reg
-    generic map(N => 11,
+
+  buf_shift_reg : entity work.shift_reg
+    generic map(N         => 9,
                 RESET_VAL => '0' & ONES)
-    port map(clk_i => clk_i, reset_i => '0',
-             shift_nLoad_i => l_shift_nLoad,
-             shift_en_i => l_shift_en,
-             serial_i => f_ps2_data,
-             serial_o => r_serial_o,
-             data_i => '0'&ONES,
-             data_o => r_data
+    port map(clk_i         => clk_i,
+             rst_i         => rst_i,
+             shift_nLoad_i => buf_shift_nLoad,
+             shift_en_i    => buf_shift_en,
+             serial_i      => f_ps2_data,
+             data_i        => buf_data_in,
+             data_o        => buf_data_out
              );
 
-transition_proc:
-process(clk_i, reset_i)
-begin
-    if(reset_i = '1') then
-        l_state_reg <= IDLE_S;
-        l_pre_ps2_clk <= '0';
-    elsif(clk_i'event and clk_i = '1') then
-        l_pre_ps2_clk <= f_ps2_clk;
-        l_state_reg <= l_next_state;
-    end if;
-end process;
+  bits_counter : entity work.counter
+    generic map (
+      max_cnt => 9,
+      rst_val => 0)
+    port map (
+      clk_i      => clk_i,
+      rst_i      => rst_i,
+      cnt_en_i   => bc_cnt_en,
+      load_i     => bc_reload,
+      load_cnt_i => 0,
+      cnt_o      => bc_cnt);
 
-rx_buffer_full_detection_proc:
-process(clk_i, reset_i)
-begin
-    if(reset_i = '1') then
-        l_rx_buf_full_reg <= '0';
-    elsif(clk_i'event and clk_i = '1') then
-        case l_state_reg is
-        when RX_START_S =>
-            l_rx_buf_full_reg <= '0';
-        when RX_STOP_S =>
-            l_rx_buf_full_reg <= r_stop_bit;
-        when others =>
-        end case;
-    end if;
-end process;
+  com_timer : entity work.counter
+    generic map (
+      max_cnt => MAX_TIMER_COUNT+1,
+      rst_val => 0)
+    port map (
+      clk_i      => clk_i,
+      rst_i      => rst_i,
+      cnt_en_i   => '1',
+      load_i     => tm_reload,
+      load_cnt_i => 0,
+      cnt_o      => tm_cnt);
 
-next_state_logic_proc:
-process(l_state_reg, l_ps2_clk_falling, f_ps2_data, r_start_bit, rx_en_i)
-begin
-    
-    case(l_state_reg) is
-    when IDLE_S =>
-        if(l_ps2_clk_falling = '1' AND f_ps2_data = '0' AND rx_en_i = '1') then
-            l_next_state <= RX_START_S;
-        else
-            l_next_state <= IDLE_S;
-        end if;
-    when RX_START_S =>
-        l_next_state <= RX_DATA_S;
-    when RX_DATA_S =>
-        if(r_start_bit = '0') then -- If the start bit if shifted to the start...
-            l_next_state <= RX_STOP_S;
-        else
-            l_next_state <= RX_DATA_S;
-        end if;
-    when RX_STOP_S =>
-        l_next_state <= IDLE_S;
-    end case;
-end process;
+  rx_parity_generator : entity work.parity_generator
+    generic map (
+      N => 9)
+    port map (
+      din_i    => buf_data_out,
+      parity_o => rx_parity);
 
--- PS2 Clock Edge detection
-l_ps2_clk_falling <= l_pre_ps2_clk AND (NOT f_ps2_clk);
+  tx_parity_generator : entity work.parity_generator
+    generic map (
+      N => 8)
+    port map (
+      din_i    => tx_data_i(7 downto 0),
+      parity_o => tx_parity);
 
--- RX Shift register control logic
-l_shift_nLoad <= '0' when l_state_reg = RX_START_S else '1';
-l_shift_en <= '1' when l_state_reg = RX_DATA_S AND l_ps2_clk_falling = '1' else '0';
+  ps2_controller_fsm_1 : entity work.ps2_controller_fsm
+    generic map (
+      MAX_TIMER_COUNT             => MAX_TIMER_COUNT,
+      CYCLES_PER_10_MICRO_SECONDS => CYCLES_PER_10_MICRO_SECONDS
+      )
+    port map (
+      clk_i               => clk_i,
+      rst_i               => rst_i,
+      ps2_clk_io          => ps2_clk_io,
+      ps2_data_io         => ps2_data_io,
+      f_ps2_clk_i         => f_ps2_clk,
+      f_ps2_data_i        => f_ps2_data,
+      rx_en_i             => rx_en_i,
+      rx_done_tick_o      => rx_done_tick,
+      tx_start_tick_i     => tx_start_tick_i,
+      tx_done_tick_o      => tx_done_tick_o,
+      tx_nack_tick_o      => tx_nack_tick_o,
+      watchdog_rst_tick_o => watchdog_rst_tick_o,
+      bussy_flag_o        => bussy_flag_o,
+      buf_tx_nRx_sel_o    => buf_tx_nRx_sel,
+      buf_shift_nLoad_o   => buf_shift_nLoad,
+      buf_shift_en_o      => buf_shift_en,
+      buf_serial_out_i    => buf_data_out(0),
+      bc_cnt_i            => bc_cnt,
+      bc_cnt_en_o         => bc_cnt_en,
+      bc_reload_o         => bc_reload,
+      tm_reload_o         => tm_reload,
+      tm_cnt_i            => tm_cnt);
 
--- RX Shift register data signal mappings
-r_start_bit  <= r_data(0);
-r_data_bits  <= r_data(8 downto 1);
-r_parity_bit <= r_data(9);
-r_stop_bit   <= r_data(10);
+  tx_parity_bit <= not tx_parity;
+  tx_load_data  <= tx_parity_bit & tx_data_i;
 
--- Status & data output logic
-rx_buf_full_o <= l_rx_buf_full_reg;
-rx_parity_err_o <= NOT(r_data_bits(0) XOR r_data_bits(1) XOR r_data_bits(2) XOR r_data_bits(3) XOR r_data_bits(4) XOR r_data_bits(5) XOR r_data_bits(6) XOR r_data_bits(7) XOR r_parity_bit);
-rx_buf_o <= r_data_bits;
+  with buf_tx_nRx_sel select
+    buf_data_in <=
+    ('0'&ONES)   when '0',
+    tx_load_data when others;
 
-ps2_clk_io <= 'Z';
-ps2_data_io <= 'Z';
+  rx_data_o            <= buf_data_out(7 downto 0);
+  rx_parity_err_tick_o <= (not rx_parity) and rx_done_tick;
+  rx_done_tick_o       <= rx_done_tick;
+
 end behaviour;

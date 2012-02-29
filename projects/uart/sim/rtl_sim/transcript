@@ -1,499 +1,977 @@
+# reading modelsim.ini
 # Loading project uart
-# Compile of uart.vhd was successful.
-# Compile of uart_receiver_fsm.vhd was successful.
+# reading modelsim.ini
+# reading modelsim.ini
+# Loading project ps2_controller
+# Compile of ps2_controller_fsm.vhd was successful.
+# Compile of parity_generator.vhd was successful.
 # Compile of counter.vhd was successful.
-# Compile of primatives_pkg.vhd was successful.
 # Compile of schmitt_trigger_filter.vhd was successful.
 # Compile of shift_reg.vhd was successful.
-# Compile of uart_receiver_tb.vhd was successful.
-# Compile of baud_rate_generator.vhd was successful.
-# Compile of parity_generator.vhd was successful.
-# Compile of uart_receiver.vhd was successful.
-# Compile of uart_de0.vhd was successful.
-# Compile of uart_transmitter.vhd was successful.
-# Compile of uart_transmitter_fsm.vhd was successful with warnings.
-# Compile of uart_transmitter_tb.vhd was successful.
-# 14 compiles, 0 failed with no errors. 
-vsim work.uart_transmitter_tb
-# vsim work.uart_transmitter_tb 
+# Compile of ps2_controller.vhd was successful.
+# Compile of ps2_controller_tb.vhd was successful.
+# 7 compiles, 0 failed with no errors. 
+vsim work.ps2_controller_tb
+# vsim work.ps2_controller_tb 
 # Loading std.standard
 # Loading ieee.std_logic_1164(body)
-# Loading work.uart_transmitter_tb(stimulus)
-# Loading work.uart_transmitter(structure)
-# Loading work.counter(behaviour)
+# Loading work.ps2_controller_tb(stimulus)
+# Loading work.ps2_controller(behaviour)
+# Loading work.schmitt_trigger_filter(behaviour)
 # Loading work.shift_reg(behaviour)
+# Loading work.counter(behaviour)
 # Loading work.parity_generator(behaviour)
-# Loading work.uart_transmitter_fsm(behaviour)
-step -over
-step -over
-step -over
-step -over
-step -over
-step -over
-step -over
-step -over
-step -over
-step -over
-step -over
-step -over
-step -over
-step -over
-step -over
-step -over
-step -over
-step -over
-step -over
-step -over
-step -over
-step -over
-step -over
-step -over
-step -over
-step -over
-step -over
-step -over
-step -over
-step -over
-step -over
-step -over
-step -over
-step -over
-step -over
-step -over
-step -over
-step -over
-step -over
-step -over
-step -over
-step -over
-step -over
-step -over
-step -over
-step -over
-step -over
-step -over
-step -over
-step -over
-step -over
-step -over
-step -over
-step -over
-step -over
-step -over
-step -over
-step -over
-step -over
-step -over
-step -over
-step -over
-step -over
-step -over
-step -over
-step -over
-step -over
-step -over
-step -over
-step -over
-step -over
+# Loading work.ps2_controller_fsm(behaviour)
+# ** Warning: (vsim-8683) Uninitialized out port /ps2_controller_tb/dut/ps2_controller_fsm_1/rx_parity_err_o has no driver.
+# This port will contribute value (U) to the signal network.
+#         Region: /ps2_controller_tb
+# ** Warning: (vsim-8683) Uninitialized out port /ps2_controller_tb/dut/ps2_controller_fsm_1/watchdog_rst_tick_o has no driver.
+# This port will contribute value (U) to the signal network.
+#         Region: /ps2_controller_tb
+add wave \
+{sim:/ps2_controller_tb/clk } \
+{sim:/ps2_controller_tb/rst } \
+{sim:/ps2_controller_tb/ps2_clk } \
+{sim:/ps2_controller_tb/ps2_data } \
+{sim:/ps2_controller_tb/rx_en } \
+{sim:/ps2_controller_tb/rx_done_tick } \
+{sim:/ps2_controller_tb/rx_parity_err } \
+{sim:/ps2_controller_tb/rx_data } \
+{sim:/ps2_controller_tb/tx_start_tick } \
+{sim:/ps2_controller_tb/tx_data } \
+{sim:/ps2_controller_tb/tx_done_tick } \
+{sim:/ps2_controller_tb/tx_nack_tick } \
+{sim:/ps2_controller_tb/watchdog_rst_tick } \
+{sim:/ps2_controller_tb/bussy_flag } \
+{sim:/ps2_controller_tb/done } \
+{sim:/ps2_controller_tb/ps2_state } \
+{sim:/ps2_controller_tb/ps2_send_data } 
+add wave \
+{sim:/ps2_controller_tb/dut/ps2_controller_fsm_1/tm_cnt_i } \
+{sim:/ps2_controller_tb/dut/ps2_controller_fsm_1/ps2_clk_falling } \
+{sim:/ps2_controller_tb/dut/ps2_controller_fsm_1/state } \
+{sim:/ps2_controller_tb/dut/ps2_controller_fsm_1/rx_next_bit_tick } \
+{sim:/ps2_controller_tb/dut/ps2_controller_fsm_1/tx_next_bit_tick } 
+run -all
+add wave \
+{sim:/ps2_controller_tb/dut/ps2_controller_fsm_1/ps2_data_io } 
+add wave \
+{sim:/ps2_controller_tb/ps2_data } 
 restart -f
-# Compile of uart.vhd was successful.
-# Compile of uart_receiver_fsm.vhd was successful.
+# ** Warning: (vsim-8683) Uninitialized out port /ps2_controller_tb/dut/ps2_controller_fsm_1/rx_parity_err_o has no driver.
+# This port will contribute value (U) to the signal network.
+#         Region: /ps2_controller_tb
+# ** Warning: (vsim-8683) Uninitialized out port /ps2_controller_tb/dut/ps2_controller_fsm_1/watchdog_rst_tick_o has no driver.
+# This port will contribute value (U) to the signal network.
+#         Region: /ps2_controller_tb
+run -all
+# Compile of ps2_controller_fsm.vhd was successful.
+# Compile of parity_generator.vhd was successful.
 # Compile of counter.vhd was successful.
-# Compile of primatives_pkg.vhd was successful.
 # Compile of schmitt_trigger_filter.vhd was successful.
 # Compile of shift_reg.vhd was successful.
-# Compile of uart_receiver_tb.vhd was successful.
-# Compile of baud_rate_generator.vhd was successful.
-# Compile of parity_generator.vhd was successful.
-# Compile of uart_receiver.vhd was successful.
-# Compile of uart_de0.vhd was successful.
-# Compile of uart_transmitter.vhd was successful.
-# Compile of uart_transmitter_fsm.vhd was successful.
-# Compile of uart_transmitter_tb.vhd was successful.
-# 14 compiles, 0 failed with no errors. 
+# Compile of ps2_controller.vhd was successful.
+# Compile of ps2_controller_tb.vhd was successful.
+# 7 compiles, 0 failed with no errors. 
 restart -f
-# Loading work.uart_transmitter_tb(stimulus)
-# Loading work.uart_transmitter(structure)
-# Loading work.counter(behaviour)
+# Loading work.ps2_controller_tb(stimulus)
+# Loading work.ps2_controller(behaviour)
+# Loading work.schmitt_trigger_filter(behaviour)
 # Loading work.shift_reg(behaviour)
+# Loading work.counter(behaviour)
 # Loading work.parity_generator(behaviour)
-# Loading work.uart_transmitter_fsm(behaviour)
+# Loading work.ps2_controller_fsm(behaviour)
+# ** Warning: (vsim-8683) Uninitialized out port /ps2_controller_tb/dut/ps2_controller_fsm_1/rx_parity_err_o has no driver.
+# This port will contribute value (U) to the signal network.
+#         Region: /ps2_controller_tb
+# ** Warning: (vsim-8683) Uninitialized out port /ps2_controller_tb/dut/ps2_controller_fsm_1/watchdog_rst_tick_o has no driver.
+# This port will contribute value (U) to the signal network.
+#         Region: /ps2_controller_tb
+run -all
+# Compile of ps2_controller_fsm.vhd was successful.
+# Compile of parity_generator.vhd was successful.
+# Compile of counter.vhd was successful.
+# Compile of schmitt_trigger_filter.vhd was successful.
+# Compile of shift_reg.vhd was successful.
+# Compile of ps2_controller.vhd was successful.
+# Compile of ps2_controller_tb.vhd was successful.
+# 7 compiles, 0 failed with no errors. 
+restart -f
+# Loading work.ps2_controller_tb(stimulus)
+# Loading work.ps2_controller(behaviour)
+# Loading work.schmitt_trigger_filter(behaviour)
+# Loading work.shift_reg(behaviour)
+# Loading work.counter(behaviour)
+# Loading work.parity_generator(behaviour)
+# Loading work.ps2_controller_fsm(behaviour)
+# ** Warning: (vsim-8683) Uninitialized out port /ps2_controller_tb/dut/ps2_controller_fsm_1/rx_parity_err_o has no driver.
+# This port will contribute value (U) to the signal network.
+#         Region: /ps2_controller_tb
+# ** Warning: (vsim-8683) Uninitialized out port /ps2_controller_tb/dut/ps2_controller_fsm_1/watchdog_rst_tick_o has no driver.
+# This port will contribute value (U) to the signal network.
+#         Region: /ps2_controller_tb
+run -all
+# Compile of ps2_controller_fsm.vhd was successful.
+# Compile of parity_generator.vhd was successful.
+# Compile of counter.vhd was successful.
+# Compile of schmitt_trigger_filter.vhd was successful.
+# Compile of shift_reg.vhd was successful.
+# Compile of ps2_controller.vhd was successful.
+# Compile of ps2_controller_tb.vhd was successful.
+# 7 compiles, 0 failed with no errors. 
+restart -f
+# Loading work.ps2_controller_tb(stimulus)
+# Loading work.ps2_controller(behaviour)
+# Loading work.schmitt_trigger_filter(behaviour)
+# Loading work.shift_reg(behaviour)
+# Loading work.counter(behaviour)
+# Loading work.parity_generator(behaviour)
+# Loading work.ps2_controller_fsm(behaviour)
+# ** Warning: (vsim-8683) Uninitialized out port /ps2_controller_tb/dut/ps2_controller_fsm_1/rx_parity_err_o has no driver.
+# This port will contribute value (U) to the signal network.
+#         Region: /ps2_controller_tb
+# ** Warning: (vsim-8683) Uninitialized out port /ps2_controller_tb/dut/ps2_controller_fsm_1/watchdog_rst_tick_o has no driver.
+# This port will contribute value (U) to the signal network.
+#         Region: /ps2_controller_tb
+run -all
+# Compile of ps2_controller_fsm.vhd was successful.
+# Compile of parity_generator.vhd was successful.
+# Compile of counter.vhd was successful.
+# Compile of schmitt_trigger_filter.vhd was successful.
+# Compile of shift_reg.vhd was successful.
+# Compile of ps2_controller.vhd was successful.
+# Compile of ps2_controller_tb.vhd was successful.
+# 7 compiles, 0 failed with no errors. 
+restart -f
+# Loading work.ps2_controller_tb(stimulus)
+# Loading work.ps2_controller(behaviour)
+# Loading work.schmitt_trigger_filter(behaviour)
+# Loading work.shift_reg(behaviour)
+# Loading work.counter(behaviour)
+# Loading work.parity_generator(behaviour)
+# Loading work.ps2_controller_fsm(behaviour)
+# ** Warning: (vsim-8683) Uninitialized out port /ps2_controller_tb/dut/ps2_controller_fsm_1/rx_parity_err_o has no driver.
+# This port will contribute value (U) to the signal network.
+#         Region: /ps2_controller_tb
+# ** Warning: (vsim-8683) Uninitialized out port /ps2_controller_tb/dut/ps2_controller_fsm_1/watchdog_rst_tick_o has no driver.
+# This port will contribute value (U) to the signal network.
+#         Region: /ps2_controller_tb
+run -all
+# Compile of ps2_controller_fsm.vhd was successful.
+# Compile of parity_generator.vhd was successful.
+# Compile of counter.vhd was successful.
+# Compile of schmitt_trigger_filter.vhd was successful.
+# Compile of shift_reg.vhd was successful.
+# Compile of ps2_controller.vhd was successful.
+# Compile of ps2_controller_tb.vhd was successful.
+# 7 compiles, 0 failed with no errors. 
+restart -f
+# Loading work.ps2_controller_tb(stimulus)
+# Loading work.ps2_controller(behaviour)
+# Loading work.schmitt_trigger_filter(behaviour)
+# Loading work.shift_reg(behaviour)
+# Loading work.counter(behaviour)
+# Loading work.parity_generator(behaviour)
+# Loading work.ps2_controller_fsm(behaviour)
+# ** Warning: (vsim-8683) Uninitialized out port /ps2_controller_tb/dut/ps2_controller_fsm_1/rx_parity_err_o has no driver.
+# This port will contribute value (U) to the signal network.
+#         Region: /ps2_controller_tb
+# ** Warning: (vsim-8683) Uninitialized out port /ps2_controller_tb/dut/ps2_controller_fsm_1/watchdog_rst_tick_o has no driver.
+# This port will contribute value (U) to the signal network.
+#         Region: /ps2_controller_tb
+run -all
+# Compile of ps2_controller_fsm.vhd was successful.
+# Compile of parity_generator.vhd was successful.
+# Compile of counter.vhd was successful.
+# Compile of schmitt_trigger_filter.vhd was successful.
+# Compile of shift_reg.vhd was successful.
+# Compile of ps2_controller.vhd failed with 1 errors.
+# Compile of ps2_controller_tb.vhd failed with 1 errors.
+# 7 compiles, 2 failed with 2 errors. 
+# Compile of ps2_controller_fsm.vhd was successful.
+# Compile of parity_generator.vhd was successful.
+# Compile of counter.vhd was successful.
+# Compile of schmitt_trigger_filter.vhd was successful.
+# Compile of shift_reg.vhd was successful.
+# Compile of ps2_controller.vhd was successful.
+# Compile of ps2_controller_tb.vhd failed with 1 errors.
+# 7 compiles, 1 failed with 1 error. 
+# Compile of ps2_controller_fsm.vhd was successful.
+# Compile of parity_generator.vhd was successful.
+# Compile of counter.vhd was successful.
+# Compile of schmitt_trigger_filter.vhd was successful.
+# Compile of shift_reg.vhd was successful.
+# Compile of ps2_controller.vhd was successful.
+# Compile of ps2_controller_tb.vhd failed with 1 errors.
+# 7 compiles, 1 failed with 1 error. 
+# Compile of ps2_controller_fsm.vhd was successful.
+# Compile of parity_generator.vhd was successful.
+# Compile of counter.vhd was successful.
+# Compile of schmitt_trigger_filter.vhd was successful.
+# Compile of shift_reg.vhd was successful.
+# Compile of ps2_controller.vhd was successful.
+# Compile of ps2_controller_tb.vhd was successful.
+# 7 compiles, 0 failed with no errors. 
+restart -f
+# Loading work.ps2_controller_tb(stimulus)
+# Loading work.ps2_controller(behaviour)
+# Loading work.schmitt_trigger_filter(behaviour)
+# Loading work.shift_reg(behaviour)
+# Loading work.counter(behaviour)
+# Loading work.parity_generator(behaviour)
+# Loading work.ps2_controller_fsm(behaviour)
+# ** Warning: (vsim-8683) Uninitialized out port /ps2_controller_tb/dut/ps2_controller_fsm_1/watchdog_rst_tick_o has no driver.
+# This port will contribute value (U) to the signal network.
+#         Region: /ps2_controller_tb
+# Warning in wave window restart: (vish-4014) No objects found matching '/ps2_controller_tb/rx_parity_err'. 
+run -all
+# ** Error: Received data did not match data sent.
+#    Time: 636680 ns  Iteration: 4  Instance: /ps2_controller_tb
+# ** Error: Received data did not match data sent.
+#    Time: 1440680 ns  Iteration: 4  Instance: /ps2_controller_tb
+# ** Error: Did not detect parity error.
+#    Time: 1440680 ns  Iteration: 4  Instance: /ps2_controller_tb
+# Compile of ps2_controller_fsm.vhd was successful.
+# Compile of parity_generator.vhd was successful.
+# Compile of counter.vhd was successful.
+# Compile of schmitt_trigger_filter.vhd was successful.
+# Compile of shift_reg.vhd was successful.
+# Compile of ps2_controller.vhd was successful.
+# Compile of ps2_controller_tb.vhd was successful.
+# 7 compiles, 0 failed with no errors. 
+restart -f
+# Loading work.ps2_controller_tb(stimulus)
+# Loading work.ps2_controller(behaviour)
+# Loading work.schmitt_trigger_filter(behaviour)
+# Loading work.shift_reg(behaviour)
+# Loading work.counter(behaviour)
+# Loading work.parity_generator(behaviour)
+# Loading work.ps2_controller_fsm(behaviour)
+# ** Warning: (vsim-8683) Uninitialized out port /ps2_controller_tb/dut/ps2_controller_fsm_1/watchdog_rst_tick_o has no driver.
+# This port will contribute value (U) to the signal network.
+#         Region: /ps2_controller_tb
+run -all
+# ** Error: Received data did not match data sent.
+#    Time: 636680 ns  Iteration: 4  Instance: /ps2_controller_tb
+# ** Error: Did not detect parity error.
+#    Time: 1440680 ns  Iteration: 4  Instance: /ps2_controller_tb
+# Compile of ps2_controller_fsm.vhd was successful.
+# Compile of parity_generator.vhd was successful.
+# Compile of counter.vhd was successful.
+# Compile of schmitt_trigger_filter.vhd was successful.
+# Compile of shift_reg.vhd was successful.
+# Compile of ps2_controller.vhd was successful.
+# Compile of ps2_controller_tb.vhd was successful.
+# 7 compiles, 0 failed with no errors. 
+# Compile of ps2_controller_fsm.vhd was successful.
+# Compile of parity_generator.vhd was successful.
+# Compile of counter.vhd was successful.
+# Compile of schmitt_trigger_filter.vhd was successful.
+# Compile of shift_reg.vhd was successful.
+# Compile of ps2_controller.vhd was successful.
+# Compile of ps2_controller_tb.vhd was successful.
+# 7 compiles, 0 failed with no errors. 
+restart -f
+# Loading work.ps2_controller_tb(stimulus)
+# Loading work.ps2_controller(behaviour)
+# Loading work.schmitt_trigger_filter(behaviour)
+# Loading work.shift_reg(behaviour)
+# Loading work.counter(behaviour)
+# Loading work.parity_generator(behaviour)
+# Loading work.ps2_controller_fsm(behaviour)
+# ** Warning: (vsim-8683) Uninitialized out port /ps2_controller_tb/dut/ps2_controller_fsm_1/watchdog_rst_tick_o has no driver.
+# This port will contribute value (U) to the signal network.
+#         Region: /ps2_controller_tb
+run -all
+# ** Error: False parity error tick.
+#    Time: 703660 ns  Iteration: 7  Instance: /ps2_controller_tb
+# ** Error: Received data did not match data sent.
+#    Time: 770660 ns  Iteration: 7  Instance: /ps2_controller_tb
+# Compile of ps2_controller_fsm.vhd was successful.
+# Compile of parity_generator.vhd was successful.
+# Compile of counter.vhd was successful.
+# Compile of schmitt_trigger_filter.vhd was successful.
+# Compile of shift_reg.vhd was successful.
+# Compile of ps2_controller.vhd was successful.
+# Compile of ps2_controller_tb.vhd was successful.
+# 7 compiles, 0 failed with no errors. 
+restart -f
+# Loading work.ps2_controller_tb(stimulus)
+# Loading work.ps2_controller(behaviour)
+# Loading work.schmitt_trigger_filter(behaviour)
+# Loading work.shift_reg(behaviour)
+# Loading work.counter(behaviour)
+# Loading work.parity_generator(behaviour)
+# Loading work.ps2_controller_fsm(behaviour)
+# ** Warning: (vsim-8683) Uninitialized out port /ps2_controller_tb/dut/ps2_controller_fsm_1/watchdog_rst_tick_o has no driver.
+# This port will contribute value (U) to the signal network.
+#         Region: /ps2_controller_tb
+run -all
+# ** Error: False parity error tick.
+#    Time: 703660 ns  Iteration: 7  Instance: /ps2_controller_tb
+# ** Error: Received data did not match data sent.
+#    Time: 770660 ns  Iteration: 7  Instance: /ps2_controller_tb
 add wave \
-{sim:/uart_transmitter_tb/sigs } \
-{sim:/uart_transmitter_tb/clk } \
-{sim:/uart_transmitter_tb/rst } \
-{sim:/uart_transmitter_tb/sample_tick } \
-{sim:/uart_transmitter_tb/data_in } \
-{sim:/uart_transmitter_tb/tx_start } \
-{sim:/uart_transmitter_tb/tx_done_tick } \
-{sim:/uart_transmitter_tb/tx_idle } \
-{sim:/uart_transmitter_tb/tx } \
-{sim:/uart_transmitter_tb/par_en } \
-{sim:/uart_transmitter_tb/par_odd_neven } \
-{sim:/uart_transmitter_tb/stop_bits_num } \
-{sim:/uart_transmitter_tb/done } 
+{sim:/ps2_controller_tb/dut/ps2_controller_fsm_1/rx_stop_idle_trans } 
+add wave \
+{sim:/ps2_controller_tb/dut/ps2_controller_fsm_1/rx_stop_idle_trans } 
+add wave \
+{sim:/ps2_controller_tb/dut/ps2_controller_fsm_1/rx_stop_idle_cond } 
+# Compile of ps2_controller_fsm.vhd was successful.
+# Compile of parity_generator.vhd was successful.
+# Compile of counter.vhd was successful.
+# Compile of schmitt_trigger_filter.vhd was successful.
+# Compile of shift_reg.vhd was successful.
+# Compile of ps2_controller.vhd was successful.
+# Compile of ps2_controller_tb.vhd was successful.
+# 7 compiles, 0 failed with no errors. 
+restart -f
+# Loading work.ps2_controller_tb(stimulus)
+# Loading work.ps2_controller(behaviour)
+# Loading work.schmitt_trigger_filter(behaviour)
+# Loading work.shift_reg(behaviour)
+# Loading work.counter(behaviour)
+# Loading work.parity_generator(behaviour)
+# Loading work.ps2_controller_fsm(behaviour)
+# ** Warning: (vsim-8683) Uninitialized out port /ps2_controller_tb/dut/ps2_controller_fsm_1/watchdog_rst_tick_o has no driver.
+# This port will contribute value (U) to the signal network.
+#         Region: /ps2_controller_tb
+run -all
+# ** Error: False parity error tick.
+#    Time: 703660 ns  Iteration: 7  Instance: /ps2_controller_tb
+# ** Error: Did not detect parity error.
+#    Time: 1474140 ns  Iteration: 7  Instance: /ps2_controller_tb
+# Compile of ps2_controller_fsm.vhd was successful.
+# Compile of parity_generator.vhd was successful.
+# Compile of counter.vhd was successful.
+# Compile of schmitt_trigger_filter.vhd was successful.
+# Compile of shift_reg.vhd was successful.
+# Compile of ps2_controller.vhd was successful.
+# Compile of ps2_controller_tb.vhd was successful.
+# 7 compiles, 0 failed with no errors. 
+restart -f
+# Loading work.ps2_controller_tb(stimulus)
+# Loading work.ps2_controller(behaviour)
+# Loading work.schmitt_trigger_filter(behaviour)
+# Loading work.shift_reg(behaviour)
+# Loading work.counter(behaviour)
+# Loading work.parity_generator(behaviour)
+# Loading work.ps2_controller_fsm(behaviour)
+# ** Warning: (vsim-8683) Uninitialized out port /ps2_controller_tb/dut/ps2_controller_fsm_1/watchdog_rst_tick_o has no driver.
+# This port will contribute value (U) to the signal network.
+#         Region: /ps2_controller_tb
+run -all
+# ** Error: Did not detect parity error.
+#    Time: 1440680 ns  Iteration: 5  Instance: /ps2_controller_tb
+add wave \
+{sim:/ps2_controller_tb/dut/buf_shift_reg/reg } 
+restart -f
+# ** Warning: (vsim-8683) Uninitialized out port /ps2_controller_tb/dut/ps2_controller_fsm_1/watchdog_rst_tick_o has no driver.
+# This port will contribute value (U) to the signal network.
+#         Region: /ps2_controller_tb
+run -all
+# ** Error: Did not detect parity error.
+#    Time: 1440680 ns  Iteration: 5  Instance: /ps2_controller_tb
+# Compile of ps2_controller_fsm.vhd was successful.
+# Compile of parity_generator.vhd was successful.
+# Compile of counter.vhd was successful.
+# Compile of schmitt_trigger_filter.vhd was successful.
+# Compile of shift_reg.vhd was successful.
+# Compile of ps2_controller.vhd was successful.
+# Compile of ps2_controller_tb.vhd was successful.
+# 7 compiles, 0 failed with no errors. 
+restart -f
+# Loading work.ps2_controller_tb(stimulus)
+# Loading work.ps2_controller(behaviour)
+# Loading work.schmitt_trigger_filter(behaviour)
+# Loading work.shift_reg(behaviour)
+# Loading work.counter(behaviour)
+# Loading work.parity_generator(behaviour)
+# Loading work.ps2_controller_fsm(behaviour)
+# ** Warning: (vsim-8683) Uninitialized out port /ps2_controller_tb/dut/ps2_controller_fsm_1/watchdog_rst_tick_o has no driver.
+# This port will contribute value (U) to the signal network.
+#         Region: /ps2_controller_tb
 run
 run -all
-# Compile of uart.vhd was successful.
-# Compile of uart_receiver_fsm.vhd was successful.
-# Compile of counter.vhd was successful.
-# Compile of primatives_pkg.vhd was successful.
-# Compile of schmitt_trigger_filter.vhd was successful.
-# Compile of shift_reg.vhd was successful.
-# Compile of uart_receiver_tb.vhd was successful.
-# Compile of baud_rate_generator.vhd was successful.
-# Compile of parity_generator.vhd was successful.
-# Compile of uart_receiver.vhd was successful.
-# Compile of uart_de0.vhd was successful.
-# Compile of uart_transmitter.vhd was successful.
-# Compile of uart_transmitter_fsm.vhd was successful.
-# Compile of uart_transmitter_tb.vhd was successful.
-# 14 compiles, 0 failed with no errors. 
+# ** Error: False parity error tick.
+#    Time: 670160 ns  Iteration: 5  Instance: /ps2_controller_tb
+add wave \
+{sim:/ps2_controller_tb/dut/rx_parity } 
+add wave \
+{sim:/ps2_controller_tb/dut/rx_parity_err_tick_o } 
 restart -f
-# Loading work.uart_transmitter_tb(stimulus)
-# Loading work.uart_transmitter(structure)
-# Loading work.counter(behaviour)
-# Loading work.shift_reg(behaviour)
-# Loading work.parity_generator(behaviour)
-# Loading work.uart_transmitter_fsm(behaviour)
+# ** Warning: (vsim-8683) Uninitialized out port /ps2_controller_tb/dut/ps2_controller_fsm_1/watchdog_rst_tick_o has no driver.
+# This port will contribute value (U) to the signal network.
+#         Region: /ps2_controller_tb
 run -all
-# Compile of uart.vhd was successful.
-# Compile of uart_receiver_fsm.vhd was successful.
+# ** Error: False parity error tick.
+#    Time: 670160 ns  Iteration: 5  Instance: /ps2_controller_tb
+# Compile of ps2_controller_fsm.vhd was successful.
+# Compile of parity_generator.vhd was successful.
 # Compile of counter.vhd was successful.
-# Compile of primatives_pkg.vhd was successful.
 # Compile of schmitt_trigger_filter.vhd was successful.
 # Compile of shift_reg.vhd was successful.
-# Compile of uart_receiver_tb.vhd was successful.
-# Compile of baud_rate_generator.vhd was successful.
-# Compile of parity_generator.vhd was successful.
-# Compile of uart_receiver.vhd was successful.
-# Compile of uart_de0.vhd was successful.
-# Compile of uart_transmitter.vhd was successful.
-# Compile of uart_transmitter_fsm.vhd was successful.
-# Compile of uart_transmitter_tb.vhd was successful.
-# 14 compiles, 0 failed with no errors. 
+# Compile of ps2_controller.vhd was successful.
+# Compile of ps2_controller_tb.vhd was successful.
+# 7 compiles, 0 failed with no errors. 
 restart -f
-# Loading work.uart_transmitter_tb(stimulus)
-# Loading work.uart_transmitter(structure)
-# Loading work.counter(behaviour)
+# Loading work.ps2_controller_tb(stimulus)
+# Loading work.ps2_controller(behaviour)
+# Loading work.schmitt_trigger_filter(behaviour)
 # Loading work.shift_reg(behaviour)
+# Loading work.counter(behaviour)
 # Loading work.parity_generator(behaviour)
-# Loading work.uart_transmitter_fsm(behaviour)
+# Loading work.ps2_controller_fsm(behaviour)
+# ** Warning: (vsim-8683) Uninitialized out port /ps2_controller_tb/dut/ps2_controller_fsm_1/watchdog_rst_tick_o has no driver.
+# This port will contribute value (U) to the signal network.
+#         Region: /ps2_controller_tb
 run -all
-# Compile of uart.vhd was successful.
-# Compile of uart_receiver_fsm.vhd was successful.
+# ** Error: False parity error tick.
+#    Time: 670200 ns  Iteration: 5  Instance: /ps2_controller_tb
+# WARNING: No extended dataflow license exists
+# Compile of ps2_controller_fsm.vhd was successful.
+# Compile of parity_generator.vhd was successful.
 # Compile of counter.vhd was successful.
-# Compile of primatives_pkg.vhd was successful.
 # Compile of schmitt_trigger_filter.vhd was successful.
 # Compile of shift_reg.vhd was successful.
-# Compile of uart_receiver_tb.vhd was successful.
-# Compile of baud_rate_generator.vhd was successful.
-# Compile of parity_generator.vhd was successful.
-# Compile of uart_receiver.vhd was successful.
-# Compile of uart_de0.vhd was successful.
-# Compile of uart_transmitter.vhd was successful.
-# Compile of uart_transmitter_fsm.vhd was successful.
-# Compile of uart_transmitter_tb.vhd failed with 1 errors.
-# 14 compiles, 1 failed with 1 error. 
-# Compile of uart.vhd was successful.
-# Compile of uart_receiver_fsm.vhd was successful.
-# Compile of counter.vhd was successful.
-# Compile of primatives_pkg.vhd was successful.
-# Compile of schmitt_trigger_filter.vhd was successful.
-# Compile of shift_reg.vhd was successful.
-# Compile of uart_receiver_tb.vhd was successful.
-# Compile of baud_rate_generator.vhd was successful.
-# Compile of parity_generator.vhd was successful.
-# Compile of uart_receiver.vhd was successful.
-# Compile of uart_de0.vhd was successful.
-# Compile of uart_transmitter.vhd was successful.
-# Compile of uart_transmitter_fsm.vhd was successful.
-# Compile of uart_transmitter_tb.vhd was successful.
-# 14 compiles, 0 failed with no errors. 
+# Compile of ps2_controller.vhd was successful.
+# Compile of ps2_controller_tb.vhd was successful.
+# 7 compiles, 0 failed with no errors. 
 restart -f
-# Loading work.uart_transmitter_tb(stimulus)
-# Loading work.uart_transmitter(structure)
-# Loading work.counter(behaviour)
+# Loading work.ps2_controller_tb(stimulus)
+# Loading work.ps2_controller(behaviour)
+# Loading work.schmitt_trigger_filter(behaviour)
 # Loading work.shift_reg(behaviour)
+# Loading work.counter(behaviour)
 # Loading work.parity_generator(behaviour)
-# Loading work.uart_transmitter_fsm(behaviour)
+# Loading work.ps2_controller_fsm(behaviour)
+# ** Warning: (vsim-8683) Uninitialized out port /ps2_controller_tb/dut/ps2_controller_fsm_1/watchdog_rst_tick_o has no driver.
+# This port will contribute value (U) to the signal network.
+#         Region: /ps2_controller_tb
 run -all
-# ** Fatal: (vsim-3421) Value 32 for l_cnt_next is out of range 0 to 31.
-#    Time: 289990 ns  Iteration: 1  Process: /uart_transmitter_tb/dut/sample_ticks_counter/count_proc File: /home/jansen/vhdl/projects/primatives/rtl/counter.vhd
-# Fatal error in Process count_proc at /home/jansen/vhdl/projects/primatives/rtl/counter.vhd line 37
+# Compile of ps2_controller_fsm.vhd was successful.
+# Compile of parity_generator.vhd was successful.
+# Compile of counter.vhd was successful.
+# Compile of schmitt_trigger_filter.vhd was successful.
+# Compile of shift_reg.vhd was successful.
+# Compile of ps2_controller.vhd was successful.
+# Compile of ps2_controller_tb.vhd was successful.
+# 7 compiles, 0 failed with no errors. 
+restart -f
+# Loading work.ps2_controller_tb(stimulus)
+# Loading work.ps2_controller(behaviour)
+# Loading work.schmitt_trigger_filter(behaviour)
+# Loading work.shift_reg(behaviour)
+# Loading work.counter(behaviour)
+# Loading work.parity_generator(behaviour)
+# Loading work.ps2_controller_fsm(behaviour)
+# ** Warning: (vsim-8683) Uninitialized out port /ps2_controller_tb/dut/ps2_controller_fsm_1/watchdog_rst_tick_o has no driver.
+# This port will contribute value (U) to the signal network.
+#         Region: /ps2_controller_tb
+run -all
+# Compile of ps2_controller_fsm.vhd was successful.
+# Compile of parity_generator.vhd was successful.
+# Compile of counter.vhd was successful.
+# Compile of schmitt_trigger_filter.vhd was successful.
+# Compile of shift_reg.vhd was successful.
+# Compile of ps2_controller.vhd was successful.
+# Compile of ps2_controller_tb.vhd was successful.
+# 7 compiles, 0 failed with no errors. 
+restart -f
+# Loading work.ps2_controller_tb(stimulus)
+# Loading work.ps2_controller(behaviour)
+# Loading work.schmitt_trigger_filter(behaviour)
+# Loading work.shift_reg(behaviour)
+# Loading work.counter(behaviour)
+# Loading work.parity_generator(behaviour)
+# Loading work.ps2_controller_fsm(behaviour)
+# ** Warning: (vsim-8683) Uninitialized out port /ps2_controller_tb/dut/ps2_controller_fsm_1/watchdog_rst_tick_o has no driver.
+# This port will contribute value (U) to the signal network.
+#         Region: /ps2_controller_tb
+run -all
+# ** Fatal: (vsim-3421) Value 5001 for cnt_o is out of range 0 to 5000.
+#    Time: 1641060 ns  Iteration: 3  Signal: /ps2_controller_tb/dut/tm_cnt File: /home/jansen/vhdl/projects/ps2_controller/rtl/ps2_controller.vhd Line: 50
+# Fatal error at an unknown location
 # 
 # HDL call sequence:
-# Stopped at /home/jansen/vhdl/projects/primatives/rtl/counter.vhd 37 Process count_proc
+# Stopped at /home/jansen/vhdl/projects/ps2_controller/bench/ps2_controller_tb.vhd 169 Process wave_gen_proc
 # 
-add wave \
-{sim:/uart_transmitter_tb/dut/uart_transmitter_fsm_1/state } 
+# Compile of ps2_controller_fsm.vhd was successful.
+# Compile of parity_generator.vhd was successful.
+# Compile of counter.vhd was successful.
+# Compile of schmitt_trigger_filter.vhd was successful.
+# Compile of shift_reg.vhd was successful.
+# Compile of ps2_controller.vhd was successful.
+# Compile of ps2_controller_tb.vhd was successful.
+# 7 compiles, 0 failed with no errors. 
 restart -f
+# Loading work.ps2_controller_tb(stimulus)
+# Loading work.ps2_controller(behaviour)
+# Loading work.schmitt_trigger_filter(behaviour)
+# Loading work.shift_reg(behaviour)
+# Loading work.counter(behaviour)
+# Loading work.parity_generator(behaviour)
+# Loading work.ps2_controller_fsm(behaviour)
+# ** Warning: (vsim-8683) Uninitialized out port /ps2_controller_tb/dut/ps2_controller_fsm_1/watchdog_rst_tick_o has no driver.
+# This port will contribute value (U) to the signal network.
+#         Region: /ps2_controller_tb
 run -all
-# ** Fatal: (vsim-3421) Value 32 for l_cnt_next is out of range 0 to 31.
-#    Time: 289990 ns  Iteration: 1  Process: /uart_transmitter_tb/dut/sample_ticks_counter/count_proc File: /home/jansen/vhdl/projects/primatives/rtl/counter.vhd
-# Fatal error in Process count_proc at /home/jansen/vhdl/projects/primatives/rtl/counter.vhd line 37
+# ** Fatal: (vsim-3421) Value 5001 for cnt_o is out of range 0 to 5000.
+#    Time: 1641060 ns  Iteration: 3  Signal: /ps2_controller_tb/dut/tm_cnt File: /home/jansen/vhdl/projects/ps2_controller/rtl/ps2_controller.vhd Line: 50
+# Fatal error at an unknown location
 # 
 # HDL call sequence:
-# Stopped at /home/jansen/vhdl/projects/primatives/rtl/counter.vhd 37 Process count_proc
+# Stopped at /home/jansen/vhdl/projects/ps2_controller/bench/ps2_controller_tb.vhd 172 Process wave_gen_proc
 # 
-add wave \
-{sim:/uart_transmitter_tb/dut/t_shift_reg/reg } 
+# Compile of ps2_controller_fsm.vhd was successful.
+# Compile of parity_generator.vhd was successful.
+# Compile of counter.vhd was successful.
+# Compile of schmitt_trigger_filter.vhd was successful.
+# Compile of shift_reg.vhd was successful.
+# Compile of ps2_controller.vhd was successful.
+# Compile of ps2_controller_tb.vhd was successful.
+# 7 compiles, 0 failed with no errors. 
 restart -f
+# Loading work.ps2_controller_tb(stimulus)
+# Loading work.ps2_controller(behaviour)
+# Loading work.schmitt_trigger_filter(behaviour)
+# Loading work.shift_reg(behaviour)
+# Loading work.counter(behaviour)
+# Loading work.parity_generator(behaviour)
+# Loading work.ps2_controller_fsm(behaviour)
+# ** Warning: (vsim-8683) Uninitialized out port /ps2_controller_tb/dut/ps2_controller_fsm_1/watchdog_rst_tick_o has no driver.
+# This port will contribute value (U) to the signal network.
+#         Region: /ps2_controller_tb
+restart -f
+# ** Warning: (vsim-8683) Uninitialized out port /ps2_controller_tb/dut/ps2_controller_fsm_1/watchdog_rst_tick_o has no driver.
+# This port will contribute value (U) to the signal network.
+#         Region: /ps2_controller_tb
 run -all
-# ** Fatal: (vsim-3421) Value 32 for l_cnt_next is out of range 0 to 31.
-#    Time: 289990 ns  Iteration: 1  Process: /uart_transmitter_tb/dut/sample_ticks_counter/count_proc File: /home/jansen/vhdl/projects/primatives/rtl/counter.vhd
-# Fatal error in Process count_proc at /home/jansen/vhdl/projects/primatives/rtl/counter.vhd line 37
+# ** Fatal: (vsim-3421) Value 5001 for cnt_o is out of range 0 to 5000.
+#    Time: 1641060 ns  Iteration: 3  Signal: /ps2_controller_tb/dut/tm_cnt File: /home/jansen/vhdl/projects/ps2_controller/rtl/ps2_controller.vhd Line: 50
+# Fatal error at an unknown location
 # 
 # HDL call sequence:
-# Stopped at /home/jansen/vhdl/projects/primatives/rtl/counter.vhd 37 Process count_proc
+# Stopped at /home/jansen/vhdl/projects/ps2_controller/bench/ps2_controller_tb.vhd 172 Process wave_gen_proc
 # 
-# Compile of uart.vhd was successful.
-# Compile of uart_receiver_fsm.vhd was successful.
+# Compile of ps2_controller_fsm.vhd was successful.
+# Compile of parity_generator.vhd was successful.
 # Compile of counter.vhd was successful.
-# Compile of primatives_pkg.vhd was successful.
 # Compile of schmitt_trigger_filter.vhd was successful.
 # Compile of shift_reg.vhd was successful.
-# Compile of uart_receiver_tb.vhd was successful.
-# Compile of baud_rate_generator.vhd was successful.
-# Compile of parity_generator.vhd was successful.
-# Compile of uart_receiver.vhd was successful.
-# Compile of uart_de0.vhd was successful.
-# Compile of uart_transmitter.vhd was successful.
-# Compile of uart_transmitter_fsm.vhd was successful.
-# Compile of uart_transmitter_tb.vhd was successful.
-# 14 compiles, 0 failed with no errors. 
+# Compile of ps2_controller.vhd was successful.
+# Compile of ps2_controller_tb.vhd was successful.
+# 7 compiles, 0 failed with no errors. 
 restart -f
-# Loading work.uart_transmitter_tb(stimulus)
-# Loading work.uart_transmitter(structure)
-# Loading work.counter(behaviour)
+# Loading work.ps2_controller_tb(stimulus)
+# Loading work.ps2_controller(behaviour)
+# Loading work.schmitt_trigger_filter(behaviour)
 # Loading work.shift_reg(behaviour)
+# Loading work.counter(behaviour)
 # Loading work.parity_generator(behaviour)
-# Loading work.uart_transmitter_fsm(behaviour)
+# Loading work.ps2_controller_fsm(behaviour)
+# ** Warning: (vsim-8683) Uninitialized out port /ps2_controller_tb/dut/ps2_controller_fsm_1/watchdog_rst_tick_o has no driver.
+# This port will contribute value (U) to the signal network.
+#         Region: /ps2_controller_tb
 run -all
-# ** Fatal: (vsim-3421) Value 32 for l_cnt_next is out of range 0 to 31.
-#    Time: 289990 ns  Iteration: 1  Process: /uart_transmitter_tb/dut/sample_ticks_counter/count_proc File: /home/jansen/vhdl/projects/primatives/rtl/counter.vhd
-# Fatal error in Process count_proc at /home/jansen/vhdl/projects/primatives/rtl/counter.vhd line 37
-# 
-# HDL call sequence:
-# Stopped at /home/jansen/vhdl/projects/primatives/rtl/counter.vhd 37 Process count_proc
-# 
-# Compile of uart.vhd was successful.
-# Compile of uart_receiver_fsm.vhd was successful.
+# Compile of ps2_controller_fsm.vhd was successful.
+# Compile of parity_generator.vhd was successful.
 # Compile of counter.vhd was successful.
-# Compile of primatives_pkg.vhd was successful.
 # Compile of schmitt_trigger_filter.vhd was successful.
 # Compile of shift_reg.vhd was successful.
-# Compile of uart_receiver_tb.vhd was successful.
-# Compile of baud_rate_generator.vhd was successful.
-# Compile of parity_generator.vhd was successful.
-# Compile of uart_receiver.vhd was successful.
-# Compile of uart_de0.vhd was successful.
-# Compile of uart_transmitter.vhd was successful.
-# Compile of uart_transmitter_fsm.vhd was successful.
-# Compile of uart_transmitter_tb.vhd was successful.
-# 14 compiles, 0 failed with no errors. 
+# Compile of ps2_controller.vhd was successful.
+# Compile of ps2_controller_tb.vhd was successful.
+# 7 compiles, 0 failed with no errors. 
 restart -f
-# Loading work.uart_transmitter_tb(stimulus)
-# Loading work.uart_transmitter(structure)
-# Loading work.counter(behaviour)
+# Loading work.ps2_controller_tb(stimulus)
+# Loading work.ps2_controller(behaviour)
+# Loading work.schmitt_trigger_filter(behaviour)
 # Loading work.shift_reg(behaviour)
+# Loading work.counter(behaviour)
 # Loading work.parity_generator(behaviour)
-# Loading work.uart_transmitter_fsm(behaviour)
+# Loading work.ps2_controller_fsm(behaviour)
+# ** Warning: (vsim-8683) Uninitialized out port /ps2_controller_tb/dut/ps2_controller_fsm_1/watchdog_rst_tick_o has no driver.
+# This port will contribute value (U) to the signal network.
+#         Region: /ps2_controller_tb
 run -all
-# Compile of uart.vhd was successful.
-# Compile of uart_receiver_fsm.vhd was successful.
+# Compile of ps2_controller_fsm.vhd was successful.
+# Compile of parity_generator.vhd was successful.
 # Compile of counter.vhd was successful.
-# Compile of primatives_pkg.vhd was successful.
 # Compile of schmitt_trigger_filter.vhd was successful.
 # Compile of shift_reg.vhd was successful.
-# Compile of uart_receiver_tb.vhd was successful.
-# Compile of baud_rate_generator.vhd was successful.
-# Compile of parity_generator.vhd was successful.
-# Compile of uart_receiver.vhd was successful.
-# Compile of uart_de0.vhd was successful.
-# Compile of uart_transmitter.vhd was successful.
-# Compile of uart_transmitter_fsm.vhd was successful.
-# Compile of uart_transmitter_tb.vhd was successful.
-# 14 compiles, 0 failed with no errors. 
+# Compile of ps2_controller.vhd was successful.
+# Compile of ps2_controller_tb.vhd was successful.
+# 7 compiles, 0 failed with no errors. 
 restart -f
-# Loading work.uart_transmitter_tb(stimulus)
-# Loading work.uart_transmitter(structure)
-# Loading work.counter(behaviour)
+# Loading work.ps2_controller_tb(stimulus)
+# Loading work.ps2_controller(behaviour)
+# Loading work.schmitt_trigger_filter(behaviour)
 # Loading work.shift_reg(behaviour)
+# Loading work.counter(behaviour)
 # Loading work.parity_generator(behaviour)
-# Loading work.uart_transmitter_fsm(behaviour)
+# Loading work.ps2_controller_fsm(behaviour)
+# ** Warning: (vsim-8683) Uninitialized out port /ps2_controller_tb/dut/ps2_controller_fsm_1/watchdog_rst_tick_o has no driver.
+# This port will contribute value (U) to the signal network.
+#         Region: /ps2_controller_tb
 run -all
-# Compile of uart.vhd was successful.
-# Compile of uart_receiver_fsm.vhd was successful.
+# Break key hit 
+# Break key hit 
+# Break in Process ps2_gen_proc at /home/jansen/vhdl/projects/ps2_controller/bench/ps2_controller_tb.vhd line 148
+# Compile of ps2_controller_fsm.vhd was successful.
+# Compile of parity_generator.vhd was successful.
 # Compile of counter.vhd was successful.
-# Compile of primatives_pkg.vhd was successful.
 # Compile of schmitt_trigger_filter.vhd was successful.
 # Compile of shift_reg.vhd was successful.
-# Compile of uart_receiver_tb.vhd was successful.
-# Compile of baud_rate_generator.vhd was successful.
+# Compile of ps2_controller.vhd was successful.
+# Compile of ps2_controller_tb.vhd failed with 2 errors.
+# 7 compiles, 1 failed with 2 errors. 
+# Compile of ps2_controller_fsm.vhd was successful.
 # Compile of parity_generator.vhd was successful.
-# Compile of uart_receiver.vhd was successful.
-# Compile of uart_de0.vhd was successful.
-# Compile of uart_transmitter.vhd was successful.
-# Compile of uart_transmitter_fsm.vhd was successful.
-# Compile of uart_transmitter_tb.vhd was successful.
-# 14 compiles, 0 failed with no errors. 
+# Compile of counter.vhd was successful.
+# Compile of schmitt_trigger_filter.vhd was successful.
+# Compile of shift_reg.vhd was successful.
+# Compile of ps2_controller.vhd was successful.
+# Compile of ps2_controller_tb.vhd was successful.
+# 7 compiles, 0 failed with no errors. 
 restart -f
-# Loading work.uart_transmitter_tb(stimulus)
-# Loading work.uart_transmitter(structure)
-# Loading work.counter(behaviour)
+# Loading work.ps2_controller_tb(stimulus)
+# Loading work.ps2_controller(behaviour)
+# Loading work.schmitt_trigger_filter(behaviour)
 # Loading work.shift_reg(behaviour)
+# Loading work.counter(behaviour)
 # Loading work.parity_generator(behaviour)
-# Loading work.uart_transmitter_fsm(behaviour)
+# Loading work.ps2_controller_fsm(behaviour)
+# ** Warning: (vsim-8683) Uninitialized out port /ps2_controller_tb/dut/ps2_controller_fsm_1/watchdog_rst_tick_o has no driver.
+# This port will contribute value (U) to the signal network.
+#         Region: /ps2_controller_tb
 run -all
-# Compile of uart.vhd was successful.
-# Compile of uart.vhd was successful.
-# Compile of uart_receiver_fsm.vhd was successful.
+# Compile of ps2_controller_fsm.vhd was successful.
+# Compile of parity_generator.vhd was successful.
 # Compile of counter.vhd was successful.
-# Compile of primatives_pkg.vhd was successful.
 # Compile of schmitt_trigger_filter.vhd was successful.
 # Compile of shift_reg.vhd was successful.
-# Compile of uart_receiver_tb.vhd was successful.
-# Compile of baud_rate_generator.vhd was successful.
-# Compile of parity_generator.vhd was successful.
-# Compile of uart_receiver.vhd was successful.
-# Compile of uart_de0.vhd was successful.
-# Compile of uart_transmitter.vhd was successful.
-# Compile of uart_transmitter_fsm.vhd failed with 1 errors.
-# Compile of uart_transmitter_tb.vhd was successful.
-# 14 compiles, 1 failed with 1 error. 
-# Compile of uart.vhd was successful.
-# Compile of uart_receiver_fsm.vhd was successful.
-# Compile of counter.vhd was successful.
-# Compile of primatives_pkg.vhd was successful.
-# Compile of schmitt_trigger_filter.vhd was successful.
-# Compile of shift_reg.vhd was successful.
-# Compile of uart_receiver_tb.vhd was successful.
-# Compile of baud_rate_generator.vhd was successful.
-# Compile of parity_generator.vhd was successful.
-# Compile of uart_receiver.vhd was successful.
-# Compile of uart_de0.vhd was successful.
-# Compile of uart_transmitter.vhd was successful.
-# Compile of uart_transmitter_fsm.vhd was successful.
-# Compile of uart_transmitter_tb.vhd was successful.
-# 14 compiles, 0 failed with no errors. 
-vsim work.uart_transmitter_tb
-# vsim work.uart_transmitter_tb 
-# Loading std.standard
-# Loading ieee.std_logic_1164(body)
-# Loading work.uart_transmitter_tb(stimulus)
-# Loading work.uart_transmitter(structure)
-# Loading work.counter(behaviour)
-# Loading work.shift_reg(behaviour)
-# Loading work.parity_generator(behaviour)
-# Loading work.uart_transmitter_fsm(behaviour)
-add wave \
-{sim:/uart_transmitter_tb/sample_tick } \
-{sim:/uart_transmitter_tb/data_in } \
-{sim:/uart_transmitter_tb/tx_start } \
-{sim:/uart_transmitter_tb/tx_done_tick } \
-{sim:/uart_transmitter_tb/tx } \
-{sim:/uart_transmitter_tb/par_en } \
-{sim:/uart_transmitter_tb/par_odd_neven } 
-add wave \
-{sim:/uart_transmitter_tb/dut/sc_cnt_en } \
-{sim:/uart_transmitter_tb/dut/sc_load } \
-{sim:/uart_transmitter_tb/dut/sc_cnt } \
-{sim:/uart_transmitter_tb/dut/bc_cnt_en } \
-{sim:/uart_transmitter_tb/dut/bc_load } \
-{sim:/uart_transmitter_tb/dut/bc_cnt } 
-add wave \
-{sim:/uart_transmitter_tb/dut/t_shift_reg/shift_nload_i } \
-{sim:/uart_transmitter_tb/dut/t_shift_reg/shift_en_i } \
-{sim:/uart_transmitter_tb/dut/t_shift_reg/reg } 
-add wave \
-{sim:/uart_transmitter_tb/dut/uart_transmitter_fsm_1/state } 
-add wave \
-{sim:/uart_transmitter_tb/clk } 
-write format wave -window .main_pane.wave.interior.cs.body.pw.wf /home/jansen/vhdl/projects/uart/sim/rtl_sim/wave.do
+# Compile of ps2_controller.vhd was successful.
+# Compile of ps2_controller_tb.vhd was successful.
+# 7 compiles, 0 failed with no errors. 
 restart -f
+# Loading work.ps2_controller_tb(stimulus)
+# Loading work.ps2_controller(behaviour)
+# Loading work.schmitt_trigger_filter(behaviour)
+# Loading work.shift_reg(behaviour)
+# Loading work.counter(behaviour)
+# Loading work.parity_generator(behaviour)
+# Loading work.ps2_controller_fsm(behaviour)
+# ** Warning: (vsim-8683) Uninitialized out port /ps2_controller_tb/dut/ps2_controller_fsm_1/watchdog_rst_tick_o has no driver.
+# This port will contribute value (U) to the signal network.
+#         Region: /ps2_controller_tb
 run -all
-# Compile of uart.vhd was successful.
-# Compile of uart_receiver_fsm.vhd was successful.
+# ** Error: Received data did not match data sent.
+#    Time: 837630 ns  Iteration: 1  Instance: /ps2_controller_tb
+# ** Error: False parity error tick.
+#    Time: 837630 ns  Iteration: 1  Instance: /ps2_controller_tb
+# ** Error: Received data did not match data sent.
+#    Time: 1675130 ns  Iteration: 1  Instance: /ps2_controller_tb
+# ** Error: Did not detect parity error.
+#    Time: 1675130 ns  Iteration: 1  Instance: /ps2_controller_tb
+# Compile of ps2_controller_fsm.vhd was successful.
+# Compile of parity_generator.vhd was successful.
 # Compile of counter.vhd was successful.
-# Compile of primatives_pkg.vhd was successful.
 # Compile of schmitt_trigger_filter.vhd was successful.
 # Compile of shift_reg.vhd was successful.
-# Compile of uart_receiver_tb.vhd was successful.
-# Compile of baud_rate_generator.vhd was successful.
-# Compile of parity_generator.vhd was successful.
-# Compile of uart_receiver.vhd was successful.
-# Compile of uart_de0.vhd was successful.
-# Compile of uart_transmitter.vhd was successful.
-# Compile of uart_transmitter_fsm.vhd was successful.
-# Compile of uart_transmitter_tb.vhd was successful.
-# 14 compiles, 0 failed with no errors. 
-run -all
+# Compile of ps2_controller.vhd was successful.
+# Compile of ps2_controller_tb.vhd was successful.
+# 7 compiles, 0 failed with no errors. 
 restart -f
-# Loading work.uart_transmitter_tb(stimulus)
-# Loading work.uart_transmitter(structure)
-# Loading work.counter(behaviour)
+# Loading work.ps2_controller_tb(stimulus)
+# Loading work.ps2_controller(behaviour)
+# Loading work.schmitt_trigger_filter(behaviour)
 # Loading work.shift_reg(behaviour)
+# Loading work.counter(behaviour)
 # Loading work.parity_generator(behaviour)
-# Loading work.uart_transmitter_fsm(behaviour)
+# Loading work.ps2_controller_fsm(behaviour)
+# ** Warning: (vsim-8683) Uninitialized out port /ps2_controller_tb/dut/ps2_controller_fsm_1/watchdog_rst_tick_o has no driver.
+# This port will contribute value (U) to the signal network.
+#         Region: /ps2_controller_tb
 run -all
-# ** Fatal: (vsim-3421) Value 32 for l_cnt_next is out of range 0 to 31.
-#    Time: 288370 ns  Iteration: 1  Process: /uart_transmitter_tb/dut/sample_ticks_counter/count_proc File: /home/jansen/vhdl/projects/primatives/rtl/counter.vhd
-# Fatal error in Process count_proc at /home/jansen/vhdl/projects/primatives/rtl/counter.vhd line 37
-# 
-# HDL call sequence:
-# Stopped at /home/jansen/vhdl/projects/primatives/rtl/counter.vhd 37 Process count_proc
-# 
-# Compile of uart.vhd was successful.
-# Compile of uart_receiver_fsm.vhd was successful.
+# ** Error: Received data did not match data sent.
+#    Time: 1675250 ns  Iteration: 1  Instance: /ps2_controller_tb
+# ** Error: Did not detect parity error.
+#    Time: 1675250 ns  Iteration: 1  Instance: /ps2_controller_tb
+# Compile of ps2_controller_fsm.vhd was successful.
+# Compile of parity_generator.vhd was successful.
 # Compile of counter.vhd was successful.
-# Compile of primatives_pkg.vhd was successful.
 # Compile of schmitt_trigger_filter.vhd was successful.
 # Compile of shift_reg.vhd was successful.
-# Compile of uart_receiver_tb.vhd was successful.
-# Compile of baud_rate_generator.vhd was successful.
-# Compile of parity_generator.vhd was successful.
-# Compile of uart_receiver.vhd was successful.
-# Compile of uart_de0.vhd was successful.
-# Compile of uart_transmitter.vhd was successful.
-# Compile of uart_transmitter_fsm.vhd was successful.
-# Compile of uart_transmitter_tb.vhd was successful.
-# 14 compiles, 0 failed with no errors. 
+# Compile of ps2_controller.vhd was successful.
+# Compile of ps2_controller_tb.vhd was successful.
+# 7 compiles, 0 failed with no errors. 
 restart -f
-# Loading work.uart_transmitter_tb(stimulus)
-# Loading work.uart_transmitter(structure)
-# Loading work.counter(behaviour)
+# Loading work.ps2_controller_tb(stimulus)
+# Loading work.ps2_controller(behaviour)
+# Loading work.schmitt_trigger_filter(behaviour)
 # Loading work.shift_reg(behaviour)
+# Loading work.counter(behaviour)
 # Loading work.parity_generator(behaviour)
-# Loading work.uart_transmitter_fsm(behaviour)
+# Loading work.ps2_controller_fsm(behaviour)
+# ** Warning: (vsim-8683) Uninitialized out port /ps2_controller_tb/dut/ps2_controller_fsm_1/watchdog_rst_tick_o has no driver.
+# This port will contribute value (U) to the signal network.
+#         Region: /ps2_controller_tb
 run -all
-# ** Fatal: (vsim-3421) Value 32 for l_cnt_next is out of range 0 to 31.
-#    Time: 286750 ns  Iteration: 1  Process: /uart_transmitter_tb/dut/sample_ticks_counter/count_proc File: /home/jansen/vhdl/projects/primatives/rtl/counter.vhd
-# Fatal error in Process count_proc at /home/jansen/vhdl/projects/primatives/rtl/counter.vhd line 37
-# 
-# HDL call sequence:
-# Stopped at /home/jansen/vhdl/projects/primatives/rtl/counter.vhd 37 Process count_proc
-# 
-# Compile of uart.vhd was successful.
-# Compile of uart_receiver_fsm.vhd was successful.
+# Compile of ps2_controller_fsm.vhd was successful.
+# Compile of parity_generator.vhd was successful.
 # Compile of counter.vhd was successful.
-# Compile of primatives_pkg.vhd was successful.
 # Compile of schmitt_trigger_filter.vhd was successful.
 # Compile of shift_reg.vhd was successful.
-# Compile of uart_receiver_tb.vhd was successful.
-# Compile of baud_rate_generator.vhd was successful.
+# Compile of ps2_controller.vhd was successful.
+# Compile of ps2_controller_tb.vhd was successful.
+# 7 compiles, 0 failed with no errors. 
+run -all
+# Compile of ps2_controller_fsm.vhd was successful.
 # Compile of parity_generator.vhd was successful.
-# Compile of uart_receiver.vhd was successful.
-# Compile of uart_de0.vhd was successful.
-# Compile of uart_transmitter.vhd was successful.
-# Compile of uart_transmitter_fsm.vhd was successful.
-# Compile of uart_transmitter_tb.vhd was successful.
-# 14 compiles, 0 failed with no errors. 
+# Compile of counter.vhd was successful.
+# Compile of schmitt_trigger_filter.vhd was successful.
+# Compile of shift_reg.vhd was successful.
+# Compile of ps2_controller.vhd was successful.
+# Compile of ps2_controller_tb.vhd was successful.
+# 7 compiles, 0 failed with no errors. 
 restart -f
-# Loading work.uart_transmitter_tb(stimulus)
-# Loading work.uart_transmitter(structure)
-# Loading work.counter(behaviour)
+# Loading work.ps2_controller_tb(stimulus)
+# Loading work.ps2_controller(behaviour)
+# Loading work.schmitt_trigger_filter(behaviour)
 # Loading work.shift_reg(behaviour)
+# Loading work.counter(behaviour)
 # Loading work.parity_generator(behaviour)
-# Loading work.uart_transmitter_fsm(behaviour)
+# Loading work.ps2_controller_fsm(behaviour)
+# ** Warning: (vsim-8683) Uninitialized out port /ps2_controller_tb/dut/ps2_controller_fsm_1/watchdog_rst_tick_o has no driver.
+# This port will contribute value (U) to the signal network.
+#         Region: /ps2_controller_tb
+run -1ll
+# Unknown option: 1ll
+# ** Error: (vsim-4005) Invalid argument '-1ll'.
+# Usage: run [<timesteps> [<time_units>]] | -all | -continue | -next | -step | -over | -out | -init | -final
+run -all
+# Compile of ps2_controller_fsm.vhd was successful.
+# Compile of parity_generator.vhd was successful.
+# Compile of counter.vhd was successful.
+# Compile of schmitt_trigger_filter.vhd was successful.
+# Compile of shift_reg.vhd was successful.
+# Compile of ps2_controller.vhd was successful.
+# Compile of ps2_controller_tb.vhd was successful.
+# 7 compiles, 0 failed with no errors. 
+restart -f
+# Loading work.ps2_controller_tb(stimulus)
+# Loading work.ps2_controller(behaviour)
+# Loading work.schmitt_trigger_filter(behaviour)
+# Loading work.shift_reg(behaviour)
+# Loading work.counter(behaviour)
+# Loading work.parity_generator(behaviour)
+# Loading work.ps2_controller_fsm(behaviour)
+# ** Warning: (vsim-8683) Uninitialized out port /ps2_controller_tb/dut/ps2_controller_fsm_1/watchdog_rst_tick_o has no driver.
+# This port will contribute value (U) to the signal network.
+#         Region: /ps2_controller_tb
+run -all
+# ** Error: Transmitter did not acknwolage.
+#    Time: 3316160 ns  Iteration: 0  Instance: /ps2_controller_tb
+# Compile of ps2_controller_fsm.vhd was successful.
+# Compile of parity_generator.vhd was successful.
+# Compile of counter.vhd was successful.
+# Compile of schmitt_trigger_filter.vhd was successful.
+# Compile of shift_reg.vhd was successful.
+# Compile of ps2_controller.vhd was successful.
+# Compile of ps2_controller_tb.vhd was successful.
+# 7 compiles, 0 failed with no errors. 
+restart -f
+# Loading work.ps2_controller_tb(stimulus)
+# Loading work.ps2_controller(behaviour)
+# Loading work.schmitt_trigger_filter(behaviour)
+# Loading work.shift_reg(behaviour)
+# Loading work.counter(behaviour)
+# Loading work.parity_generator(behaviour)
+# Loading work.ps2_controller_fsm(behaviour)
+# ** Warning: (vsim-8683) Uninitialized out port /ps2_controller_tb/dut/ps2_controller_fsm_1/watchdog_rst_tick_o has no driver.
+# This port will contribute value (U) to the signal network.
+#         Region: /ps2_controller_tb
+run -all
+# ** Error: Transmitter did not acknwolage.
+#    Time: 2411660 ns  Iteration: 0  Instance: /ps2_controller_tb
+# Compile of ps2_controller_fsm.vhd failed with 1 errors.
+# Compile of parity_generator.vhd was successful.
+# Compile of counter.vhd was successful.
+# Compile of schmitt_trigger_filter.vhd was successful.
+# Compile of shift_reg.vhd was successful.
+# Compile of ps2_controller.vhd was successful.
+# Compile of ps2_controller_tb.vhd was successful.
+# 7 compiles, 1 failed with 1 error. 
+# Compile of ps2_controller_fsm.vhd was successful.
+# Compile of parity_generator.vhd was successful.
+# Compile of counter.vhd was successful.
+# Compile of schmitt_trigger_filter.vhd was successful.
+# Compile of shift_reg.vhd was successful.
+# Compile of ps2_controller.vhd was successful.
+# Compile of ps2_controller_tb.vhd was successful.
+# 7 compiles, 0 failed with no errors. 
+restart -f
+# Loading work.ps2_controller_tb(stimulus)
+# Loading work.ps2_controller(behaviour)
+# Loading work.schmitt_trigger_filter(behaviour)
+# Loading work.shift_reg(behaviour)
+# Loading work.counter(behaviour)
+# Loading work.parity_generator(behaviour)
+# Loading work.ps2_controller_fsm(behaviour)
+# ** Warning: (vsim-8683) Uninitialized out port /ps2_controller_tb/dut/ps2_controller_fsm_1/watchdog_rst_tick_o has no driver.
+# This port will contribute value (U) to the signal network.
+#         Region: /ps2_controller_tb
+run -all
+# ** Error: Transmitter did not generate stop bit.
+#    Time: 2344660 ns  Iteration: 0  Instance: /ps2_controller_tb
+# Compile of ps2_controller_fsm.vhd was successful.
+# Compile of parity_generator.vhd was successful.
+# Compile of counter.vhd was successful.
+# Compile of schmitt_trigger_filter.vhd was successful.
+# Compile of shift_reg.vhd was successful.
+# Compile of ps2_controller.vhd was successful.
+# Compile of ps2_controller_tb.vhd was successful.
+# 7 compiles, 0 failed with no errors. 
+restart -f
+# Loading work.ps2_controller_tb(stimulus)
+# Loading work.ps2_controller(behaviour)
+# Loading work.schmitt_trigger_filter(behaviour)
+# Loading work.shift_reg(behaviour)
+# Loading work.counter(behaviour)
+# Loading work.parity_generator(behaviour)
+# Loading work.ps2_controller_fsm(behaviour)
+# ** Warning: (vsim-8683) Uninitialized out port /ps2_controller_tb/dut/ps2_controller_fsm_1/watchdog_rst_tick_o has no driver.
+# This port will contribute value (U) to the signal network.
+#         Region: /ps2_controller_tb
+run -all
+# Compile of ps2_controller_fsm.vhd was successful.
+# Compile of parity_generator.vhd was successful.
+# Compile of counter.vhd was successful.
+# Compile of schmitt_trigger_filter.vhd was successful.
+# Compile of shift_reg.vhd was successful.
+# Compile of ps2_controller.vhd was successful.
+# Compile of ps2_controller_tb.vhd was successful.
+# 7 compiles, 0 failed with no errors. 
+restart -f
+# Loading work.ps2_controller_tb(stimulus)
+# Loading work.ps2_controller(behaviour)
+# Loading work.schmitt_trigger_filter(behaviour)
+# Loading work.shift_reg(behaviour)
+# Loading work.counter(behaviour)
+# Loading work.parity_generator(behaviour)
+# Loading work.ps2_controller_fsm(behaviour)
+# ** Warning: (vsim-8683) Uninitialized out port /ps2_controller_tb/dut/ps2_controller_fsm_1/watchdog_rst_tick_o has no driver.
+# This port will contribute value (U) to the signal network.
+#         Region: /ps2_controller_tb
+run -all
+# Compile of ps2_controller_fsm.vhd was successful.
+# Compile of parity_generator.vhd was successful.
+# Compile of counter.vhd was successful.
+# Compile of schmitt_trigger_filter.vhd was successful.
+# Compile of shift_reg.vhd was successful.
+# Compile of ps2_controller.vhd was successful.
+# Compile of ps2_controller_tb.vhd was successful.
+# 7 compiles, 0 failed with no errors. 
+restart -f
+# Loading work.ps2_controller_tb(stimulus)
+# Loading work.ps2_controller(behaviour)
+# Loading work.schmitt_trigger_filter(behaviour)
+# Loading work.shift_reg(behaviour)
+# Loading work.counter(behaviour)
+# Loading work.parity_generator(behaviour)
+# Loading work.ps2_controller_fsm(behaviour)
+# ** Warning: (vsim-8683) Uninitialized out port /ps2_controller_tb/dut/ps2_controller_fsm_1/watchdog_rst_tick_o has no driver.
+# This port will contribute value (U) to the signal network.
+#         Region: /ps2_controller_tb
+# Compile of ps2_controller_fsm.vhd was successful.
+# Compile of parity_generator.vhd was successful.
+# Compile of counter.vhd was successful.
+# Compile of schmitt_trigger_filter.vhd was successful.
+# Compile of shift_reg.vhd was successful.
+# Compile of ps2_controller.vhd was successful.
+# Compile of ps2_controller_tb.vhd was successful.
+# 7 compiles, 0 failed with no errors. 
+restart -f
+# Loading work.ps2_controller_tb(stimulus)
+# Loading work.ps2_controller(behaviour)
+# Loading work.schmitt_trigger_filter(behaviour)
+# Loading work.shift_reg(behaviour)
+# Loading work.counter(behaviour)
+# Loading work.parity_generator(behaviour)
+# Loading work.ps2_controller_fsm(behaviour)
+# ** Warning: (vsim-8683) Uninitialized out port /ps2_controller_tb/dut/ps2_controller_fsm_1/watchdog_rst_tick_o has no driver.
+# This port will contribute value (U) to the signal network.
+#         Region: /ps2_controller_tb
+run -all
+# Compile of ps2_controller_fsm.vhd was successful.
+# Compile of parity_generator.vhd was successful.
+# Compile of counter.vhd was successful.
+# Compile of schmitt_trigger_filter.vhd was successful.
+# Compile of shift_reg.vhd was successful.
+# Compile of ps2_controller.vhd was successful.
+# Compile of ps2_controller_tb.vhd was successful.
+# 7 compiles, 0 failed with no errors. 
+restart -f
+# Loading work.ps2_controller_tb(stimulus)
+# Loading work.ps2_controller(behaviour)
+# Loading work.schmitt_trigger_filter(behaviour)
+# Loading work.shift_reg(behaviour)
+# Loading work.counter(behaviour)
+# Loading work.parity_generator(behaviour)
+# Loading work.ps2_controller_fsm(behaviour)
+# ** Warning: (vsim-8683) Uninitialized out port /ps2_controller_tb/dut/ps2_controller_fsm_1/watchdog_rst_tick_o has no driver.
+# This port will contribute value (U) to the signal network.
+#         Region: /ps2_controller_tb
+run -all
+# ** Error: False nack tick.
+#    Time: 2311250 ns  Iteration: 1  Instance: /ps2_controller_tb
+# Compile of ps2_controller_fsm.vhd was successful.
+# Compile of parity_generator.vhd was successful.
+# Compile of counter.vhd was successful.
+# Compile of schmitt_trigger_filter.vhd was successful.
+# Compile of shift_reg.vhd was successful.
+# Compile of ps2_controller.vhd was successful.
+# Compile of ps2_controller_tb.vhd was successful.
+# 7 compiles, 0 failed with no errors. 
+restart -f
+# Loading work.ps2_controller_tb(stimulus)
+# Loading work.ps2_controller(behaviour)
+# Loading work.schmitt_trigger_filter(behaviour)
+# Loading work.shift_reg(behaviour)
+# Loading work.counter(behaviour)
+# Loading work.parity_generator(behaviour)
+# Loading work.ps2_controller_fsm(behaviour)
+# ** Warning: (vsim-8683) Uninitialized out port /ps2_controller_tb/dut/ps2_controller_fsm_1/watchdog_rst_tick_o has no driver.
+# This port will contribute value (U) to the signal network.
+#         Region: /ps2_controller_tb
+run -all
+# ** Error: Did not detect nack.
+#    Time: 3181790 ns  Iteration: 1  Instance: /ps2_controller_tb
+# Compile of ps2_controller_fsm.vhd was successful.
+# Compile of parity_generator.vhd was successful.
+# Compile of counter.vhd was successful.
+# Compile of schmitt_trigger_filter.vhd was successful.
+# Compile of shift_reg.vhd was successful.
+# Compile of ps2_controller.vhd was successful.
+# Compile of ps2_controller_tb.vhd failed with 1 errors.
+# 7 compiles, 1 failed with 1 error. 
+# Compile of ps2_controller_fsm.vhd was successful.
+# Compile of parity_generator.vhd was successful.
+# Compile of counter.vhd was successful.
+# Compile of schmitt_trigger_filter.vhd was successful.
+# Compile of shift_reg.vhd was successful.
+# Compile of ps2_controller.vhd was successful.
+# Compile of ps2_controller_tb.vhd was successful.
+# 7 compiles, 0 failed with no errors. 
+restart -f
+# Loading work.ps2_controller_tb(stimulus)
+# Loading work.ps2_controller(behaviour)
+# Loading work.schmitt_trigger_filter(behaviour)
+# Loading work.shift_reg(behaviour)
+# Loading work.counter(behaviour)
+# Loading work.parity_generator(behaviour)
+# Loading work.ps2_controller_fsm(behaviour)
+# ** Warning: (vsim-8683) Uninitialized out port /ps2_controller_tb/dut/ps2_controller_fsm_1/watchdog_rst_tick_o has no driver.
+# This port will contribute value (U) to the signal network.
+#         Region: /ps2_controller_tb
 run -all

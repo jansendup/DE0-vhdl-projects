@@ -31,37 +31,135 @@ R7
 R8
 !s100 QH?Di_imDXB<dic]anK?f3
 Ecounter
-Z12 w1330170392
+Z12 w1330200072
 R2
 R3
 Z13 8/home/jansen/vhdl/projects/primatives/rtl/counter.vhd
 Z14 F/home/jansen/vhdl/projects/primatives/rtl/counter.vhd
 l0
 L4
-VBmG<>cmVnR]>1`;0SWV182
+VKBTokfNS0lHMKo>P_:49C2
 R6
 31
 R7
 R8
-!s100 JkS1Wf>8F?6UH0P2zZ7k81
+!s100 bX^>CmZ?JIJS^EE[_SHiV1
 Abehaviour
 R2
-R9
-l25
-L19
-VQ9c6PnkY9mGMAYC6jba?21
+Z15 DEx4 work 7 counter 0 22 KBTokfNS0lHMKo>P_:49C2
+l26
+L20
+VcU344CSh7eUZ45>^IP[TS3
 R6
 31
 R11
 R7
 R8
-!s100 @<OSLYA>8RCc^9aTJD`z;1
-Eschmitt_trigger_filter
-Z15 w1330021661
+!s100 CfKQZ012K[XK[]X_N1;h<1
+Eparity_generator
+Z16 w1330287396
 R2
 R3
-Z16 8/home/jansen/vhdl/projects/primatives/rtl/schmitt_trigger_filter.vhd
-Z17 F/home/jansen/vhdl/projects/primatives/rtl/schmitt_trigger_filter.vhd
+Z17 8/home/jansen/vhdl/projects/common/rtl/parity_generator.vhd
+Z18 F/home/jansen/vhdl/projects/common/rtl/parity_generator.vhd
+l0
+L4
+VE^FOFO7HXWm3XEQC`khdE2
+R6
+31
+R7
+R8
+!s100 W7hCHfH9>=4;Q<LjFlhoh1
+Abehaviour
+R2
+Z19 DEx4 work 16 parity_generator 0 22 E^FOFO7HXWm3XEQC`khdE2
+l19
+L15
+VhCfCKUL8f5XK=j6Q@FOQY0
+R6
+31
+R11
+R7
+R8
+!s100 UiiPNHGaDd6DJkfQI9N;m2
+Pprimatives_pkg
+R2
+w1330028876
+R3
+8/home/jansen/vhdl/projects/primatives/rtl/primatives_pkg.vhd
+F/home/jansen/vhdl/projects/primatives/rtl/primatives_pkg.vhd
+l0
+L4
+VgS2J7=>IEJR2PW4QjOCKG1
+R6
+31
+R11
+R7
+R8
+!s100 VXKF>i2NXj9m69D<Vg3@R1
+Eps2_controller
+Z20 w1330524659
+R2
+R3
+Z21 8/home/jansen/vhdl/projects/ps2_controller/rtl/ps2_controller.vhd
+Z22 F/home/jansen/vhdl/projects/ps2_controller/rtl/ps2_controller.vhd
+l0
+L4
+VZ6[YUzGLcFlFmzmaOZVRV3
+!s100 M3][TH5[Wh9A`MZE@@>172
+R6
+31
+R7
+R8
+Abehaviour
+Z23 DEx4 work 18 ps2_controller_fsm 0 22 SBT]=dR;6O<e@kcYaD]Yl3
+R19
+R15
+Z24 DEx4 work 9 shift_reg 0 22 [^P_Q<_oJ;Y<AzWjBgH;Y1
+Z25 DEx4 work 22 schmitt_trigger_filter 0 22 =D2KPoZzjnL2CmU@oPYQe3
+R2
+Z26 DEx4 work 14 ps2_controller 0 22 Z6[YUzGLcFlFmzmaOZVRV3
+l59
+L26
+VcCa4QZ>k=Fn7di0YWdI@O2
+!s100 H^F>Z_d7l3h]X6ekM:NYg2
+R6
+31
+R11
+R7
+R8
+Eps2_controller_fsm
+Z27 w1330524612
+R2
+R3
+Z28 8/home/jansen/vhdl/projects/ps2_controller/rtl/ps2_controller_fsm.vhd
+Z29 F/home/jansen/vhdl/projects/ps2_controller/rtl/ps2_controller_fsm.vhd
+l0
+L4
+VSBT]=dR;6O<e@kcYaD]Yl3
+R6
+31
+R7
+R8
+!s100 FfRe7lfL@B;dzz71T1^kb3
+Abehaviour
+R2
+R23
+l69
+L38
+V==hibLENR;AViVFh>b^XE3
+R6
+31
+R11
+R7
+R8
+!s100 k:`e2^JjKSO;lB[zm`K<k3
+Eschmitt_trigger_filter
+Z30 w1330021661
+R2
+R3
+Z31 8/home/jansen/vhdl/projects/primatives/rtl/schmitt_trigger_filter.vhd
+Z32 F/home/jansen/vhdl/projects/primatives/rtl/schmitt_trigger_filter.vhd
 l0
 L4
 V=D2KPoZzjnL2CmU@oPYQe3
@@ -72,7 +170,7 @@ R8
 !s100 S^_`b[I_CXJRfK8Ml0nHf2
 Abehaviour
 R2
-Z18 DEx4 work 22 schmitt_trigger_filter 0 22 =D2KPoZzjnL2CmU@oPYQe3
+R25
 l21
 L12
 VVL0I9XXgLTafcZ1Z<UHR_1
@@ -83,65 +181,65 @@ R7
 R8
 !s100 NZ=DP4Z^;i5h8z^Ze;[J:3
 Eshift_reg
-Z19 w1330160146
+R16
 R2
 R3
-Z20 8/home/jansen/vhdl/projects/primatives/rtl/shift_reg.vhd
-Z21 F/home/jansen/vhdl/projects/primatives/rtl/shift_reg.vhd
+Z33 8/home/jansen/vhdl/projects/primatives/rtl/shift_reg.vhd
+Z34 F/home/jansen/vhdl/projects/primatives/rtl/shift_reg.vhd
 l0
 L4
-VM9PkY4LZV@GfRd32^oYbd2
+V[^P_Q<_oJ;Y<AzWjBgH;Y1
 R6
 31
 R7
 R8
-!s100 ?II@HWn^f[62=D@ImH>0B3
+!s100 k0TH_ceIGf<PKokThBVUi1
 Abehaviour
 R2
-Z22 DEx4 work 9 shift_reg 0 22 M9PkY4LZV@GfRd32^oYbd2
-l21
-L17
-VL]jj[]lC_jcc@@h`O_P3E2
+R24
+l20
+L16
+V@@LmB7bGd<]cJfm;0FCmh2
 R6
 31
 R11
 R7
 R8
-!s100 TTB]MHRhUGR`?C<BSBT>@3
+!s100 PU@lbHBi6^4<_RIcHL_Rb3
 Euart
-Z23 w1330194136
+Z35 w1330194136
 R2
 R3
-Z24 8/home/jansen/vhdl/projects/uart/rtl/uart.vhd
-Z25 F/home/jansen/vhdl/projects/uart/rtl/uart.vhd
+Z36 8/home/jansen/vhdl/projects/uart/rtl/uart.vhd
+Z37 F/home/jansen/vhdl/projects/uart/rtl/uart.vhd
 l0
 L4
 VnXAF;zZoSNkfKaD:Fgn0l2
-!s100 H91KCZE6K64d4G?mmTR^S2
 R6
 31
 R7
 R8
+!s100 H91KCZE6K64d4G?mmTR^S2
 Astructure
 R10
-Z26 DEx4 work 13 uart_receiver 0 22 hI051zYOeg`VF`]>NKE_=1
+Z38 DEx4 work 13 uart_receiver 0 22 hI051zYOeg`VF`]>NKE_=1
 R2
 DEx4 work 4 uart 0 22 nXAF;zZoSNkfKaD:Fgn0l2
 l27
 L23
 VCKiB0`iOb^QS132V4mllS0
-!s100 JB4jPKXh[6JXll3N3<g5T2
 R6
 31
 R11
 R7
 R8
+!s100 JB4jPKXh[6JXll3N3<g5T2
 Euart_receiver
-Z27 w1330174934
+Z39 w1330174934
 R2
 R3
-Z28 8/home/jansen/vhdl/projects/uart/rtl/uart_receiver.vhd
-Z29 F/home/jansen/vhdl/projects/uart/rtl/uart_receiver.vhd
+Z40 8/home/jansen/vhdl/projects/uart/rtl/uart_receiver.vhd
+Z41 F/home/jansen/vhdl/projects/uart/rtl/uart_receiver.vhd
 l0
 L4
 VhI051zYOeg`VF`]>NKE_=1
@@ -151,12 +249,12 @@ R7
 R8
 !s100 [A_aiL3F`oED_kfelTzOG3
 Astructure
-Z30 DEx4 work 17 uart_receiver_fsm 0 22 8QJ0z>10KVec:b]Qglg5>2
+Z42 DEx4 work 17 uart_receiver_fsm 0 22 8QJ0z>10KVec:b]Qglg5>2
 R9
-R22
-R18
+DEx4 work 9 shift_reg 0 22 M9PkY4LZV@GfRd32^oYbd2
+R25
 R2
-R26
+R38
 l39
 L24
 V4`Vid`1E_J[GQe8_:KzbF3
@@ -167,11 +265,11 @@ R7
 R8
 !s100 [XJ9Cl`=:TmEVW:0RHS251
 Euart_receiver_fsm
-Z31 w1330176703
+Z43 w1330176703
 R2
 R3
-Z32 8/home/jansen/vhdl/projects/uart/rtl/uart_receiver_fsm.vhd
-Z33 F/home/jansen/vhdl/projects/uart/rtl/uart_receiver_fsm.vhd
+Z44 8/home/jansen/vhdl/projects/uart/rtl/uart_receiver_fsm.vhd
+Z45 F/home/jansen/vhdl/projects/uart/rtl/uart_receiver_fsm.vhd
 l0
 L4
 V8QJ0z>10KVec:b]Qglg5>2
@@ -182,7 +280,7 @@ R8
 !s100 ?hYA0SCBaf6>lI9oAEZRT3
 Abehaviour
 R2
-R30
+R42
 l60
 L30
 Voi1@bCYM=AcR3EFW=]4i:3
