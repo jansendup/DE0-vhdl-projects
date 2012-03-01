@@ -1,0 +1,21 @@
+
+State Machine - |ps2_controller_de0|ps2_kb_led_controller:ps2_kb_led_controller_1|state
+Name state.WAIT_WRITE_S state.WRITE_S state.WAIT_CMD_S state.WRITE_CMD_S state.BUSSY_WAIT_S state.IDLE_S 
+state.IDLE_S 0 0 0 0 0 0 
+state.BUSSY_WAIT_S 0 0 0 0 1 1 
+state.WRITE_CMD_S 0 0 0 1 0 1 
+state.WAIT_CMD_S 0 0 1 0 0 1 
+state.WRITE_S 0 1 0 0 0 1 
+state.WAIT_WRITE_S 1 0 0 0 0 1 
+
+State Machine - |ps2_controller_de0|ps2_controller:kb_ps2_contr|ps2_controller_fsm:ps2_controller_fsm_1|state
+Name state.TX_ACK_S state.TX_STOP_S state.TX_DATA_S state.TX_START_S state.TX_INHIBIT_S state.RX_STOP_S state.RX_DATA_S state.INHIBIT_S state.IDLE_S 
+state.IDLE_S 0 0 0 0 0 0 0 0 0 
+state.INHIBIT_S 0 0 0 0 0 0 0 1 1 
+state.RX_DATA_S 0 0 0 0 0 0 1 0 1 
+state.RX_STOP_S 0 0 0 0 0 1 0 0 1 
+state.TX_INHIBIT_S 0 0 0 0 1 0 0 0 1 
+state.TX_START_S 0 0 0 1 0 0 0 0 1 
+state.TX_DATA_S 0 0 1 0 0 0 0 0 1 
+state.TX_STOP_S 0 1 0 0 0 0 0 0 1 
+state.TX_ACK_S 1 0 0 0 0 0 0 0 1 

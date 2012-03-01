@@ -17,7 +17,6 @@ entity ps2_controller_fsm is
 
        rx_frame_err_tick_o : out std_logic;
        tx_nack_tick_o      : out std_logic;
-       watchdog_rst_tick_o : out std_logic;
        bussy_flag_o        : out std_logic;
 
        buf_tx_nRx_sel_o  : out std_logic;
@@ -50,20 +49,20 @@ architecture behaviour of ps2_controller_fsm is
   signal rx_stop_idle_cond : std_logic;
 
   signal rx_idle_data_trans : std_logic;
-  signal rx_data_stop_trans : std_logic;
+  --signal rx_data_stop_trans : std_logic;
   signal rx_stop_idle_trans : std_logic;
 
-  signal tx_idle_inhibit_cond  : std_logic;
+  signal tx_inhibit_cond       : std_logic;
   signal tx_inhibit_start_cond : std_logic;
   signal tx_start_data_cond    : std_logic;
   signal tx_data_stop_cond     : std_logic;
   signal tx_stop_ack_cond      : std_logic;
   signal tx_ack_idle_cond      : std_logic;
 
-  signal tx_idle_inhibit_trans  : std_logic;
-  signal tx_inhibit_start_trans : std_logic;
+  signal tx_inhibit_trans       : std_logic;
+  --signal tx_inhibit_start_trans : std_logic;
   signal tx_start_data_trans    : std_logic;
-  signal tx_data_stop_trans     : std_logic;
+  --signal tx_data_stop_trans     : std_logic;
   signal tx_stop_ack_trans      : std_logic;
   signal tx_ack_idle_trans      : std_logic;
 
@@ -86,13 +85,16 @@ begin  -- architecture behaviour
 
   next_state_logic_proc :
   process(rx_data_stop_cond, rx_idle_data_cond, rx_stop_idle_cond, state,
-          tx_ack_idle_cond, tx_data_stop_cond, tx_idle_inhibit_cond,
-          tx_inhibit_start_cond, tx_start_data_cond, tx_stop_ack_cond)
+          tx_ack_idle_cond, tx_data_stop_cond, tx_inhibit_cond,
+          tx_inhibit_start_cond, tx_start_data_cond, tx_stop_ack_cond,
+          rx_en_i)
   begin
     case(state) is
       when IDLE_S =>
-    if tx_idle_inhibit_cond = '1' then
+    if tx_inhibit_cond = '1' then
       state_next <= TX_INHIBIT_S;
+    elsif rx_en_i = '0' then
+      state_next <= INHIBIT_S;
     elsif rx_idle_data_cond = '1' then
       state_next <= RX_DATA_S;
     else
@@ -100,6 +102,13 @@ begin  -- architecture behaviour
     end if;
 
     when INHIBIT_S =>
+    if tx_inhibit_cond = '1' then
+      state_next <= TX_INHIBIT_S;
+    elsif rx_en_i = '1' then
+      state_next <= IDLE_S;
+    else
+      state_next <= INHIBIT_S;
+    end if;
 
     when RX_DATA_S =>
     if rx_data_stop_cond = '1' then  -- If the start bit is shifted to the start...
@@ -147,7 +156,6 @@ begin  -- architecture behaviour
       state_next <= TX_ACK_S;
     end if;
     
-    
   end case;
 end process;
 
@@ -160,22 +168,22 @@ rx_data_stop_cond <= not buf_serial_out_i and ps2_clk_falling;  -- Check if the 
 rx_stop_idle_cond <= ps2_clk_falling;
 
 rx_idle_data_trans <= '1' when state = IDLE_S and rx_idle_data_cond = '1'    else '0';
-rx_data_stop_trans <= '1' when state = RX_DATA_S and rx_data_stop_cond = '1' else '0';
+--rx_data_stop_trans <= '1' when state = RX_DATA_S and rx_data_stop_cond = '1' else '0';
 rx_stop_idle_trans <= '1' when state = RX_STOP_S and rx_stop_idle_cond = '1' else '0';
 
-tx_idle_inhibit_cond  <= tx_start_tick_i;
+tx_inhibit_cond       <= tx_start_tick_i;
 tx_inhibit_start_cond <= '1' when tm_cnt_i >= (10*CYCLES_PER_10_MICRO_SECONDS-1) else '0';
 tx_start_data_cond    <= ps2_clk_falling;
 tx_data_stop_cond     <= '1' when bc_cnt_i >= 9                                  else '0';
 tx_stop_ack_cond      <= ps2_clk_falling;
 tx_ack_idle_cond      <= f_ps2_clk_i;
 
-tx_idle_inhibit_trans  <= '1' when state = IDLE_S and tx_idle_inhibit_cond = '1'        else '0';
-tx_inhibit_start_trans <= '1' when state = TX_INHIBIT_S and tx_inhibit_start_cond = '1' else '0';
-tx_start_data_trans    <= '1' when state = TX_START_S and tx_start_data_cond = '1'      else '0';
-tx_data_stop_trans     <= '1' when state = TX_DATA_S and tx_data_stop_cond = '1'        else '0';
-tx_stop_ack_trans      <= '1' when state = TX_STOP_S and tx_stop_ack_cond = '1'         else '0';
-tx_ack_idle_trans      <= '1' when state = TX_ACK_S and tx_ack_idle_cond = '1'          else '0';
+tx_inhibit_trans       <= '1' when (state = IDLE_S or state = INHIBIT_S) and tx_inhibit_cond = '1' else '0';
+--tx_inhibit_start_trans <= '1' when state = TX_INHIBIT_S and tx_inhibit_start_cond = '1'            else '0';
+tx_start_data_trans    <= '1' when state = TX_START_S and tx_start_data_cond = '1'                 else '0';
+--tx_data_stop_trans     <= '1' when state = TX_DATA_S and tx_data_stop_cond = '1'                   else '0';
+tx_stop_ack_trans      <= '1' when state = TX_STOP_S and tx_stop_ack_cond = '1'                    else '0';
+tx_ack_idle_trans      <= '1' when state = TX_ACK_S and tx_ack_idle_cond = '1'                     else '0';
 
 rx_next_bit_tick <= '1' when state = RX_DATA_S and ps2_clk_falling = '1' else '0';
 tx_next_bit_tick <= '1' when state = TX_DATA_S and ps2_clk_falling = '1' else '0';
@@ -183,11 +191,11 @@ tx_next_bit_tick <= '1' when state = TX_DATA_S and ps2_clk_falling = '1' else '0
 bc_cnt_en_o <= tx_next_bit_tick;
 bc_reload_o <= tx_start_data_trans;
 
-tm_reload_o <= '0' when state = TX_INHIBIT_S or state = INHIBIT_S else '1';
+tm_reload_o <= '0' when state = TX_INHIBIT_S else '1';
 
 -- RX Shift register control logic
-buf_tx_nRx_sel_o  <= tx_idle_inhibit_trans;
-buf_shift_nLoad_o <= not(rx_idle_data_trans or tx_idle_inhibit_trans);
+buf_tx_nRx_sel_o  <= tx_inhibit_trans;
+buf_shift_nLoad_o <= not(rx_idle_data_trans or tx_inhibit_trans);
 buf_shift_en_o    <= rx_next_bit_tick or tx_next_bit_tick;
 
 -- Status & data output logic
@@ -195,7 +203,6 @@ rx_done_tick_o      <= rx_stop_idle_trans;
 rx_frame_err_tick_o <= rx_stop_idle_trans and (not f_ps2_data_i);
 tx_done_tick_o      <= tx_ack_idle_trans;
 tx_nack_tick_o      <= tx_stop_ack_trans and f_ps2_data_i;
---watchdog_rst_tick_o <= out std_logic;
 bussy_flag_o        <= '0' when state = IDLE_S else '1';
 
 with state select

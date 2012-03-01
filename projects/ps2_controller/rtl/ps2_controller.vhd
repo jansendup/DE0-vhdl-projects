@@ -17,15 +17,12 @@ entity ps2_controller is
        tx_done_tick_o  : out std_logic;
 
        tx_nack_tick_o      : out std_logic;
-       watchdog_rst_tick_o : out std_logic;
        bussy_flag_o        : out std_logic
 
        );
 end ps2_controller;
 
-architecture behaviour of ps2_controller is
-
-  type state is (IDLE_S, RX_START_S, RX_DATA_S, RX_STOP_S, TX_INHIBIT_S, TX_RTS_S, TX_START_S, TX_DATA_S, TX_STOP_S, TX_ACK_S);
+architecture structure of ps2_controller is
 
   constant ONES : std_logic_vector(7 downto 0) := (others => '1');
 
@@ -135,7 +132,6 @@ begin
       tx_start_tick_i     => tx_start_tick_i,
       tx_done_tick_o      => tx_done_tick_o,
       tx_nack_tick_o      => tx_nack_tick_o,
-      watchdog_rst_tick_o => watchdog_rst_tick_o,
       bussy_flag_o        => bussy_flag_o,
       buf_tx_nRx_sel_o    => buf_tx_nRx_sel,
       buf_shift_nLoad_o   => buf_shift_nLoad,
@@ -159,4 +155,4 @@ begin
   rx_parity_err_tick_o <= (not rx_parity) and rx_done_tick;
   rx_done_tick_o       <= rx_done_tick;
 
-end behaviour;
+end structure;

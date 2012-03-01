@@ -1,0 +1,29 @@
+# Loading project ps2_controller
+# Compile of ps2_controller_fsm.vhd was successful.
+# Compile of parity_generator.vhd was successful.
+# Compile of counter.vhd was successful.
+# Compile of schmitt_trigger_filter.vhd was successful.
+# Compile of shift_reg.vhd was successful.
+# Compile of ps2_controller.vhd was successful.
+# Compile of ps2_controller_tb.vhd failed with 1 errors.
+# 7 compiles, 1 failed with 1 error. 
+# Compile of ps2_controller_fsm.vhd was successful.
+# Compile of parity_generator.vhd was successful.
+# Compile of counter.vhd was successful.
+# Compile of schmitt_trigger_filter.vhd was successful.
+# Compile of shift_reg.vhd was successful.
+# Compile of ps2_controller.vhd was successful.
+# Compile of ps2_controller_tb.vhd was successful.
+# 7 compiles, 0 failed with no errors. 
+vsim work.ps2_controller_tb
+# vsim work.ps2_controller_tb 
+# Loading std.standard
+# Loading ieee.std_logic_1164(body)
+# Loading work.ps2_controller_tb(stimulus)
+# Loading work.ps2_controller(structure)
+# Loading work.schmitt_trigger_filter(behaviour)
+# Loading work.shift_reg(behaviour)
+# Loading work.counter(behaviour)
+# Loading work.parity_generator(behaviour)
+# Loading work.ps2_controller_fsm(behaviour)
+run -all

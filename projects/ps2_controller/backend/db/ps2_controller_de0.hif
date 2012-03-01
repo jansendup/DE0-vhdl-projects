@@ -1,0 +1,691 @@
+Quartus II
+Version 11.0 Build 157 04/27/2011 SJ Web Edition
+13
+843
+OFF
+OFF
+OFF
+ON
+ON
+ON
+FV_OFF
+Level2
+0
+0
+VRSM_ON
+VHSM_ON
+0
+-- Start Library Paths --
+-- End Library Paths --
+-- Start VHDL Libraries --
+-- End VHDL Libraries --
+# entity
+schmitt_trigger_filter
+# storage
+db|ps2_controller_de0.(2).cnf
+db|ps2_controller_de0.(2).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+|home|jansen|vhdl|projects|primatives|rtl|schmitt_trigger_filter.vhd
+cbe91a9cbad07f4864f071daeaa6f589
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# user_parameter {
+n
+3
+PARAMETER_SIGNED_DEC
+USR
+reset_val
+'0'
+PARAMETER_ENUM
+USR
+}
+# hierarchies {
+ps2_controller:kb_ps2_contr|schmitt_trigger_filter:ps2_clk_filter
+ps2_controller:kb_ps2_contr|schmitt_trigger_filter:ps2_data_filter
+}
+# macro_sequence
+
+# end
+# entity
+shift_reg
+# storage
+db|ps2_controller_de0.(3).cnf
+db|ps2_controller_de0.(3).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+|home|jansen|vhdl|projects|primatives|rtl|shift_reg.vhd
+bed8c33240419e93ef55a1a25e621f
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# user_parameter {
+n
+9
+PARAMETER_SIGNED_DEC
+USR
+reset_val
+011111111
+PARAMETER_UNSIGNED_BIN
+USR
+ constraint(reset_val)
+0 to 8
+PARAMETER_STRING
+USR
+ constraint(data_i)
+8 downto 0
+PARAMETER_STRING
+USR
+ constraint(data_o)
+8 downto 0
+PARAMETER_STRING
+USR
+}
+# hierarchies {
+ps2_controller:kb_ps2_contr|shift_reg:buf_shift_reg
+}
+# macro_sequence
+
+# end
+# entity
+counter
+# storage
+db|ps2_controller_de0.(4).cnf
+db|ps2_controller_de0.(4).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+|home|jansen|vhdl|projects|primatives|rtl|counter.vhd
+a928111c22b5e055fcae84a595275a5
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# user_parameter {
+max_cnt
+9
+PARAMETER_SIGNED_DEC
+USR
+rst_val
+0
+PARAMETER_SIGNED_DEC
+USR
+}
+# hierarchies {
+ps2_controller:kb_ps2_contr|counter:bits_counter
+}
+# macro_sequence
+
+# end
+# entity
+counter
+# storage
+db|ps2_controller_de0.(5).cnf
+db|ps2_controller_de0.(5).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+|home|jansen|vhdl|projects|primatives|rtl|counter.vhd
+a928111c22b5e055fcae84a595275a5
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# user_parameter {
+max_cnt
+5001
+PARAMETER_SIGNED_DEC
+USR
+rst_val
+0
+PARAMETER_SIGNED_DEC
+USR
+}
+# hierarchies {
+ps2_controller:kb_ps2_contr|counter:com_timer
+}
+# macro_sequence
+
+# end
+# entity
+parity_generator
+# storage
+db|ps2_controller_de0.(6).cnf
+db|ps2_controller_de0.(6).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+|home|jansen|vhdl|projects|common|rtl|parity_generator.vhd
+bb8df95f8a28ef4710c053a9ea410
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# user_parameter {
+n
+9
+PARAMETER_SIGNED_DEC
+USR
+ constraint(din_i)
+8 downto 0
+PARAMETER_STRING
+USR
+}
+# hierarchies {
+ps2_controller:kb_ps2_contr|parity_generator:rx_parity_generator
+}
+# macro_sequence
+
+# end
+# entity
+parity_generator
+# storage
+db|ps2_controller_de0.(7).cnf
+db|ps2_controller_de0.(7).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+|home|jansen|vhdl|projects|common|rtl|parity_generator.vhd
+bb8df95f8a28ef4710c053a9ea410
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# user_parameter {
+n
+8
+PARAMETER_SIGNED_DEC
+USR
+ constraint(din_i)
+7 downto 0
+PARAMETER_STRING
+USR
+}
+# hierarchies {
+ps2_controller:kb_ps2_contr|parity_generator:tx_parity_generator
+}
+# macro_sequence
+
+# end
+# entity
+ps2_controller
+# storage
+db|ps2_controller_de0.(1).cnf
+db|ps2_controller_de0.(1).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+|home|jansen|vhdl|projects|ps2_controller|rtl|ps2_controller.vhd
+ef6940c73fc3d651c2febf69d6408d4b
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# user_parameter {
+clk_freq
+50000000
+PARAMETER_SIGNED_DEC
+USR
+ constraint(rx_data_o)
+7 downto 0
+PARAMETER_STRING
+USR
+ constraint(tx_data_i)
+7 downto 0
+PARAMETER_STRING
+USR
+}
+# include_file {
+|home|jansen|vhdl|projects|ps2_controller|rtl|ps2_controller_fsm.vhd
+9b18358975acd02653c2f931ca638fd
+|home|jansen|vhdl|projects|primatives|rtl|schmitt_trigger_filter.vhd
+cbe91a9cbad07f4864f071daeaa6f589
+|home|jansen|vhdl|projects|common|rtl|parity_generator.vhd
+bb8df95f8a28ef4710c053a9ea410
+|home|jansen|vhdl|projects|primatives|rtl|counter.vhd
+a928111c22b5e055fcae84a595275a5
+|home|jansen|vhdl|projects|primatives|rtl|shift_reg.vhd
+bed8c33240419e93ef55a1a25e621f
+}
+# hierarchies {
+ps2_controller:kb_ps2_contr
+}
+# macro_sequence
+
+# end
+# entity
+ps2_controller_fsm
+# storage
+db|ps2_controller_de0.(8).cnf
+db|ps2_controller_de0.(8).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+|home|jansen|vhdl|projects|ps2_controller|rtl|ps2_controller_fsm.vhd
+9b18358975acd02653c2f931ca638fd
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# user_parameter {
+max_timer_count
+5000
+PARAMETER_SIGNED_DEC
+USR
+cycles_per_10_micro_seconds
+500
+PARAMETER_SIGNED_DEC
+USR
+}
+# hierarchies {
+ps2_controller:kb_ps2_contr|ps2_controller_fsm:ps2_controller_fsm_1
+}
+# macro_sequence
+
+# end
+# entity
+seg7_decoder
+# storage
+db|ps2_controller_de0.(10).cnf
+db|ps2_controller_de0.(10).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+|home|jansen|vhdl|projects|common|rtl|seg7_decoder.vhd
+117ab3a67dbeedf6b7132583a2da9
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# user_parameter {
+ constraint(data_i)
+3 downto 0
+PARAMETER_STRING
+USR
+ constraint(data_o)
+6 downto 0
+PARAMETER_STRING
+USR
+}
+# hierarchies {
+seg7_decoder:seg7_decoder_1
+seg7_decoder:seg7_decoder_2
+seg7_decoder:seg7_decoder_3
+seg7_decoder:seg7_decoder_4
+}
+# macro_sequence
+
+# end
+# entity
+ps2_kb_led_controller
+# storage
+db|ps2_controller_de0.(11).cnf
+db|ps2_controller_de0.(11).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+|home|jansen|vhdl|projects|ps2_controller|rtl|ps2_kb_led_controller.vhd
+fe69ddc3bbadace6ba3857b1e8bc2139
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# user_parameter {
+ constraint(leds_i)
+2 downto 0
+PARAMETER_STRING
+USR
+ constraint(tx_data_o)
+7 downto 0
+PARAMETER_STRING
+USR
+}
+# hierarchies {
+ps2_kb_led_controller:ps2_kb_led_controller_1
+}
+# macro_sequence
+
+# end
+# entity
+ps2_controller_de0
+# storage
+db|ps2_controller_de0.(0).cnf
+db|ps2_controller_de0.(0).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+|home|jansen|vhdl|projects|ps2_controller|rtl|ps2_controller_de0.vhd
+337fd330ff64d528a0599e79876d45a
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# include_file {
+|home|jansen|vhdl|projects|ps2_controller|rtl|ps2_controller_fsm.vhd
+9b18358975acd02653c2f931ca638fd
+|home|jansen|vhdl|projects|common|rtl|parity_generator.vhd
+bb8df95f8a28ef4710c053a9ea410
+|home|jansen|vhdl|projects|primatives|rtl|counter.vhd
+a928111c22b5e055fcae84a595275a5
+|home|jansen|vhdl|projects|primatives|rtl|shift_reg.vhd
+bed8c33240419e93ef55a1a25e621f
+|home|jansen|vhdl|projects|primatives|rtl|schmitt_trigger_filter.vhd
+cbe91a9cbad07f4864f071daeaa6f589
+|home|jansen|vhdl|projects|ps2_controller|rtl|ps2_kb_led_controller.vhd
+fe69ddc3bbadace6ba3857b1e8bc2139
+|home|jansen|vhdl|projects|ps2_controller|rtl|ps2_controller.vhd
+ef6940c73fc3d651c2febf69d6408d4b
+|home|jansen|vhdl|projects|common|rtl|seg7_decoder.vhd
+117ab3a67dbeedf6b7132583a2da9
+}
+# hierarchies {
+|
+}
+# macro_sequence
+
+# end
+# entity
+reset_control
+# storage
+db|ps2_controller_de0.(9).cnf
+db|ps2_controller_de0.(9).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+|home|jansen|vhdl|projects|ps2_controller|rtl|ps2_controller_de0.vhd
+337fd330ff64d528a0599e79876d45a
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# include_file {
+|home|jansen|vhdl|projects|ps2_controller|rtl|ps2_controller_fsm.vhd
+9b18358975acd02653c2f931ca638fd
+|home|jansen|vhdl|projects|common|rtl|parity_generator.vhd
+bb8df95f8a28ef4710c053a9ea410
+|home|jansen|vhdl|projects|primatives|rtl|counter.vhd
+a928111c22b5e055fcae84a595275a5
+|home|jansen|vhdl|projects|primatives|rtl|shift_reg.vhd
+bed8c33240419e93ef55a1a25e621f
+|home|jansen|vhdl|projects|primatives|rtl|schmitt_trigger_filter.vhd
+cbe91a9cbad07f4864f071daeaa6f589
+|home|jansen|vhdl|projects|ps2_controller|rtl|ps2_kb_led_controller.vhd
+fe69ddc3bbadace6ba3857b1e8bc2139
+|home|jansen|vhdl|projects|ps2_controller|rtl|ps2_controller.vhd
+ef6940c73fc3d651c2febf69d6408d4b
+|home|jansen|vhdl|projects|common|rtl|seg7_decoder.vhd
+117ab3a67dbeedf6b7132583a2da9
+}
+# hierarchies {
+reset_control:reset_control_1
+}
+# macro_sequence
+
+# end
+# entity
+knight_rider_leds
+# storage
+db|ps2_controller_de0.(12).cnf
+db|ps2_controller_de0.(12).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+|home|jansen|vhdl|projects|ps2_controller|rtl|ps2_controller_de0.vhd
+337fd330ff64d528a0599e79876d45a
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# user_parameter {
+clk_freq
+50000000
+PARAMETER_SIGNED_DEC
+USR
+period
+500
+PARAMETER_SIGNED_DEC
+USR
+n
+3
+PARAMETER_SIGNED_DEC
+USR
+o
+1
+PARAMETER_SIGNED_DEC
+USR
+ constraint(leds_out_o)
+2 downto 0
+PARAMETER_STRING
+USR
+}
+# include_file {
+|home|jansen|vhdl|projects|ps2_controller|rtl|ps2_controller_fsm.vhd
+9b18358975acd02653c2f931ca638fd
+|home|jansen|vhdl|projects|common|rtl|parity_generator.vhd
+bb8df95f8a28ef4710c053a9ea410
+|home|jansen|vhdl|projects|primatives|rtl|counter.vhd
+a928111c22b5e055fcae84a595275a5
+|home|jansen|vhdl|projects|primatives|rtl|shift_reg.vhd
+bed8c33240419e93ef55a1a25e621f
+|home|jansen|vhdl|projects|primatives|rtl|schmitt_trigger_filter.vhd
+cbe91a9cbad07f4864f071daeaa6f589
+|home|jansen|vhdl|projects|ps2_controller|rtl|ps2_kb_led_controller.vhd
+fe69ddc3bbadace6ba3857b1e8bc2139
+|home|jansen|vhdl|projects|ps2_controller|rtl|ps2_controller.vhd
+ef6940c73fc3d651c2febf69d6408d4b
+|home|jansen|vhdl|projects|common|rtl|seg7_decoder.vhd
+117ab3a67dbeedf6b7132583a2da9
+}
+# hierarchies {
+knight_rider_leds:kb_knight_rider_leds
+}
+# macro_sequence
+
+# end
+# entity
+knight_rider_leds
+# storage
+db|ps2_controller_de0.(13).cnf
+db|ps2_controller_de0.(13).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+|home|jansen|vhdl|projects|ps2_controller|rtl|ps2_controller_de0.vhd
+337fd330ff64d528a0599e79876d45a
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# user_parameter {
+clk_freq
+50000000
+PARAMETER_SIGNED_DEC
+USR
+period
+500
+PARAMETER_SIGNED_DEC
+USR
+n
+10
+PARAMETER_SIGNED_DEC
+USR
+o
+4
+PARAMETER_SIGNED_DEC
+USR
+ constraint(leds_out_o)
+9 downto 0
+PARAMETER_STRING
+USR
+}
+# include_file {
+|home|jansen|vhdl|projects|ps2_controller|rtl|ps2_controller_fsm.vhd
+9b18358975acd02653c2f931ca638fd
+|home|jansen|vhdl|projects|common|rtl|parity_generator.vhd
+bb8df95f8a28ef4710c053a9ea410
+|home|jansen|vhdl|projects|primatives|rtl|counter.vhd
+a928111c22b5e055fcae84a595275a5
+|home|jansen|vhdl|projects|primatives|rtl|shift_reg.vhd
+bed8c33240419e93ef55a1a25e621f
+|home|jansen|vhdl|projects|primatives|rtl|schmitt_trigger_filter.vhd
+cbe91a9cbad07f4864f071daeaa6f589
+|home|jansen|vhdl|projects|ps2_controller|rtl|ps2_kb_led_controller.vhd
+fe69ddc3bbadace6ba3857b1e8bc2139
+|home|jansen|vhdl|projects|ps2_controller|rtl|ps2_controller.vhd
+ef6940c73fc3d651c2febf69d6408d4b
+|home|jansen|vhdl|projects|common|rtl|seg7_decoder.vhd
+117ab3a67dbeedf6b7132583a2da9
+}
+# hierarchies {
+knight_rider_leds:sys_knight_rider_leds
+}
+# macro_sequence
+
+# end
+# complete
+

@@ -1,0 +1,1 @@
+Error: Error creating IP Search Path index file: could not create /home/jansen/.altera.quartus/ip

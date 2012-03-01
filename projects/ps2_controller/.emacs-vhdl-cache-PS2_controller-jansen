@@ -1,0 +1,48 @@
+;; -*- Emacs-Lisp -*-
+
+;;; .emacs-vhdl-cache-PS2_controller-jansen - design hierarchy cache file for Emacs VHDL Mode 3.33.6
+
+;; Project   : PS2 controller
+;; Saved     : 2012-02-29 23:39:19 jansen
+
+
+;; version number
+(setq vhdl-cache-version "3.33.6")
+
+;; project name
+(setq project "PS2 controller")
+
+;; entity and architecture cache
+(aput 'vhdl-entity-alist project '
+(("baud_rate_generator" "baud_rate_generator" "~/vhdl/projects/common/rtl/baud_rate_generator.vhd" 4 (("structure" "structure" "~/vhdl/projects/common/rtl/baud_rate_generator.vhd" 16 (("cycles_counter" "cycles_counter" "~/vhdl/projects/common/rtl/baud_rate_generator.vhd" 23 nil "counter" nil nil "work" nil)) nil)) "structure" (("ieee" . "std_logic_1164"))) ("counter" "counter" "~/vhdl/projects/primatives/rtl/counter.vhd" 4 (("behaviour" "behaviour" "~/vhdl/projects/primatives/rtl/counter.vhd" 20 nil nil)) "behaviour" (("ieee" . "std_logic_1164"))) ("parity_generator" "parity_generator" "~/vhdl/projects/common/rtl/parity_generator.vhd" 4 (("behaviour" "behaviour" "~/vhdl/projects/common/rtl/parity_generator.vhd" 15 nil nil)) "behaviour" (("ieee" . "std_logic_1164"))) ("ps2_controller" "ps2_controller" "~/vhdl/projects/ps2_controller/rtl/ps2_controller.vhd" 4 (("behaviour" "behaviour" "~/vhdl/projects/ps2_controller/rtl/ps2_controller.vhd" 26 (("ps2_clk_filter" "ps2_clk_filter" "~/vhdl/projects/ps2_controller/rtl/ps2_controller.vhd" 61 nil "schmitt_trigger_filter" nil nil "work" nil) ("ps2_data_filter" "ps2_data_filter" "~/vhdl/projects/ps2_controller/rtl/ps2_controller.vhd" 66 nil "schmitt_trigger_filter" nil nil "work" nil) ("buf_shift_reg" "buf_shift_reg" "~/vhdl/projects/ps2_controller/rtl/ps2_controller.vhd" 71 nil "shift_reg" nil nil "work" nil) ("bits_counter" "bits_counter" "~/vhdl/projects/ps2_controller/rtl/ps2_controller.vhd" 83 nil "counter" nil nil "work" nil) ("com_timer" "com_timer" "~/vhdl/projects/ps2_controller/rtl/ps2_controller.vhd" 95 nil "counter" nil nil "work" nil) ("rx_parity_generator" "rx_parity_generator" "~/vhdl/projects/ps2_controller/rtl/ps2_controller.vhd" 107 nil "parity_generator" nil nil "work" nil) ("tx_parity_generator" "tx_parity_generator" "~/vhdl/projects/ps2_controller/rtl/ps2_controller.vhd" 114 nil "parity_generator" nil nil "work" nil) ("ps2_controller_fsm_1" "ps2_controller_fsm_1" "~/vhdl/projects/ps2_controller/rtl/ps2_controller.vhd" 121 nil "ps2_controller_fsm" nil nil "work" nil)) nil)) "behaviour" (("ieee" . "std_logic_1164"))) ("ps2_controller_fsm" "ps2_controller_fsm" "~/vhdl/projects/ps2_controller/rtl/ps2_controller_fsm.vhd" 4 (("behaviour" "behaviour" "~/vhdl/projects/ps2_controller/rtl/ps2_controller_fsm.vhd" 38 nil nil)) "behaviour" (("ieee" . "std_logic_1164"))) ("schmitt_trigger_filter" "schmitt_trigger_filter" "~/vhdl/projects/primatives/rtl/schmitt_trigger_filter.vhd" 4 (("behaviour" "behaviour" "~/vhdl/projects/primatives/rtl/schmitt_trigger_filter.vhd" 12 nil nil)) "behaviour" (("ieee" . "std_logic_1164"))) ("shift_reg" "shift_reg" "~/vhdl/projects/primatives/rtl/shift_reg.vhd" 4 (("behaviour" "behaviour" "~/vhdl/projects/primatives/rtl/shift_reg.vhd" 16 nil nil)) "behaviour" (("ieee" . "std_logic_1164"))))
+)
+
+;; configuration cache
+(aput 'vhdl-config-alist project '
+nil
+)
+
+;; package cache
+(aput 'vhdl-package-alist project '
+(("primatives_pkg" "primatives_pkg" "~/vhdl/projects/primatives/rtl/primatives_pkg.vhd" 4 (("shift_reg" "shift_reg" "~/vhdl/projects/primatives/rtl/primatives_pkg.vhd" 5) ("schmitt_trigger_filter" "schmitt_trigger_filter" "~/vhdl/projects/primatives/rtl/primatives_pkg.vhd" 18) ("counter" "counter" "~/vhdl/projects/primatives/rtl/primatives_pkg.vhd" 26)) nil (("ieee" . "std_logic_1164")) nil nil nil nil))
+)
+
+;; instantiated entities cache
+(aput 'vhdl-ent-inst-alist project '
+(("ps2_controller_fsm" "parity_generator" "parity_generator" "counter" "counter" "shift_reg" "schmitt_trigger_filter" "schmitt_trigger_filter" "counter"))
+)
+
+;; design units per file cache
+(aput 'vhdl-file-alist project '
+(("~/vhdl/projects/ps2_controller/rtl/ps2_controller_fsm.vhd" ("ps2_controller_fsm") ("behaviour") ("ps2_controller_fsm") nil nil nil nil nil) ("~/vhdl/projects/ps2_controller/rtl/ps2_controller.vhd" ("ps2_controller") ("behaviour") ("ps2_controller") nil nil nil ("ps2_controller_fsm_1" "tx_parity_generator" "rx_parity_generator" "com_timer" "bits_counter" "buf_shift_reg" "ps2_data_filter" "ps2_clk_filter") ("ps2_controller_fsm" "parity_generator" "parity_generator" "counter" "counter" "shift_reg" "schmitt_trigger_filter" "schmitt_trigger_filter")) ("~/vhdl/projects/primatives/rtl/schmitt_trigger_filter.vhd" ("schmitt_trigger_filter") ("behaviour") ("schmitt_trigger_filter") nil nil nil nil nil) ("~/vhdl/projects/common/rtl/parity_generator.vhd" ("parity_generator") ("behaviour") ("parity_generator") nil nil nil nil nil) ("~/vhdl/projects/common/rtl/baud_rate_generator.vhd" ("baud_rate_generator") ("structure") ("baud_rate_generator") nil nil nil ("cycles_counter") ("counter")) ("~/vhdl/projects/primatives/rtl/shift_reg.vhd" ("shift_reg") ("behaviour") ("shift_reg") nil nil nil nil nil) ("~/vhdl/projects/primatives/rtl/primatives_pkg.vhd" nil nil nil nil ("primatives_pkg") nil nil nil) ("~/vhdl/projects/primatives/rtl/counter.vhd.bak" nil nil nil nil nil nil nil nil) ("~/vhdl/projects/primatives/rtl/counter.vhd" ("counter") ("behaviour") ("counter") nil nil nil nil nil) ("~/vhdl/projects/ps2_controller/rtl/ps2_controller_fsm.vhd~" nil nil nil nil nil nil nil nil))
+)
+
+;; source directories in project cache
+(aput 'vhdl-directory-alist project '
+(("~/vhdl/projects/ps2_controller/rtl/" "~/vhdl/projects/primatives/rtl/" "~/vhdl/projects/common/rtl/"))
+)
+
+;; shown design units cache
+(aput 'vhdl-speedbar-shown-unit-alist project '
+nil
+)

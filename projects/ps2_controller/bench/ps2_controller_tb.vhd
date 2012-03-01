@@ -46,7 +46,6 @@ architecture stimulus of ps2_controller_tb is
   signal tx_data            : std_logic_vector(7 downto 0);
   signal tx_done_tick       : std_logic;
   signal tx_nack_tick       : std_logic;
-  signal watchdog_rst_tick  : std_logic;
   signal bussy_flag         : std_logic;
 
   signal done : boolean := FALSE;
@@ -78,7 +77,6 @@ begin  -- architecture stimulus
       tx_data_i            => tx_data,
       tx_done_tick_o       => tx_done_tick,
       tx_nack_tick_o       => tx_nack_tick,
-      watchdog_rst_tick_o  => watchdog_rst_tick,
       bussy_flag_o         => bussy_flag);
 
   clk_gen_proc : process is
